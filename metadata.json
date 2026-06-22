@@ -1,0 +1,6 @@
+{
+  "name": "La Convention Nationale",
+  "description": "Le site officiel de la Convention Nationale. Retrouvez le programme, les intervenants, les thématiques, inscrivez-vous à l'événement et consultez notre FAQ.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

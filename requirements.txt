@@ -1,0 +1,49 @@
+# Dynamic Youth Summit & JCI Madagascar Project Requirements File
+# -----------------------------------------------------------------------------
+# System Prerequisites:
+# - Node.js: >= v18.0.0 (Recommended: v20.x or v22.x LTS)
+# - Package Manager: npm >= v9.0.0 (or yarn / pnpm)
+# - Operating System: Cross-platform (Linux, macOS, Windows)
+
+# Core Frontend Dependencies:
+react==19.0.1
+react-dom==19.0.1
+motion==12.23.24
+lucide-react==0.546.0
+
+# Build Engine and Styling:
+vite==6.2.3
+tailwindcss==4.1.14
+@tailwindcss/vite==4.1.14
+@vitejs/plugin-react==5.0.4
+
+# Server and Environment Utilities (Optional Proxy support):
+express==4.21.2
+dotenv==17.2.3
+
+# Development & Type Tooling:
+typescript==5.8.2
+tsx==4.21.0
+esbuild==0.25.0
+@types/node==22.14.0
+@types/express==4.17.21
+autoprefixer==10.4.21
+
+# -----------------------------------------------------------------------------
+# SETUP AND INSTALLATION INSTRUCTIONS:
+#
+# Since this is a Node.js & React project, all dependencies are fully declared
+# in package.json. You should run the following commands to get started:
+#
+# 1. Clean build directory & node_modules (if applicable):
+#    npm run clean
+#
+# 2. Install all official dependencies based on package.json:
+#    npm install
+#
+# 3. Start the local server in development mode with live-reloads:
+#    npm run dev
+#
+# 4. Generate the optimized final production build:
+#    npm run build
+# -----------------------------------------------------------------------------
