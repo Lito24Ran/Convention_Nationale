@@ -99,19 +99,19 @@ export default function Speakers() {
 
   // Data for Intervenants (3 cards base)
   const intervenants: SpeakerMock[] = [
-    { name: "Nom et Prenom", role: "Expert principal", company: "JCI Madagascar", image: speakerImage },
-    { name: "Nom et Prenom", role: "Expert principal", company: "JCI Madagascar", image: speakerImage },
-    { name: "Nom et Prenom", role: "Expert principal", company: "JCI Madagascar", image: speakerImage }
+    { name: "Nom et Prenom", role: "Expert principal", company: "JCI Madagascar", image: "src/assets/images/WhatsApp Image 2026-06-17 at 08.32.43.jpeg" },
+    { name: "Nom et Prenom", role: "Expert principal", company: "JCI Madagascar", image: "src/assets/images/WhatsApp Image 2026-06-17 at 08.32.43.jpeg" },
+    { name: "Nom et Prenom", role: "Expert principal", company: "JCI Madagascar", image: "src/assets/images/WhatsApp Image 2026-06-17 at 08.32.43.jpeg" }
   ];
 
   // Data for Conferenciers (6 cards base)
   const conferenciers: SpeakerMock[] = [
-    { name: "Nom et Prenom", role: "Conférencier invité", company: "Leadership Summit", image: speakerImage },
-    { name: "Nom et Prenom", role: "Conférencier invité", company: "Leadership Summit", image: speakerImage },
-    { name: "Nom et Prenom", role: "Conférencier invité", company: "Leadership Summit", image: speakerImage },
-    { name: "Nom et Prenom", role: "Conférencier invité", company: "Leadership Summit", image: speakerImage },
-    { name: "Nom et Prenom", role: "Conférencier invité", company: "Leadership Summit", image: speakerImage },
-    { name: "Nom et Prenom", role: "Conférencier invité", company: "Leadership Summit", image: speakerImage }
+    { name: "Sahodra", role: "Conférencier invité", company: "Leadership Summit", image: "src/assets/images/WhatsApp Image 2026-06-17 at 08.32.43.jpeg" },
+    { name: "Nom et Prenom", role: "Conférencier invité", company: "Leadership Summit", image: "src/assets/images/WhatsApp Image 2026-06-17 at 08.32.43.jpeg" },
+    { name: "Nom et Prenom", role: "Conférencier invité", company: "Leadership Summit", image: "src/assets/images/WhatsApp Image 2026-06-17 at 08.32.43.jpeg" },
+    { name: "Nom et Prenom", role: "Conférencier invité", company: "Leadership Summit", image: "src/assets/images/WhatsApp Image 2026-06-17 at 08.32.43.jpeg" },
+    { name: "Nom et Prenom", role: "Conférencier invité", company: "Leadership Summit", image: "src/assets/images/WhatsApp Image 2026-06-17 at 08.32.43.jpeg" },
+    { name: "Nom et Prenom", role: "Conférencier invité", company: "Leadership Summit", image: "src/assets/images/WhatsApp Image 2026-06-17 at 08.32.43.jpeg" }
   ];
 
   // Cloning cards to ensure seamless, jitter-free loop wrapping
@@ -142,11 +142,11 @@ export default function Speakers() {
 
         {/* Horizontal Scroll Track - Intervenants */}
         <div className="relative w-full overflow-hidden py-4">
-          {/* Aesthetic fading gradient masks on edges */}
+          
           <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-32 bg-gradient-to-r from-[#0F1026] to-transparent z-20 pointer-events-none" />
           <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-32 bg-gradient-to-l from-[#0F1026] to-transparent z-20 pointer-events-none" />
 
-          {/* Scrolling conveyor */}
+          
           <div className="animate-marquee-left">
             {seamlessIntervenantsTrack.map((s, idx) => (
               <SpeakerCard 
