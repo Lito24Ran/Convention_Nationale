@@ -30,7 +30,7 @@ export default function Program() {
               Programme de la Convention
             </h2>
             <p className="text-sm sm:text-base text-gray-300 font-sans">
-              Planifiez votre parcours personnalisé sur 2 jours. Filtrez par format d&apos;intervention pour cibler au mieux vos priorités.
+              Planifiez votre parcours personnalisé sur 3 jours. Filtrez par format d&apos;intervention pour cibler au mieux vos priorités.
             </p>
           </div>
 

@@ -167,8 +167,8 @@ export default function Speakers() {
             {/* Left side text info */}
             <div className="lg:col-span-7 space-y-6 text-left">
               {/* Gold pill block resembling mockup */}
-              <div className="inline-flex items-center bg-[#F4B400] text-[#0F1026] px-4 py-1.5 rounded-full font-mono text-xs font-black tracking-widest">
-                YS
+              <div className="inline-flex items-center bg-amber-400/10 border border-amber-400/20 px-3 py-1 rounded-full w-fit rounded-full font-mono text-xs font-black tracking-widest">
+                Youth Summit
               </div>
               
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-sans font-black text-[#0F1026] tracking-tight leading-tight uppercase animate-pulse-slow">
@@ -187,7 +187,7 @@ export default function Speakers() {
                 className="w-full max-w-[450px] aspect-[4/3] rounded-[32px] overflow-hidden shadow-2xl border border-gray-100 relative group"
               >
                 <img
-                  src={youthSummitImage}
+                  src="src/assets/images/Wpp_image.jpeg"
                   alt="Youth Summit female speaker"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   referrerPolicy="no-referrer"
