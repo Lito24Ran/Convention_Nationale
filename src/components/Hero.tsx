@@ -1,6 +1,10 @@
 import { useState, useEffect } from "react";
 import { Users, Calendar, Award, Mic, ChevronRight, Play } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
+import conventionImage from "../assets/images/CoventionN.jpeg";
+import ysImage from "../assets/images/YS.jpeg";
+import collaborerImage from "../assets/images/Collaborer.jpeg";
+
 
 interface HeroProps {
   onRegisterClick: () => void;
@@ -9,19 +13,19 @@ interface HeroProps {
 
 const carouselSlides = [
   {
-    image: "/src/assets/images/convention_group_selfie_1782117207138.jpg",
+    image: conventionImage,
     tagline: "CONVENTION NATIONALE 2026",
     title: "LA CONVENTION\nNATIONALE",
     desc: "Grand rendez-vous annuel de la JCI Madagascar rassemblant membres, dirigeants et partenaires le 01–03 Octobre 2026.",
   },
   {
-    image: "/src/assets/images/convention_venue_blog_1782117221629.jpg",
+    image: ysImage,
     tagline: "YOUTH SUMMIT 2026",
     title: "YOUTH\nSUMMIT",
     desc: "Le sommet de la jeunesse active pour l'innovation, l'entrepreneuriat et le leadership d'impact.",
   },
   {
-    image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1600",
+    image: collaborerImage,
     tagline: "INSPIRATION • IMPACT • SYNERGIE",
     title: "COLLABORER\n& INNOVER",
     desc: "Rejoignez de nombreux leaders venus de toutes les provinces pour co-créer les solutions d'avenir.",
@@ -84,29 +88,29 @@ export default function Hero({ onRegisterClick, onThemesClick }: HeroProps) {
     <section id="hero" className="relative bg-[#0F1026] text-white pt-24 min-h-screen flex flex-col justify-between overflow-hidden">
       
       {/* Background with crossfade and high-contrast atmospheric filters */}
-      <div className="absolute inset-0 -z-20 overflow-hidden">
-        <AnimatePresence mode="wait">
+      <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute inset-0 w-full h-full">
+        {carouselSlides.map((slide, index) => (
           <motion.div
-            key={currentSlide}
-            initial={{ opacity: 0, scale: 1.05 }}
-            animate={{ opacity: 0.60, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.95 }}
-            transition={{ duration: 1.2 }}
+            key={index}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: index === currentSlide ? 1 : 0 }}
+            transition={{ duration: 1.5, ease: "easeOut" }}
             className="absolute inset-0 w-full h-full"
           >
             <img
-              src={carouselSlides[currentSlide].image}
+              src={slide.image}
               alt="Convention Background Slide"
               className="w-full h-full object-cover select-none"
-              referrerPolicy="no-referrer"
             />
           </motion.div>
-        </AnimatePresence>
-        
-        {/* Semi-transparent dark cinematic overlay to make UI elements pop with high contrast */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0F1026]/90 via-[#0F1026]/75 to-[#050614]/60" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0C0D21] via-[#0F1026]/20 to-[#0F1026]/50" />
+        ))}
       </div>
+
+  {/* Overlays */}
+  <div className="absolute inset-0 bg-gradient-to-r from-[#0F1026]/65 via-[#0F1026]/50 to-[#050614]/40 z-10" />
+  <div className="absolute inset-0 bg-gradient-to-t from-[#0C0D21] via-[#0F1026]/20 to-[#0F1026]/50 z-10" />
+</div>
 
       {/* Main hero grid centering the JCI content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-16 md:py-28 flex-grow flex items-center relative z-10">
@@ -121,14 +125,41 @@ export default function Hero({ onRegisterClick, onThemesClick }: HeroProps) {
           </div>
 
           {/* Large display headings with line breaks matching the photograph */}
-          <h1 className="text-4xl sm:text-6xl md:text-7xl font-sans font-black tracking-tight text-white leading-none uppercase whitespace-pre-line drop-shadow-md">
-            {carouselSlides[currentSlide].title}
-          </h1>
+          <div className="relative">
+            {carouselSlides.map((slide, index) => (
+              <motion.h1
+                key={index}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: index === currentSlide ? 1 : 0 }}
+                transition={{ duration: 1.5, ease: "easeOut" }}
+                className="absolute top-0 left-0 text-4xl sm:text-6xl md:text-7xl font-sans font-black tracking-tight text-white leading-none uppercase whitespace-pre-line drop-shadow-md"
+              >
+                {slide.title}
+              </motion.h1>
+            ))}
+            {/* div invisible pour garder la hauteur */}
+            <h1 className="invisible text-4xl sm:text-6xl md:text-7xl font-sans font-black tracking-tight leading-none uppercase whitespace-pre-line">
+              {carouselSlides[currentSlide].title}
+            </h1>
+          </div>
 
           {/* Description text with font-sans, line-relaxed and beautiful contrast */}
-          <p className="text-base sm:text-lg text-gray-200 max-w-2xl font-sans font-normal leading-relaxed drop-shadow-sm">
-            {carouselSlides[currentSlide].desc}
-          </p>
+          <div className="relative">
+            {carouselSlides.map((slide, index) => (
+              <motion.p
+                key={index}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: index === currentSlide ? 1 : 0 }}
+                transition={{ duration: 1.5, ease: "easeOut" }}
+                className="absolute top-0 left-0 text-base sm:text-lg text-gray-200 max-w-2xl font-sans font-normal leading-relaxed drop-shadow-sm"
+              >
+                {slide.desc}
+              </motion.p>
+            ))}
+            <p className="invisible text-base sm:text-lg max-w-2xl leading-relaxed">
+              {carouselSlides[currentSlide].desc}
+            </p>
+          </div>
 
           {/* Solid integrated double button bar styled exactly as the image */}
           <div className="pt-2 flex">
