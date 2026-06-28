@@ -4,7 +4,7 @@ export default function About() {
   const highlights = [
     {
       icon: <Calendar className="h-5 w-5 text-amber-400" />,
-      title: "2 Jours d&apos;Immersion",
+      title: "3 Jours d' Immersion",
       description: "Plus de 20 heures de débats denses, de conférences plénières et d&apos;ateliers d&apos;idéation décentralisés.",
     },
     {
@@ -28,7 +28,7 @@ export default function About() {
           <div className="lg:col-span-7 space-y-6 text-left">
             <div className="inline-flex items-center space-x-2 bg-amber-400/10 border border-amber-400/20 px-3 py-1 rounded-full w-fit">
               <span className="text-xs font-mono tracking-wider uppercase font-extrabold text-[#0F1026]">
-                ÉVÉNEMENT
+                Convention Nationale
               </span>
             </div>
 
@@ -40,15 +40,17 @@ export default function About() {
 
             <div className="space-y-4 text-base sm:text-lg text-gray-600 font-sans leading-relaxed">
               <p>
-                La <strong className="text-[#0F1026] font-semibold">Convention Nationale</strong> est l&apos;espace de convergence décisif où se rencontrent les forces technologiques, scientifiques et managériales engagées dans la construction de l&apos;avenir.
+                La <strong className="text-[#0F1026] font-semibold">Convention Nationale</strong>   Grand rendez-vous annuel de la JCI Madagascar rassemblant
+membres, dirigeants et partenaires. Temps fort du calendrier institutionnel, espace de célébration, de formation et de prise de
+décision stratégique.
               </p>
               <p className="text-sm sm:text-base text-gray-500">
-                Pendant deux jours intenses de réflexion collective, nous aborderons de manière pragmatique les enjeux cardinaux de notre ère : le déploiement éthique de l&apos;intelligence artificielle, la restructuration durable liée à l&apos;adaptation climatique, et le déclin des organisations hiérarchiques au profit d&apos;écosystèmes agiles et transversaux.
+                Pendant trois jours intenses de réflexion collective, nous aborderons de manière pragmatique les enjeux cardinaux de notre ère : le déploiement éthique de l&apos;intelligence artificielle, la restructuration durable liée à l&apos;adaptation climatique, et le déclin des organisations hiérarchiques au profit d&apos;écosystèmes agiles et transversaux.
               </p>
             </div>
 
             {/* List highlights */}
-            <div className="grid grid-cols-1 gap-6 pt-4 border-t border-gray-100">
+            {/* <div className="grid grid-cols-1 gap-6 pt-4 border-t border-gray-100">
               {highlights.map((item, index) => (
                 <div key={index} className="flex items-start space-x-4">
                   <div className="flex-shrink-0 bg-[#0F1026]/5 p-3 rounded-xl border border-[#0F1026]/5">
@@ -64,7 +66,7 @@ export default function About() {
                   </div>
                 </div>
               ))}
-            </div>
+            </div> */}
 
           </div>
 
@@ -75,7 +77,7 @@ export default function About() {
             
             <div className="relative w-full max-w-md aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border border-gray-100">
               <img
-                src="/src/assets/images/convention_group_selfie_1782117207138.jpg"
+                src="src/assets/images/WhatsApp Image 2026-06-17 at 08.32.46.jpeg"
                 alt="Jeunes professionnels souriants et engagés"
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
@@ -96,7 +98,7 @@ export default function About() {
                 Concret & Immersif
               </span>
               <p className="text-[10px] text-gray-400 mt-1 leading-normal">
-                Aucun pitch de vente commerciale toléré.
+                Créativité et réseautage au rendez-vous
               </p>
             </div>
           </div>
