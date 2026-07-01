@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Calendar, Shield } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
+import { label } from "motion/react-client";
 
 interface HeaderProps {
   onNavigate: (sectionId: string) => void;
@@ -27,7 +28,9 @@ export default function Header({ onNavigate, activeSection }: HeaderProps) {
   const navItems = [
     { label: "Accueil", id: "hero" },
     { label: "A propos", id: "about" },
-    { label: "Youth Summit", id: "program" },
+    { label: "programmes", id: "program" },
+    {label: "Intervenants", id: "intervenants"},
+    {label: "Youth Summit", id: "YS"},
     { label: "Partenaires", id: "partners" },
     { label: "Actualités", id: "blog" },
     { label: "FAQ", id: "faq" },
@@ -52,23 +55,29 @@ export default function Header({ onNavigate, activeSection }: HeaderProps) {
           
           {/* JCI Styled Logo identical to the screenshot */}
           <div
-            id="logo-container"
-            onClick={() => handleLinkClick("hero")}
-            className="flex items-center space-x-2.5 cursor-pointer group select-none"
-          >
-            <div className="flex flex-col items-start leading-none">
-              <span className="text-white font-sans font-extrabold text-2xl tracking-tight">
-                JCI
-              </span>
-              <span className="text-gray-300 font-sans text-[10px] tracking-widest block lowercase -mt-0.5">
-                iarivo
-              </span>
+              id="logo-container"
+              onClick={() => handleLinkClick("hero")}
+              className="flex items-center space-x-2.5 cursor-pointer group select-none"
+            >
+              <div className="flex flex-col items-start leading-none">
+                <img
+                  src="src/assets/images/JCI Iarivo background blue logo.png"
+                  alt="logo"
+                  className="h-20 w-auto"
+                />
+              </div>
+              {/* <div className="flex flex-col items-start leading-none">
+                <span className="text-white font-sans font-extrabold text-2xl tracking-tight">
+                  JCI
+                </span>
+                <span className="text-gray-300 font-sans text-[10px] tracking-widest block lowercase -mt-0.5">
+                  iarivo
+                </span>
+              </div>
+              <div className="h-7 w-7 rounded-lg border-2 border-white/95 flex items-center justify-center p-0.5 transform group-hover:scale-105 transition-transform duration-300">
+                <Shield className="h-4 w-4 text-white fill-white/10" />
+              </div> */}
             </div>
-            {/* JCI Shield icon on the right side of the word */}
-            <div className="h-7 w-7 rounded-lg border-2 border-white/95 flex items-center justify-center p-0.5 transform group-hover:scale-105 transition-transform duration-300">
-              <Shield className="h-4 w-4 text-white fill-white/10" />
-            </div>
-          </div>
 
           {/* Desktop Navigation - adjusted spacing for professional responsiveness across high-count links */}
           <nav id="desktop-nav" className="hidden lg:flex items-center space-x-1 xl:space-x-2">

@@ -105,7 +105,7 @@ export default function Registration() {
             {/* Right Image column inside Card 1 */}
             <div className="w-full md:w-[220px] lg:w-[210px] xl:w-[230px] flex-shrink-0 flex items-center justify-center relative z-10 self-center">
               <img
-                src="/src/assets/images/convention_venue_blog_1782117221629.jpg"
+                src="src/assets/images/WhatsApp Image 2026-06-17 at 08.27.08.jpeg"
                 alt="JCI Convention"
                 referrerPolicy="no-referrer"
                 className="w-full h-48 md:h-full max-h-[220px] md:max-h-[250px] object-cover rounded-2xl shadow-lg border border-white/10 group-hover:scale-[1.02] transition-transform duration-300"
@@ -160,7 +160,7 @@ export default function Registration() {
             {/* Right Image column inside Card 2 */}
             <div className="w-full md:w-[220px] lg:w-[210px] xl:w-[230px] flex-shrink-0 flex items-center justify-center relative z-10 self-center">
               <img
-                src="/src/assets/images/convention_group_selfie_1782117207138.jpg"
+                src="src/assets/images/WhatsApp Image 2026-06-17 at 08.27.09.jpeg"
                 alt="Youth Summit Selfie"
                 referrerPolicy="no-referrer"
                 className="w-full h-48 md:h-full max-h-[220px] md:max-h-[250px] object-cover rounded-2xl shadow-lg border border-gray-100 group-hover:scale-[1.02] transition-transform duration-300"

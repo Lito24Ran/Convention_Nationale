@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "motion/react";
 export default function Program() {
   const [activeCategory, setActiveCategory] = useState<string>("Tous");
 
-  const categories = ["Tous", "Conférence", "Table Ronde", "Atelier"];
+  const categories = ["Tous", "Conférence","Networking", "Pause", "Atelier","AG","Soirée","Cérémonie","Compétition","Panel","Formation"];
 
   // Filter sessions based on category
   const filteredSessions = SESSIONS.filter((session) => {

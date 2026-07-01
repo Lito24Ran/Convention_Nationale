@@ -178,63 +178,383 @@ export const THEMES: Theme[] = [
   }
 ];
 
+export interface ProgramSession {
+  id: string;
+  day: 1 | 2 | 3;
+  time: string;
+  title: string;
+  description: string;
+  location: string;
+  category: string;
+}
+
 export const SESSIONS: ProgramSession[] = [
+  // ===================== JOUR 1 : "Jeunesse et Leadership" =====================
   {
-    id: "s1",
-    time: "08:30 - 09:30",
-    title: "Conférence d'Ouverture : Les enjeux de la Souveraineté Technologique",
-    description: "Allocution de bienvenue et cadrage géopolitique des grands défis industriels et environnementaux mondiaux.",
-    speakerId: "sp1",
-    location: "Auditorium Principal (Ampli A)",
+    id: "j1-s1",
+    day: 1,
+    time: "08h30 - 09h50",
+    title: "Cérémonie d'ouverture officielle",
+    description: "Discours JCI Madagascar x JCI Iarivo, allocutions des partenaires institutionnels, présentation des objectifs du Youth Summit (Dir-Coc 1, PL, Orange, PN, MJS, MIC).",
+    location: "Non précisé",
+    category: "Cérémonie"
+  },
+  {
+    id: "j1-s2",
+    day: 1,
+    time: "10h00 - 10h50",
+    title: "Ouverture des stands & Cocktail de bienvenue",
+    description: "Ouverture des stands, cocktail de bienvenue et networking.",
+    location: "Non précisé",
+    category: "Networking"
+  },
+  {
+    id: "j1-s3",
+    day: 1,
+    time: "11h00 - 12h30",
+    title: "Panel de discussion #1 : \"Accès au financement : réalités, défis et solutions\"",
+    description: "Panel sur invitation. Intervenants : banques, investisseurs, incubateurs.",
+    location: "Non précisé",
+    category: "Panel"
+  },
+  {
+    id: "j1-s4",
+    day: 1,
+    time: "12h35 - 13h30",
+    title: "Pause déjeuner & visite des stands",
+    description: "Interaction avec entreprises, présentation de projets, premiers contacts business.",
+    location: "Non précisé",
+    category: "Pause"
+  },
+  {
+    id: "j1-s5",
+    day: 1,
+    time: "13h30 - 14h50",
+    title: "Conférence plénière #1 : \"Jeunesse malagasy & opportunités économiques : transformer le potentiel en impact\"",
+    description: "Intervenants : leaders du secteur public & privé.",
+    location: "Non précisé",
     category: "Conférence"
   },
   {
-    id: "s2",
-    time: "09:45 - 11:15",
-    title: "Table Ronde : Comment financer les transitions matérielles ?",
-    description: "Un débat sans concession entre banquiers mutualistes, entrepreneurs à impact et régulateurs publics sur le déploiement des investissements verts.",
-    speakerId: "sp2",
-    location: "Salle des Débats (Niveau 1)",
-    category: "Table Ronde"
-  },
-  {
-    id: "s3",
-    time: "11:30 - 13:00",
-    title: "Atelier Pratique : Co-conception de chartes éthiques IA",
-    description: "Session de prototypage rapide pour concevoir un document d'engagement de confiance pour votre propre organisation.",
-    speakerId: "sp5",
-    location: "Espace Créatif B (Rdc)",
+    id: "j1-s6",
+    day: 1,
+    time: "15h00 - 16h30",
+    title: "Ateliers pratiques (sessions parallèles) — Atelier 1 : Leadership & Mindset",
+    description: "Session parallèle à participants limités.",
+    location: "Non précisé",
     category: "Atelier"
   },
   {
-    id: "s4",
-    time: "14:30 - 16:00",
-    title: "Table Ronde : Flexibilité et résilience, les clés du Management Hybride",
-    description: "Comparaison de méthodes managériales adoptées en période de turbulence par des entreprises de tailles et secteurs variés.",
-    speakerId: "sp3",
-    location: "Salle des Débats (Niveau 1)",
-    category: "Table Ronde"
-  },
-  {
-    id: "s5",
-    time: "16:15 - 17:45",
-    title: "Atelier Prospectif : Dessiner l'horizon économique 2030",
-    description: "Méthode des scénarios d'incertitude appliquée à l'adaptation de votre chaîne d'approvisionnement globale.",
-    speakerId: "sp4",
-    location: "Espace Créatif A (Rdc)",
+    id: "j1-s7",
+    day: 1,
+    time: "15h00 - 16h30",
+    title: "Ateliers pratiques (sessions parallèles) — Atelier 2 : Personal branding",
+    description: "Session parallèle à participants limités.",
+    location: "Non précisé",
     category: "Atelier"
   },
   {
-    id: "s6",
-    time: "18:00 - 19:30",
-    title: "Keynote de Clôture & Cocktail Réseau",
-    description: "Synthèse des apprentissages issus des différents ateliers et thèmes, suivie d'une soirée conviviale.",
-    speakerId: "sp6",
-    location: "Cocktail Lounge & Jardins",
+    id: "j1-s8",
+    day: 1,
+    time: "15h00 - 16h30",
+    title: "Ateliers pratiques (sessions parallèles) — Atelier 3 : Marketing digital",
+    description: "Session parallèle à participants limités.",
+    location: "Non précisé",
+    category: "Atelier"
+  },
+  {
+    id: "j1-s9",
+    day: 1,
+    time: "16h40 - 18h15",
+    title: "Préparation Soirée d'ouverture",
+    description: "Préparation de la soirée d'ouverture.",
+    location: "Non précisé",
+    category: "Préparation"
+  },
+  {
+    id: "j1-s10",
+    day: 1,
+    time: "18h30 - 21h30",
+    title: "Soirée d'ouverture (Networking Cocktail & VIP)",
+    description: "Discours courts, networking premium (VIP, partenaires, décideurs), animation DJ + musique.",
+    location: "Non précisé",
+    category: "Soirée"
+  },
+  {
+    id: "j1-s11",
+    day: 1,
+    time: "21h45 - 22h00",
+    title: "Embarquement en car",
+    description: "Embarquement en car.",
+    location: "Non précisé",
+    category: "Transport"
+  },
+  {
+    id: "j1-s12",
+    day: 1,
+    time: "22h00 - 22h45",
+    title: "Trajet Lieu Conférence → Lieu Hébergement",
+    description: "Transport entre le lieu de la conférence et le lieu d'hébergement.",
+    location: "Lieu Conf → Lieu Heberg",
+    category: "Transport"
+  },
+  {
+    id: "j1-s13",
+    day: 1,
+    time: "23h00 - 0h00",
+    title: "Dispatching chambres",
+    description: "Répartition des chambres.",
+    location: "Lieu Heberg",
+    category: "Logistique"
+  },
+
+  // ===================== JOUR 2 : "Entrepreneuriat" =====================
+  {
+    id: "j2-s1",
+    day: 2,
+    time: "6h00 - 6h30",
+    title: "Petit déjeuner",
+    description: "Petit déjeuner.",
+    location: "Lieu Heberg",
+    category: "Pause"
+  },
+  {
+    id: "j2-s2",
+    day: 2,
+    time: "6h30 - 7h00",
+    title: "Préparation",
+    description: "Préparation.",
+    location: "Lieu Heberg",
+    category: "Préparation"
+  },
+  {
+    id: "j2-s3",
+    day: 2,
+    time: "7h15 - 8h45",
+    title: "Trajet Lieu Hébergement → Lieu Conférence",
+    description: "Transport entre le lieu d'hébergement et le lieu de la conférence.",
+    location: "Lieu Heberg → Lieu Conf",
+    category: "Transport"
+  },
+  {
+    id: "j2-s4",
+    day: 2,
+    time: "8h50 - 9h00",
+    title: "Dépôt de tenue dans la vestiaire",
+    description: "Dépôt de tenue dans la vestiaire.",
+    location: "Vestiaire",
+    category: "Logistique"
+  },
+  {
+    id: "j2-s5",
+    day: 2,
+    time: "09h00 - 10h50",
+    title: "Formation Certifiante JCI",
+    description: "Formation certifiante JCI.",
+    location: "Non précisé",
+    category: "Formation"
+  },
+  {
+    id: "j2-s6",
+    day: 2,
+    time: "11h00 - 12h15",
+    title: "Ateliers pratiques (session parallèle) — Atelier 4 : Pitcher son projet efficacement",
+    description: "Session parallèle.",
+    location: "Non précisé",
+    category: "Atelier"
+  },
+  {
+    id: "j2-s7",
+    day: 2,
+    time: "11h00 - 12h15",
+    title: "Ateliers pratiques (session parallèle) — Atelier 5 : Trouver des financements",
+    description: "Session parallèle.",
+    location: "Non précisé",
+    category: "Atelier"
+  },
+  {
+    id: "j2-s8",
+    day: 2,
+    time: "11h00 - 12h15",
+    title: "Ateliers pratiques (session parallèle) — Atelier 6 : Construire un réseau stratégique",
+    description: "Session parallèle.",
+    location: "Non précisé",
+    category: "Atelier"
+  },
+  {
+    id: "j2-s9",
+    day: 2,
+    time: "12h15 - 13h00",
+    title: "Pause déjeuner & visite des stands",
+    description: "Interaction avec entreprises, présentation de projets, premiers contacts business.",
+    location: "Non précisé",
+    category: "Pause"
+  },
+  {
+    id: "j2-s10",
+    day: 2,
+    time: "13h15 - 14h50",
+    title: "Success stories",
+    description: "Témoignages d'entrepreneurs malagasy, cas concrets de réussite, secteur public & privé.",
+    location: "Non précisé",
     category: "Conférence"
+  },
+  {
+    id: "j2-s11",
+    day: 2,
+    time: "15h00 - 16h20",
+    title: "Panel & Pause-café",
+    description: "Panel suivi d'une pause-café.",
+    location: "Non précisé",
+    category: "Panel"
+  },
+  {
+    id: "j2-s12",
+    day: 2,
+    time: "16h30 - 18h00",
+    title: "FINAL AOD",
+    description: "Final AOD.",
+    location: "Non précisé",
+    category: "Compétition"
+  },
+  {
+    id: "j2-s13",
+    day: 2,
+    time: "18h15 - 18h45",
+    title: "Préparation Clôture Officielle Youth Summit 2026",
+    description: "Préparation de la clôture officielle.",
+    location: "Non précisé",
+    category: "Préparation"
+  },
+  {
+    id: "j2-s14",
+    day: 2,
+    time: "19h00 - 21h45",
+    title: "Clôture Officielle Youth Summit 2026",
+    description: "Spectacle culturel, défilé, concert d'artistes, partage de gâteau pour les 15 ans de JCI Iarivo. Location de tenue chez Bogasy.",
+    location: "Non précisé",
+    category: "Cérémonie"
+  },
+  {
+    id: "j2-s15",
+    day: 2,
+    time: "22h00 - 22h15",
+    title: "Embarquement en car",
+    description: "Embarquement en car.",
+    location: "Non précisé",
+    category: "Transport"
+  },
+  {
+    id: "j2-s16",
+    day: 2,
+    time: "22h15 - 23h00",
+    title: "Trajet Lieu Conférence → Lieu Hébergement",
+    description: "Transport entre le lieu de la conférence et le lieu d'hébergement.",
+    location: "Lieu Conf → Lieu Heberg",
+    category: "Transport"
+  },
+  {
+    id: "j2-s17",
+    day: 2,
+    time: "23h00 - 2h00",
+    title: "After",
+    description: "Animation DJ, boisson / snack.",
+    location: "Lieu Heberg",
+    category: "Soirée"
+  },
+
+  // ===================== JOUR 3 : "AG" =====================
+  {
+    id: "j3-s1",
+    day: 3,
+    time: "7h00 - 7h30",
+    title: "Petit déjeuner",
+    description: "Petit déjeuner.",
+    location: "Non précisé",
+    category: "Pause"
+  },
+  {
+    id: "j3-s2",
+    day: 3,
+    time: "7h30 - 8h00",
+    title: "Préparation AG",
+    description: "Préparation de l'Assemblée Générale.",
+    location: "Non précisé",
+    category: "Préparation"
+  },
+  {
+    id: "j3-s3",
+    day: 3,
+    time: "8h00 - 10h00",
+    title: "AG1",
+    description: "Première session de l'Assemblée Générale.",
+    location: "Non précisé",
+    category: "AG"
+  },
+  {
+    id: "j3-s4",
+    day: 3,
+    time: "10h10 - 10h25",
+    title: "Pause",
+    description: "Pause.",
+    location: "Non précisé",
+    category: "Pause"
+  },
+  {
+    id: "j3-s5",
+    day: 3,
+    time: "10h30 - 12h30",
+    title: "AG2",
+    description: "Deuxième session de l'Assemblée Générale.",
+    location: "Non précisé",
+    category: "AG"
+  },
+  {
+    id: "j3-s6",
+    day: 3,
+    time: "12h45 - 13h45",
+    title: "Déjeuner",
+    description: "Déjeuner.",
+    location: "Non précisé",
+    category: "Pause"
+  },
+  {
+    id: "j3-s7",
+    day: 3,
+    time: "14h00 - 17h00",
+    title: "Réunion des officiers BN-BL 2027 / Quartier libre",
+    description: "Réunion des officiers BN-BL 2027, ou quartier libre selon les participants.",
+    location: "Non précisé",
+    category: "Réunion"
+  },
+  {
+    id: "j3-s8",
+    day: 3,
+    time: "17h15 - 17h50",
+    title: "Préparation soirée",
+    description: "Préparation de la soirée de clôture.",
+    location: "Non précisé",
+    category: "Préparation"
+  },
+  {
+    id: "j3-s9",
+    day: 3,
+    time: "18h00 - 21h00",
+    title: "Soirée de clôture",
+    description: "Remise des awards.",
+    location: "Non précisé",
+    category: "Soirée"
+  },
+  {
+    id: "j3-s10",
+    day: 3,
+    time: "21h15 - 2h00",
+    title: "After",
+    description: "Animation DJ, boisson / snack.",
+    location: "Non précisé",
+    category: "Soirée"
   }
 ];
-
 export const FAQS: FAQItem[] = [
   {
     id: "f1",
