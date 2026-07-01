@@ -82,11 +82,11 @@ export default function App() {
         <Program />
         <Speakers />
         <Registration />
-        <WhoWeAre />
-        <JCIMadagascar />
-        <Partners />
-        <Blog />
-        <FAQ />
+        {/* <WhoWeAre /> */}
+        {/* <JCIMadagascar /> */}
+        {/* <Partners /> */}
+        {/* <Blog /> */}
+        {/* <FAQ /> */}
       </main>
 
       {/* Permanent footer */}
