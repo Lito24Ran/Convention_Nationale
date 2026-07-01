@@ -61,7 +61,7 @@ export default function Header({ onNavigate, activeSection }: HeaderProps) {
             >
               <div className="flex flex-col items-start leading-none">
                 <img
-                  src="src/assets/images/JCI Iarivo background blue logo.png"
+                  src="src/assets/images/JCI_Logo.png"
                   alt="logo"
                   className="h-20 w-auto"
                 />
