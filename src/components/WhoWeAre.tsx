@@ -1,5 +1,9 @@
 import React from "react";
 import { motion } from "motion/react";
+import ImageGive from "/src/assets/images/WhatsApp Image 2026-06-17 at 08.32.42.jpeg";
+import shootImage from "/src/assets/images/WhatsApp Image 2026-06-17 at 08.32.46.jpeg";
+import presentation from "/src/assets/images/Presentation.jpeg"
+import image from "/src/assets/images/CN_image.jpeg"
 
 export default function WhoWeAre() {
   const imgPresentation = "/src/assets/images/jci_presentation_1782134191329.jpg";
@@ -80,7 +84,7 @@ export default function WhoWeAre() {
                 className="aspect-[4/3] rounded-[16px] sm:rounded-[24px] overflow-hidden shadow-lg border border-white/10 relative group"
               >
                 <img 
-                  src={imgPresentation} 
+                  src={ImageGive} 
                   alt="JCI Presentation Session" 
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   referrerPolicy="no-referrer"
@@ -97,7 +101,7 @@ export default function WhoWeAre() {
                 className="aspect-[4/3] rounded-[16px] sm:rounded-[24px] overflow-hidden shadow-lg border border-white/10 relative group"
               >
                 <img 
-                  src={imgMeeting} 
+                  src={presentation} 
                   alt="JCI Leaders meeting" 
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   referrerPolicy="no-referrer"
@@ -114,7 +118,7 @@ export default function WhoWeAre() {
                 className="aspect-[4/3] rounded-[16px] sm:rounded-[24px] overflow-hidden shadow-lg border border-white/10 relative group"
               >
                 <img 
-                  src={imgDinner} 
+                  src={image} 
                   alt="JCI Ceremony and dinner" 
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   referrerPolicy="no-referrer"
@@ -131,7 +135,7 @@ export default function WhoWeAre() {
                 className="aspect-[4/3] rounded-[16px] sm:rounded-[24px] overflow-hidden shadow-lg border border-white/10 relative group"
               >
                 <img 
-                  src={imgPinning} 
+                  src={shootImage} 
                   alt="JCI Badge pinning ceremony" 
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   referrerPolicy="no-referrer"

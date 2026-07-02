@@ -43,7 +43,7 @@ export default function JCIMadagascar() {
 
               {/* Text paragraph with the unique inline stylized underlines to replicate the visual mockup perfectly */}
               <div className="space-y-6 text-lg sm:text-xl font-sans text-gray-800 font-medium leading-relaxed md:leading-loose">
-                <p className="decoration-[#00A6DF] underline underline-offset-[12px] decoration-1 decoration-dashed md:decoration-solid">
+                <p className="decoration-1 decoration-dashed md:decoration-solid">
                   JCI Madagascar, en tant que chambre nationale, fédère les chambres locales malgaches et organise chaque année sa Convention Nationale. JCI Iarivo, chambre locale basée à Antananarivo, est le comité organisateur officiel de l&apos;édition 2026.
                 </p>
               </div>

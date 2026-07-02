@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Menu, X, Calendar, Shield } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { label } from "motion/react-client";
+import logo from "../assets/images/JCI_Logo.png"
 
 interface HeaderProps {
   onNavigate: (sectionId: string) => void;
@@ -61,7 +62,7 @@ export default function Header({ onNavigate, activeSection }: HeaderProps) {
             >
               <div className="flex flex-col items-start leading-none">
                 <img
-                  src="src/assets/images/JCI_Logo.png"
+                  src={logo}
                   alt="logo"
                   className="h-20 w-auto"
                 />

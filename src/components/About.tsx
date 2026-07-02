@@ -1,4 +1,5 @@
 import { Calendar, Shield, Users, Award } from "lucide-react";
+import Imge from "../assets/images/WhatsApp Image 2026-06-17 at 08.32.46.jpeg"
 
 export default function About() {
   const highlights = [
@@ -77,7 +78,7 @@ décision stratégique.
             
             <div className="relative w-full max-w-md aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border border-gray-100">
               <img
-                src="src/assets/images/WhatsApp Image 2026-06-17 at 08.32.46.jpeg"
+                src={Imge}
                 alt="Jeunes professionnels souriants et engagés"
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"

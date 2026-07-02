@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import { Facebook, Linkedin, Youtube, X } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
+import speakerImg from "../assets/images/WhatsApp Image 2026-06-17 at 08.32.43.jpeg";
+import youthImg from "../assets/images/Wpp_image.jpeg";
+import heroImg from "/src/assets/images/jci_group_dinner_1782134222052.jpg";
+import jciImg from "../assets/images/jci_presentation_1782134191329.jpg";
+import Ys_image from "../assets/images/Wpp_image.jpeg"
 
 // Inline stylesheet for seamless, GPU-accelerated infinite horizontal marquees
 const marqueeGlobalCSS = `
@@ -94,25 +99,24 @@ const SpeakerCard = ({ s, onClick }: SpeakerCardProps) => (
 export default function Speakers() {
   const [selectedSpeaker, setSelectedSpeaker] = useState<SpeakerMock | null>(null);
 
-  const speakerImage = "/src/assets/images/hero_speaker_portrait_1782117191963.jpg";
-  const youthSummitImage = "/src/assets/images/jci_presentation_1782134191329.jpg";
+  const speakerImage = heroImg;
+  const youthSummitImage = jciImg;
 
   // Data for Intervenants (3 cards base)
-  const intervenants: SpeakerMock[] = [
-    { name: "Nom et Prenom", role: "Expert principal", company: "JCI Madagascar", image: "src/assets/images/WhatsApp Image 2026-06-17 at 08.32.43.jpeg" },
-    { name: "Nom et Prenom", role: "Expert principal", company: "JCI Madagascar", image: "src/assets/images/WhatsApp Image 2026-06-17 at 08.32.43.jpeg" },
-    { name: "Nom et Prenom", role: "Expert principal", company: "JCI Madagascar", image: "src/assets/images/WhatsApp Image 2026-06-17 at 08.32.43.jpeg" }
-  ];
+ const intervenants: SpeakerMock[] = [
+  { name: "Nom et Prenom", role: "Expert principal", company: "JCI Madagascar", image: speakerImg },
+  { name: "Nom et Prenom", role: "Expert principal", company: "JCI Madagascar", image: speakerImg },
+  { name: "Nom et Prenom", role: "Expert principal", company: "JCI Madagascar", image: speakerImg },
+];
 
-  // Data for Conferenciers (6 cards base)
-  const conferenciers: SpeakerMock[] = [
-    { name: "Sahodra", role: "Conférencier invité", company: "Leadership Summit", image: "src/assets/images/WhatsApp Image 2026-06-17 at 08.32.43.jpeg" },
-    { name: "Nom et Prenom", role: "Conférencier invité", company: "Leadership Summit", image: "src/assets/images/WhatsApp Image 2026-06-17 at 08.32.43.jpeg" },
-    { name: "Nom et Prenom", role: "Conférencier invité", company: "Leadership Summit", image: "src/assets/images/WhatsApp Image 2026-06-17 at 08.32.43.jpeg" },
-    { name: "Nom et Prenom", role: "Conférencier invité", company: "Leadership Summit", image: "src/assets/images/WhatsApp Image 2026-06-17 at 08.32.43.jpeg" },
-    { name: "Nom et Prenom", role: "Conférencier invité", company: "Leadership Summit", image: "src/assets/images/WhatsApp Image 2026-06-17 at 08.32.43.jpeg" },
-    { name: "Nom et Prenom", role: "Conférencier invité", company: "Leadership Summit", image: "src/assets/images/WhatsApp Image 2026-06-17 at 08.32.43.jpeg" }
-  ];
+const conferenciers: SpeakerMock[] = [
+  { name: "Sahodra",       role: "Conférencier invité", company: "Leadership Summit", image: speakerImg },
+  { name: "Nom et Prenom", role: "Conférencier invité", company: "Leadership Summit", image: speakerImg },
+  { name: "Nom et Prenom", role: "Conférencier invité", company: "Leadership Summit", image: speakerImg },
+  { name: "Nom et Prenom", role: "Conférencier invité", company: "Leadership Summit", image: speakerImg },
+  { name: "Nom et Prenom", role: "Conférencier invité", company: "Leadership Summit", image: speakerImg },
+  { name: "Nom et Prenom", role: "Conférencier invité", company: "Leadership Summit", image: speakerImg },
+];
 
   // Cloning cards to ensure seamless, jitter-free loop wrapping
   const clonedIntervenants = [...intervenants, ...intervenants, ...intervenants, ...intervenants]; // 12 elements base
@@ -187,7 +191,7 @@ export default function Speakers() {
                 className="w-full max-w-[450px] aspect-[4/3] rounded-[32px] overflow-hidden shadow-2xl border border-gray-100 relative group"
               >
                 <img
-                  src="src/assets/images/Wpp_image.jpeg"
+                  src={Ys_image}
                   alt="Youth Summit female speaker"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   referrerPolicy="no-referrer"
