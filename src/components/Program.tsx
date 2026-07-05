@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Clock, MapPin, Filter, ChevronDown, Calendar } from "lucide-react";
 import { SESSIONS, SPEAKERS } from "../types";
 import { motion, AnimatePresence } from "motion/react";
+import ImageJCIpro from "../assets/images/Presentation.jpeg"
 
 export default function Program() {
   const [activeDay, setActiveDay] = useState<number>(1);
@@ -79,7 +80,7 @@ export default function Program() {
      {/* Photo décorative en haut à droite avec fondu sur tous les bords */}
       <div className="absolute top-0 right-0 w-[55%] sm:w-[60%] lg:w-[65%] h-[380px] sm:h-[460px] lg:h-[520px] pointer-events-none select-none">
         <img
-          src="/src/assets/images/Conferene_JCI.png"
+          src={ImageJCIpro}
           alt=""
           className="w-full h-full object-cover"
           style={{
