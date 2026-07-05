@@ -31,7 +31,6 @@ export default function Header({ onNavigate, activeSection }: HeaderProps) {
     { label: "A propos", id: "about" },
     { label: "programmes", id: "program" },
     {label: "Intervenants", id: "intervenants"},
-    {label: "Youth Summit", id: "YS"},
     { label: "Partenaires", id: "partners" },
     { label: "Actualités", id: "blog" },
     { label: "FAQ", id: "faq" },
@@ -87,7 +86,7 @@ export default function Header({ onNavigate, activeSection }: HeaderProps) {
               const isActive = 
                 activeSection === item.id || 
                 (item.id === "about" && (activeSection === "who-we-are" || activeSection === "jci-madagascar")) ||
-                (item.id === "program" && (activeSection === "intervenants" || activeSection === "youth-summit-feature" || activeSection === "conferenciers"));
+                (item.id === "program" && (activeSection === "intervenants" || activeSection === "conferenciers"));
                 
               return (
                 <button
