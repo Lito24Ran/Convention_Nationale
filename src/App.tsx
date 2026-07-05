@@ -85,7 +85,7 @@ export default function App() {
         <WhoWeAre />
         <JCIMadagascar /> 
         <Partners /> 
-        {/* <Blog /> */}
+        <Blog />
         <FAQ />
       </main>
 
