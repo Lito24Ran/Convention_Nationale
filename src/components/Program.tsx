@@ -8,14 +8,14 @@ export default function Program() {
   const [activeCategory, setActiveCategory] = useState<string>("Tous");
   const [expandedIds, setExpandedIds] = useState<Record<string, boolean>>({});
 
-  const categories = ["Tous", "Conférence", "Table Ronde", "Atelier"];
+  const categories = ["Tous", "Conférence","Cérémonie","Networking","Soirée", "Atelier","Panel"];
 
   // Dynamically balance sessions into Day 1, Day 2 or Day 3 to handle content scale safely
   const getSessionDay = (id: string) => {
     const index = SESSIONS.findIndex((s) => s.id === id);
-    if (index < 2) return 1;
-    if (index < 4) return 2;
-    return 3;
+    if (index < 13) return 1;
+    if (index < 27) return 2;
+    return 3; 
   };
 
   // Filter based on both Day and Format Categories

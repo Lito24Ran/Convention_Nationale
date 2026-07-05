@@ -280,24 +280,24 @@ export const SESSIONS: ProgramSession[] = [
     location: "Non précisé",
     category: "Soirée"
   },
-  {
-    id: "j1-s11",
-    day: 1,
-    time: "21h45 - 22h00",
-    title: "Embarquement en car",
-    description: "Embarquement en car.",
-    location: "Non précisé",
-    category: "Transport"
-  },
-  {
-    id: "j1-s12",
-    day: 1,
-    time: "22h00 - 22h45",
-    title: "Trajet Lieu Conférence → Lieu Hébergement",
-    description: "Transport entre le lieu de la conférence et le lieu d'hébergement.",
-    location: "Lieu Conf → Lieu Heberg",
-    category: "Transport"
-  },
+  // {
+  //   id: "j1-s11",
+  //   day: 1,
+  //   time: "21h45 - 22h00",
+  //   title: "Embarquement en car",
+  //   description: "Embarquement en car.",
+  //   location: "Non précisé",
+  //   category: "Transport"
+  // },
+  // {
+  //   id: "j1-s12",
+  //   day: 1,
+  //   time: "22h00 - 22h45",
+  //   title: "Trajet Lieu Conférence → Lieu Hébergement",
+  //   description: "Transport entre le lieu de la conférence et le lieu d'hébergement.",
+  //   location: "Lieu Conf → Lieu Heberg",
+  //   category: "Transport"
+  // },
   {
     id: "j1-s13",
     day: 1,
@@ -435,33 +435,33 @@ export const SESSIONS: ProgramSession[] = [
     location: "Non précisé",
     category: "Cérémonie"
   },
-  {
-    id: "j2-s15",
-    day: 2,
-    time: "22h00 - 22h15",
-    title: "Embarquement en car",
-    description: "Embarquement en car.",
-    location: "Non précisé",
-    category: "Transport"
-  },
-  {
-    id: "j2-s16",
-    day: 2,
-    time: "22h15 - 23h00",
-    title: "Trajet Lieu Conférence → Lieu Hébergement",
-    description: "Transport entre le lieu de la conférence et le lieu d'hébergement.",
-    location: "Lieu Conf → Lieu Heberg",
-    category: "Transport"
-  },
-  {
-    id: "j2-s17",
-    day: 2,
-    time: "23h00 - 2h00",
-    title: "After",
-    description: "Animation DJ, boisson / snack.",
-    location: "Lieu Heberg",
-    category: "Soirée"
-  },
+  // {
+  //   id: "j2-s15",
+  //   day: 2,
+  //   time: "22h00 - 22h15",
+  //   title: "Embarquement en car",
+  //   description: "Embarquement en car.",
+  //   location: "Non précisé",
+  //   category: "Transport"
+  // },
+  // {
+  //   id: "j2-s16",
+  //   day: 2,
+  //   time: "22h15 - 23h00",
+  //   title: "Trajet Lieu Conférence → Lieu Hébergement",
+  //   description: "Transport entre le lieu de la conférence et le lieu d'hébergement.",
+  //   location: "Lieu Conf → Lieu Heberg",
+  //   category: "Transport"
+  // },
+  // {
+  //   id: "j2-s17",
+  //   day: 2,
+  //   time: "23h00 - 2h00",
+  //   title: "After",
+  //   description: "Animation DJ, boisson / snack.",
+  //   location: "Lieu Heberg",
+  //   category: "Soirée"
+  // },
 
   // ===================== JOUR 3 : "AG" =====================
   {
@@ -509,15 +509,15 @@ export const SESSIONS: ProgramSession[] = [
     location: "Non précisé",
     category: "AG"
   },
-  {
-    id: "j3-s6",
-    day: 3,
-    time: "12h45 - 13h45",
-    title: "Déjeuner",
-    description: "Déjeuner.",
-    location: "Non précisé",
-    category: "Pause"
-  },
+  // {
+  //   id: "j3-s6",
+  //   day: 3,
+  //   time: "12h45 - 13h45",
+  //   title: "Déjeuner",
+  //   description: "Déjeuner.",
+  //   location: "Non précisé",
+  //   category: "Pause"
+  // },
   {
     id: "j3-s7",
     day: 3,
@@ -545,15 +545,15 @@ export const SESSIONS: ProgramSession[] = [
     location: "Non précisé",
     category: "Soirée"
   },
-  {
-    id: "j3-s10",
-    day: 3,
-    time: "21h15 - 2h00",
-    title: "After",
-    description: "Animation DJ, boisson / snack.",
-    location: "Non précisé",
-    category: "Soirée"
-  }
+  // {
+  //   id: "j3-s10",
+  //   day: 3,
+  //   time: "21h15 - 2h00",
+  //   title: "After",
+  //   description: "Animation DJ, boisson / snack.",
+  //   location: "Non précisé",
+  //   category: "Soirée"
+  // }
 ];
 export const FAQS: FAQItem[] = [
   {

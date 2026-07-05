@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Shield, Users, ArrowRight, X, Check, Mail, Phone, User, Award } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
+import ImageRegistration from "../assets/images/WhatsApp Image 2026-06-17 at 08.27.09.jpeg"
+import ImageRegisration2 from "../assets/images/CoventionN.jpeg"
 
 type ProgramType = "convention" | "youth";
 type ModalStep = "pricing" | "form" | "success";
@@ -167,7 +169,7 @@ export default function Registration() {
             {/* Right Image column inside Card 1 */}
             <div className="w-full md:w-[220px] lg:w-[210px] xl:w-[230px] flex-shrink-0 flex items-center justify-center relative z-10 self-center">
               <img
-                src="src/assets/images/WhatsApp Image 2026-06-17 at 08.27.08.jpeg"
+                src={ImageRegisration2}
                 alt="JCI Convention"
                 referrerPolicy="no-referrer"
                 className="w-full h-48 md:h-full max-h-[220px] md:max-h-[250px] object-cover rounded-2xl shadow-lg border border-white/10 group-hover:scale-[1.02] transition-transform duration-300"
@@ -222,7 +224,7 @@ export default function Registration() {
             {/* Right Image column inside Card 2 */}
             <div className="w-full md:w-[220px] lg:w-[210px] xl:w-[230px] flex-shrink-0 flex items-center justify-center relative z-10 self-center">
               <img
-                src="src/assets/images/WhatsApp Image 2026-06-17 at 08.27.09.jpeg"
+                src={ImageRegistration}
                 alt="Youth Summit Selfie"
                 referrerPolicy="no-referrer"
                 className="w-full h-48 md:h-full max-h-[220px] md:max-h-[250px] object-cover rounded-2xl shadow-lg border border-gray-100 group-hover:scale-[1.02] transition-transform duration-300"
