@@ -46,7 +46,7 @@ export default function Footer() {
             <ul className="space-y-3 font-sans text-xs text-gray-300">
               <li className="flex items-center space-x-2.5">
                 <Calendar className="h-4 w-4 text-amber-500" />
-                <span>22 et 23 Juin 2026, de 08h30 à 19h30</span>
+                <span>01-03 Octobre 2026, de 08h30 à 19h30</span>
               </li>
               <li className="flex items-center space-x-2.5">
                 <MapPin className="h-4 w-4 text-amber-500" />
