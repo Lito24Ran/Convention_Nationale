@@ -16,6 +16,7 @@ import JCIMadagascar from "./components/JCIMadagascar";
 import Blog from "./components/Blog";
 import FAQ from "./components/FAQ";
 import Footer from "./components/Footer";
+import Formateurs from "./components/Formateur";
 
 export default function App() {
   const [activeSection, setActiveSection] = useState("hero");
@@ -80,7 +81,8 @@ export default function App() {
         />
         <About />
         <Program />
-        <Speakers />
+        {/* <Speakers /> */}
+         <Formateurs />
         <Registration />
         <WhoWeAre />
         <JCIMadagascar /> 

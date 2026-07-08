@@ -16,7 +16,7 @@ export default function Footer() {
           <div className="md:col-span-4 space-y-4 text-left">
             <div className="flex items-center space-x-2">
               <div className="h-9 w-9 rounded-lg bg-amber-400 flex items-center justify-center font-bold text-[#0F1026] text-base">
-                LCN
+                CN
               </div>
               <span className="text-white font-sans font-bold text-lg tracking-tight uppercase">
                 Convention Nationale
@@ -26,13 +26,13 @@ export default function Footer() {
               L&apos;événement national de référence pour tous les professionnels en quête d&apos;innovation, de transition verte et de gouvernance agile.
             </p>
             <div className="flex space-x-3 pt-2">
-              <a href="#" className="h-8 w-8 rounded-lg bg-white/5 hover:bg-white/10 text-gray-400 hover:text-amber-400 border border-white/5 flex items-center justify-center transition-colors">
+              {/* <a href="#" className="h-8 w-8 rounded-lg bg-white/5 hover:bg-white/10 text-gray-400 hover:text-amber-400 border border-white/5 flex items-center justify-center transition-colors">
                 <Twitter className="h-4 w-4" />
-              </a>
-              <a href="#" className="h-8 w-8 rounded-lg bg-white/5 hover:bg-white/10 text-gray-400 hover:text-amber-400 border border-white/5 flex items-center justify-center transition-colors">
+              </a> */}
+              <a href="linkedin.com/company/cn-jci-madagascar" className="h-8 w-8 rounded-lg bg-white/5 hover:bg-white/10 text-gray-400 hover:text-amber-400 border border-white/5 flex items-center justify-center transition-colors">
                 <Linkedin className="h-4 w-4" />
               </a>
-              <a href="#" className="h-8 w-8 rounded-lg bg-white/5 hover:bg-white/10 text-gray-400 hover:text-amber-400 border border-white/5 flex items-center justify-center transition-colors">
+              <a href="https://www.facebook.com/CNJCIMadagascar" className="h-8 w-8 rounded-lg bg-white/5 hover:bg-white/10 text-gray-400 hover:text-amber-400 border border-white/5 flex items-center justify-center transition-colors">
                 <Facebook className="h-4 w-4" />
               </a>
             </div>
@@ -50,11 +50,11 @@ export default function Footer() {
               </li>
               <li className="flex items-center space-x-2.5">
                 <MapPin className="h-4 w-4 text-amber-500" />
-                <span>Palais des Congrès, Avenue des Champs-Élysées, Paris</span>
+                <span>Antananarivo, </span>
               </li>
               <li className="flex items-center space-x-2.5">
                 <Mail className="h-4 w-4 text-amber-500" />
-                <span>contact@convention-nationale.fr</span>
+                <span>Contact: jciiarivo@gmail.com</span>
               </li>
             </ul>
           </div>
