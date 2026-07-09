@@ -556,29 +556,179 @@ export const SESSIONS: ProgramSession[] = [
   // }
 ];
 export const FAQS: FAQItem[] = [
+  // A. GENERAL / PRESENTATION
   {
-    id: "f1",
-    question: "Comment puis-je retirer mon badge physique ?",
-    answer: "Les badges d'accréditation sont disponibles à l'accueil principal du centre de congrès dès la veille de l'événement de 16h00 à 20h00, ou directement le matin même de la Convention à partir de 07h30 sur présentation de votre confirmation d'inscription QR code et d'une pièce d'identité.",
-    category: "Accès"
+    id: "g1",
+    question: "Qu'est-ce que la Convention Nationale JCI Madagascar 2026 ?",
+    answer: "L'événement institutionnel annuel de la JCI Madagascar. Elle rassemble les 14 Organisations Locales du pays (9 régions, +380 membres actifs) sur 3 jours de conférences, ateliers, networking et moments institutionnels, avec un accent 2026 sur l'entrepreneuriat. Édition 2026 organisée par la JCI Iarivo.",
+    category: "Général"
   },
   {
-    id: "f2",
-    question: "Les sessions sont-elles accessibles en streaming ou en replay ?",
-    answer: "Oui, la formule Pass Plus inclut un accès intégral en direct haute définition pour toutes les conférences organisées dans l'Auditorium Principal, ainsi que des replays disponibles pendant 12 mois pour l'intégralité des conférences et tables rondes (hors ateliers purement physiques).",
-    category: "Format"
+    id: "g2",
+    question: "Qu'est-ce que le Youth Summit 2026 ?",
+    answer: "Le volet grand public de la Convention Nationale, ouvert au-delà des membres JCI. Il se déroule sur les 2 premiers jours (1er et 2 octobre) et regroupe conférences, ateliers pratiques, success stories et animations pour la jeunesse malagasy autour du leadership et de l'entrepreneuriat.",
+    category: "Général"
   },
   {
-    id: "f3",
-    question: "Comment s'inscrire pour les déjeuners et dîners d'affaires ?",
-    answer: "Le cocktail d'accueil et les buffets du midi sont entièrement compris dans tous nos forfaits. Si vous souhaitez participer au dîner de gala des partenaires du jeudi soir, une option de surclassement spécifique est disponible lors du processus d'achat.",
-    category: "Restauration"
+    id: "g3",
+    question: "Quelles sont les dates de l'événement ?",
+    answer: "Du jeudi 1er au samedi 3 octobre 2026. Jour 1 (Jeunesse & Leadership) et Jour 2 (Entrepreneuriat) accueillent le Youth Summit ; le Jour 3 est réservé à l'Assemblée Générale de la JCI Madagascar (membres).",
+    category: "Général"
   },
   {
-    id: "f4",
-    question: "Puis-je modifier mes choix d'ateliers après validation ?",
-    answer: "Absolument ! Vous pouvez adapter votre parcours d'ateliers thématiques directement depuis votre espace personnel d'inscription en ligne jusqu'à 48 heures avant le début de l'événement, sous réserve des places encore de libre dans les salles.",
-    category: "Parcours"
+    id: "g4",
+    question: "Où se déroule l'événement ?",
+    answer: "À Antananarivo. Lieu exact en cours de confirmation officielle — annonce dès confirmation.",
+    category: "Général"
+  },
+  {
+    id: "g5",
+    question: "Qui peut participer ?",
+    answer: "La Convention Nationale (inscriptions payantes) est ouverte aux membres JCI de toutes les Organisations Locales. Le Youth Summit (Jour 1 et 2) est ouvert au grand public : jeunes professionnels, entrepreneurs, étudiants, secteur privé, ONG.",
+    category: "Général"
+  },
+  {
+    id: "g6",
+    question: "Qui organise la Convention Nationale 2026 ?",
+    answer: "La JCI Iarivo (Organisation Locale d'Antananarivo, fondée en 2011), sous l'égide de la JCI Madagascar (organisation nationale). La JCI (Junior Chamber International) est une organisation mondiale de jeunes leaders de 18 à 40 ans, présente dans plus de 100 pays.",
+    category: "Général"
+  },
+  // B. INSCRIPTIONS & TARIFS
+  {
+    id: "i1",
+    question: "Comment s'inscrire à la Convention Nationale ?",
+    answer: "Via le formulaire d'inscription en ligne (Tally), dont le lien sera communiqué sur la page Facebook et Linkedin JCI Iarivo / Convention Nationale JCI Madagascar et sur ce site à partir du 13 juillet 2026 (ouverture Early Bird).",
+    category: "Inscriptions"
+  },
+  {
+    id: "i2",
+    question: "Quel est le calendrier des inscriptions ?",
+    answer: "• Early Bird : 13 juillet → 2 août 2026\n• Tarif Standard : 3 août → 23 août 2026\n• Last Chance : 24 août → 13 septembre 2026\n• Fermeture des inscriptions : 13 septembre 2026",
+    category: "Inscriptions"
+  },
+  {
+    id: "i3",
+    question: "Quels sont les tarifs d'inscription ?",
+    answer: "• Pack Complet (avec hébergement) :\n  - Early Bird : 500 000 Ar\n  - Standard : 550 000 Ar\n  - Last Chance : 575 000 Ar\n\n• Pack Sans Hébergement :\n  - Early Bird : 350 000 Ar\n  - Standard : 375 000 Ar\n  - Last Chance : 400 000 Ar",
+    category: "Inscriptions"
+  },
+  {
+    id: "i4",
+    question: "Quelle est la différence entre le Pack Complet et le Pack Sans Hébergement ?",
+    answer: "Les deux incluent : 3 déjeuners, 3 dîners de soirée (ouverture, soirée folklorique, clôture), 5 pauses café, l'accès au programme complet des 3 jours et le kit participant. Le Pack Complet ajoute 3 nuits d'hébergement (1, 2 et 3 octobre) et 2 petits-déjeuners. Le Pack Sans Hébergement est limité à 30 places (fermeture automatique du choix une fois le quota atteint, sans dérogation).",
+    category: "Inscriptions"
+  },
+  {
+    id: "i5",
+    question: "Existe-t-il un tarif VIP / Premium ?",
+    answer: "Oui, un Pack Premium/VIP à 850 000 Ar (5 places maximum, deadline 2 août 2026), réservé aux partenaires sponsors, invités officiels et représentants institutionnels — non applicable aux membres JCI actifs. Il inclut le Pack Complet, une chambre individuelle non partagée, une priorité de placement en salle plénière, une mention officielle dans le programme et l'accès au networking VIP.",
+    category: "Inscriptions"
+  },
+  {
+    id: "i6",
+    question: "Comment payer mon inscription ?",
+    answer: "Par Orange Money, au tarif confirmé selon la période d'inscription. La référence de paiement est ensuite à indiquer dans le formulaire d'inscription.",
+    category: "Inscriptions"
+  },
+  {
+    id: "i7",
+    question: "Puis-je annuler mon inscription ou me faire rembourser ?",
+    answer: "La politique de remboursement/annulation n'est pas encore définie — elle sera précisée par la Commission Finance avant l'ouverture des inscriptions le 13 juillet 2026.",
+    category: "Inscriptions"
+  },
+  // C. HEBERGEMENT
+  {
+    id: "h1",
+    question: "Où seront hébergés les participants ayant choisi le Pack Complet ?",
+    answer: "Les hôtels partenaires sont en cours de confirmation. L'hébergement se fera à proximité du lieu de l'événement (centre-ville), pour un séjour de 3 nuits (1, 2 et 3 octobre 2026). Les détails seront communiqués dès confirmation.",
+    category: "Hébergement"
+  },
+  {
+    id: "h2",
+    question: "Puis-je choisir mon hôtel ?",
+    answer: "Non, l'allocation sera gérée par le COC après validation de l'inscription — il n'y aura pas de choix du participant dans le formulaire.",
+    category: "Hébergement"
+  },
+  {
+    id: "h3",
+    question: "Je n'ai pas besoin d'hébergement, dois-je quand même prendre le Pack Complet ?",
+    answer: "Non, le Pack Sans Hébergement est prévu pour cela (mêmes repas et accès programme, sans nuitées ni petits-déjeuners). Il est toutefois limité à 30 places.",
+    category: "Hébergement"
+  },
+  // D. PROGRAMME & LOGISTIQUE
+  {
+    id: "d1",
+    question: "Quel est le programme des 3 jours ?",
+    answer: "• Jour 1 (jeudi 1er oct.) — Jeunesse & Leadership : cérémonie d'ouverture officielle (CN + Youth Summit), panel \"Accès au financement\", conférence plénière \"Jeunesse malagasy & opportunités économiques\", ateliers pratiques (Leadership & Mindset / Personal Branding / Marketing Digital), soirée d'ouverture et networking cocktail VIP.\n\n• Jour 2 (vendredi 2 oct.) — Entrepreneuriat : formation certifiante JCI, ateliers pratiques (Pitcher son projet / Trouver des financements / Construire un réseau stratégique), success stories d'entrepreneurs malagasy, finale nationale du concours Art Oratoire et Débat, clôture officielle du Youth Summit (spectacle culturel, défilé, concert, 15 ans de la JCI Iarivo).\n\n• Jour 3 (samedi 3 oct.) — Gouvernance & vie associative : Assemblées Générales 1 et 2 de la JCI Madagascar, réunion des officiers BN-BL 2027, soirée de clôture et remise des Awards JCI Madagascar.",
+    category: "Programme"
+  },
+  {
+    id: "d2",
+    question: "Les repas sont-ils inclus ?",
+    answer: "Oui. Les deux packs d'inscription (Complet et Sans Hébergement) incluent 3 déjeuners, 3 dîners de soirée (ouverture, folklorique, clôture) et 5 pauses café. Aucune inscription séparée n'est nécessaire pour les repas.",
+    category: "Programme"
+  },
+  {
+    id: "d3",
+    question: "Comment se passe le choix des ateliers pratiques ?",
+    answer: "Certains ateliers ont un nombre de places limité. Le choix se fait sur votre espace d'inscription personnel après obtention de votre Pass nominatif — plus tôt vous choisissez, plus vous avez de chances d'obtenir la session souhaitée. Les modalités exactes de modification après validation seront à confirmer par la Commission Logistique.",
+    category: "Programme"
+  },
+  {
+    id: "d4",
+    question: "Comment récupérer mon badge d'accréditation ?",
+    answer: "Les badges sont disponibles à l'accueil principal du site le matin même à partir de 07h30, sur présentation de votre confirmation d'inscription (QR code) et d'une pièce d'identité.",
+    category: "Programme"
+  },
+  {
+    id: "d5",
+    question: "Y a-t-il un code vestimentaire ?",
+    answer: "Un code vestimentaire sera communiqué avant l'événement (annonce prévue avec le programme détaillé, autour du 11 septembre 2026).",
+    category: "Programme"
+  },
+  {
+    id: "d6",
+    question: "Les sessions seront-elles diffusées en direct ou disponibles en replay ?",
+    answer: "La cérémonie d'ouverture officielle du 1er octobre sera diffusée en direct sur la page Facebook de la JCI Iarivo. Les autres sessions (ateliers, panels, conférences) ne sont pas prévues en streaming ni en replay.",
+    category: "Programme"
+  },
+  // E. YOUTH SUMMIT
+  {
+    id: "y1",
+    question: "Le Youth Summit est-il payant ?",
+    answer: "Des pass payants sont prévus (Pass Journée J1, Pass Journée J2, Pass Complet J1+J2, Pass Étudiant, Pass VIP), mais les tarifs sont en attente de confirmation. Le Pass Intervenant est gratuit, en échange d'une intervention sur scène.",
+    category: "Youth Summit"
+  },
+  {
+    id: "y2",
+    question: "Je ne suis pas membre JCI, puis-je venir seulement pour le Youth Summit ?",
+    answer: "Oui, c'est justement l'objectif du Youth Summit : un format ouvert au grand public, sans nécessité d'être membre JCI, sur les journées du 1er et 2 octobre.",
+    category: "Youth Summit"
+  },
+  {
+    id: "y3",
+    question: "Qu'est-ce que le Pass Étudiant ?",
+    answer: "Un tarif dédié, identique au Pass Journée (J1 ou J2 au choix), sur présentation d'une carte étudiante en cours de validité. Hors accès aux soirées.",
+    category: "Youth Summit"
+  },
+  {
+    id: "y4",
+    question: "Comment devenir exposant au Youth Summit ?",
+    answer: "Trois formules de stand sont prévues : Stand Standard (3x3m), Stand Premium (3x6m) et Stand Recruteur (dans un espace Carrières dédié, avec accès à une session de speed-networking). 39 chapiteaux 3x3m et 2 chapiteaux 3x6m sont disponibles. Les tarifs sont en attente de confirmation.",
+    category: "Youth Summit"
+  },
+  {
+    id: "y5",
+    question: "Comment devenir intervenant ?",
+    answer: "En contactant le COC de la Convention Nationale. Le statut d'intervenant donne accès aux 2 journées, un badge nominatif \"Intervenant\", une bio publiée dans le programme et un kit intervenant, en échange d'une présence sur scène (conférence, panel ou atelier).",
+    category: "Youth Summit"
+  },
+  // F. CONTACT
+  {
+    id: "c1",
+    question: "J'ai une autre question, qui contacter ?",
+    answer: "Écrivez à jciiarivo@gmail.com, ou au Bureau Local JCI Iarivo : bliarivo@googlegroups.com.",
+    category: "Contact"
   }
 ];
 
