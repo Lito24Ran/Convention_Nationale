@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-// Note : Si ton projet plante sur "motion/react", remplace par "framer-motion"
 import { Shield, Users, ArrowRight, X, Check } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import ImageRegistration from "../assets/images/WhatsApp Image 2026-06-17 at 08.27.09.jpeg";
@@ -14,6 +13,7 @@ const PERIOD_CONFIG = {
     start: new Date("2026-07-11T00:00:00"),
     end: new Date("2026-08-02T23:59:59"),
     dateStr: "11 juillet → 2 Août 2026",
+    openDateStr: "Dès le 11 Juillet",
     priceComplet: "500 000 AR",
     priceSolo: "350 000 AR"
   },
@@ -23,6 +23,7 @@ const PERIOD_CONFIG = {
     start: new Date("2026-08-03T00:00:00"),
     end: new Date("2026-08-23T23:59:59"),
     dateStr: "3 Août → 23 Août 2026",
+    openDateStr: "Dès le 3 Août",
     priceComplet: "550 000 AR",
     priceSolo: "375 000 AR"
   },
@@ -32,6 +33,7 @@ const PERIOD_CONFIG = {
     start: new Date("2026-08-24T00:00:00"),
     end: new Date("2026-09-13T23:59:59"),
     dateStr: "24 Août → 13 septembre 2026",
+    openDateStr: "Dès le 24 Août",
     priceComplet: "575 000 AR",
     priceSolo: "400 000 AR"
   }
@@ -45,18 +47,10 @@ export default function Registration() {
 
   const now = new Date();
 
-  // Pré-sélection automatique de la période active au chargement
+  // Force la pré-sélection visuelle sur l'Early Bird à l'ouverture
   useEffect(() => {
     if (modalOpen) {
-      if (now <= PERIOD_CONFIG.early.end) {
-        setSelectedTier("early");
-      } else if (now <= PERIOD_CONFIG.standard.end) {
-        setSelectedTier("standard");
-      } else if (now <= PERIOD_CONFIG.last.end) {
-        setSelectedTier("last");
-      } else {
-        setSelectedTier("early");
-      }
+      setSelectedTier("early");
     }
   }, [modalOpen]);
 
@@ -85,10 +79,10 @@ export default function Registration() {
           </p>
         </div>
 
-        {/* Grille des boutons d'accès initiaux */}
+        {/* Boutons d'accès initiaux */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
           
-          {/* Carte d'appel : Convention Nationale */}
+          {/* Carte : Convention Nationale */}
           <div className="bg-[#1A3E7E] text-white rounded-3xl p-8 flex flex-col md:flex-row justify-between gap-6 shadow-xl relative overflow-hidden group hover:shadow-2xl transition-all duration-300">
             <div className="flex-1 flex flex-col justify-between space-y-6 relative z-10">
               <div>
@@ -132,7 +126,7 @@ export default function Registration() {
             </div>
           </div>
 
-          {/* Carte d'appel : Youth Summit */}
+          {/* Carte : Youth Summit */}
           <div className="bg-gray-50 text-gray-900 rounded-3xl p-8 flex flex-col md:flex-row justify-between gap-6 shadow-sm border border-gray-100 relative overflow-hidden group hover:shadow-md transition-all duration-300">
             <div className="flex-1 flex flex-col justify-between space-y-6 relative z-10">
               <div>
@@ -174,11 +168,10 @@ export default function Registration() {
         </div>
       </div>
 
-      {/* ================= MODAL DE SELECTION INTERACTIF (STYLE IMAGE_4317C6.PNG) ================= */}
+      {/* ================= MODAL DE SELECTION INTERACTIF ================= */}
       <AnimatePresence>
         {modalOpen && (
           <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
-            {/* Voile d'arrière-plan flouté sombre */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -187,15 +180,14 @@ export default function Registration() {
               className="absolute inset-0 bg-slate-950/60 backdrop-blur-md"
             />
 
-            {/* Conteneur de grille transparent sans boîte blanche d'arrière-plan */}
             <motion.div
               initial={{ scale: 0.96, opacity: 0, y: 20 }}
               animate={{ scale: 1, opacity: 1, y: 0 }}
               exit={{ scale: 0.96, opacity: 0, y: 20 }}
               transition={{ type: "spring", duration: 0.4 }}
-              className="w-full max-w-4xl overflow-y-auto max-h-[96vh] relative z-50 px-2 sm:px-6 py-4 flex flex-col space-y-8 scrollbar-none"
+              className="w-full max-w-4xl overflow-y-auto max-h-[96vh] relative z-50 px-2 sm:px-6 py-4 flex flex-col space-y-6 scrollbar-none"
             >
-              {/* Bouton croix de fermeture */}
+              {/* Bouton fermeture croix */}
               <div className="absolute top-2 right-4 sm:right-6 z-50">
                 <button
                   type="button"
@@ -206,17 +198,24 @@ export default function Registration() {
                 </button>
               </div>
 
-              {/* Titre minimaliste haut de page */}
+              {/* Titre principal */}
               <div className="text-center space-y-1">
                 <h4 className="text-xl sm:text-3xl font-sans font-black uppercase text-white tracking-tight">
                   {selectedProgram === "convention" ? "CONVENTION NATIONALE 2026" : "YOUTH SUMMIT 2026"}
                 </h4>
-                <p className="text-xs sm:text-sm text-gray-300 font-sans">
-                  No contracts. No surprise fees.
+              </div>
+
+              {/* Nouvelle section Accroche validée par la direction */}
+              <div className="text-center max-w-xl mx-auto px-4 bg-white/5 border border-white/10 py-3 px-6 rounded-2xl backdrop-blur-sm">
+                <p className="text-sm sm:text-base font-sans font-black text-cyan-400 tracking-wide uppercase">
+                  Une génération construit ensemble. Une île se transforme.
+                </p>
+                <p className="text-xs sm:text-sm text-gray-300 font-sans mt-1 font-semibold">
+                  100+ participants · 14 OLs · 9 régions · 3 jours
                 </p>
               </div>
 
-              {/* Onglets Pilule style épuré */}
+              {/* Sélecteur de Pack */}
               {selectedProgram === "convention" && (
                 <div className="bg-white/10 border border-white/10 p-1 rounded-full flex items-center justify-center max-w-[240px] mx-auto shadow-inner backdrop-blur-md">
                   <button
@@ -244,18 +243,13 @@ export default function Registration() {
                 </div>
               )}
 
-              {/* Grille des 3 modèles */}
+              {/* Grille des tarifs (3 cartes) */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center text-left pt-2 px-2">
                 {(Object.keys(PERIOD_CONFIG) as Array<keyof typeof PERIOD_CONFIG>).map((key) => {
                   const tier = PERIOD_CONFIG[key];
                   const isSelected = selectedTier === key;
                   
-                  // Vérification de la disponibilité réelle par rapport aux dates configurées
-                  // const isNotOpenYet = now < tier.start;
-                  // const isExpired = now > tier.end;
-                  // const isActive = !isNotOpenYet && !isExpired;
-
-                  // Force l'activation UNIQUEMENT pour l'Early Bird
+                  // Seul l'Early Bird est actif. Les autres affichent leur date d'ouverture.
                   const isActive = key === "early";
                   const isNotOpenYet = key !== "early" && now < tier.start;
                   const isExpired = key !== "early" && now > tier.end;
@@ -265,23 +259,22 @@ export default function Registration() {
                   return (
                     <div
                       key={key}
-                      onClick={() => setSelectedTier(key)} // Reste toujours cliquable pour tester la flottaison et l'animation bleue !
+                      onClick={() => setSelectedTier(key)}
                       className={`rounded-3xl p-7 flex flex-col justify-between relative transition-all duration-300 select-none cursor-pointer ${
                         isSelected
-                          ? "bg-[#1A3E7E] text-white shadow-[0_30px_70px_-15px_rgba(0,0,0,0.6)] md:scale-105 z-10 border-none min-h-[540px]"
+                          ? "bg-[#1A3E7E] text-white shadow-[0_30px_70px_-15px_rgba(0,0,0,0.6)] md:scale-105 z-10 border-none min-h-[520px]"
                           : "bg-white text-gray-900 border border-gray-100 shadow-xl min-h-[480px] opacity-85 hover:opacity-100 hover:scale-[1.01]"
                       }`}
                     >
-                      {/* En-tête interne de la carte */}
                       <div>
-                        {/* Prix prédominant */}
+                        {/* Affichage Prix */}
                         <span className={`text-3xl font-sans font-black block tracking-tight ${
                           isSelected ? "text-white" : "text-gray-950"
                         }`}>
                           {currentPrice}
                         </span>
 
-                        {/* Titre de l'offre */}
+                        {/* Label de l'offre */}
                         <h5 className={`text-base font-sans font-black uppercase mt-1 tracking-wide ${
                           isSelected ? "text-cyan-400" : "text-[#1A3E7E]"
                         }`}>
@@ -295,7 +288,7 @@ export default function Registration() {
                           {tier.dateStr}
                         </span>
 
-                        {/* Inclusions textuelles */}
+                        {/* Inclusions identiques sur les 3 cartes (Harmonisées) */}
                         <div className={`border-t pt-5 mt-5 ${
                           isSelected ? "border-white/10" : "border-gray-100"
                         }`}>
@@ -313,32 +306,37 @@ export default function Registration() {
                                 isSelected ? "text-white" : "text-[#00A6DF]"
                               }`} />
                               <span className={isSelected ? "text-white/90" : "text-gray-600"}>
-                                5 pause-café + kit complet
+                                5 pauses-café + kit complet
                               </span>
                             </li>
                             <li className="flex items-start gap-2.5">
-                              <div className="pl-6.5">
-                                {hasAccommodation ? (
-                                  <span className={`font-bold ${isSelected ? "text-cyan-300" : "text-[#1A3E7E]"}`}>
-                                    3 nuitées + 2 p.déjeuners
+                              {hasAccommodation ? (
+                                <>
+                                  <Check className={`h-4 w-4 flex-shrink-0 mt-0.5 ${
+                                    isSelected ? "text-white" : "text-[#00A6DF]"
+                                  }`} />
+                                  <span className={isSelected ? "text-white/90" : "text-gray-600"}>
+                                    3 nuitées + 2 petits-déjeuners
                                   </span>
-                                ) : (
+                                </>
+                              ) : (
+                                <div className="pl-6.5">
                                   <span className={`font-bold ${isSelected ? "text-amber-300" : "text-amber-600"}`}>
                                     Accès Solo (Sans hôtel)
                                   </span>
-                                )}
-                              </div>
+                                </div>
+                              )}
                             </li>
                           </ul>
                         </div>
                       </div>
 
-                      {/* Bouton d'action interne unique avec blocage de sécurité */}
+                      {/* Bouton d'action sécurisé (Bloqué pour Standard / Last) */}
                       <button
                         type="button"
-                        disabled={!isActive} // Désactive nativement l'élément HTML si l'offre n'est pas disponible
+                        disabled={!isActive}
                         onClick={(e) => {
-                          e.stopPropagation(); // Évite les doublons de clic avec la carte parente
+                          e.stopPropagation();
                           if (isActive) {
                             const url = selectedProgram === "convention" ? "https://tally.so/r/dWVbEo" : "https://tally.so/r/MegLYX";
                             window.open(url, "_blank");
@@ -346,23 +344,23 @@ export default function Registration() {
                         }}
                         className={`w-full py-3 px-4 rounded-full font-sans font-black text-xs tracking-wide transition-all text-center mt-6 shadow-sm ${
                           !isActive
-                            ? "bg-gray-100 text-gray-400 cursor-not-allowed border border-gray-200" // État désactivé (Expiré ou Pas ouvert)
+                            ? "bg-gray-100 text-gray-400 cursor-not-allowed border border-gray-200"
                             : isSelected
                             ? "bg-white text-[#1A3E7E] hover:bg-gray-50 font-black cursor-pointer"
                             : "bg-[#1A3E7E] text-white hover:bg-[#133063] font-bold cursor-pointer"
                         }`}
                       >
-                        {isExpired ? "Expiré" : isNotOpenYet ? "Bientôt" : "S'inscrire"}
+                        {isExpired ? "Expiré" : isNotOpenYet ? tier.openDateStr : "S'inscrire"}
                       </button>
                     </div>
                   );
                 })}
               </div>
 
-              {/* Notice informative de bas de page */}
+              {/* Nouvelle note de bas de page stratégique (Justification de l'augmentation) */}
               <div className="text-[11px] text-gray-300 font-sans font-medium leading-relaxed pt-4 text-center max-w-2xl mx-auto border-t border-white/10">
                 <p>
-                  <strong>Note de validation :</strong> Munissez-vous de votre référence de transaction Orange Money avant de lancer le formulaire. L&apos;attribution définitive des hébergements est coordonnée par le comité d&apos;organisation (COC).
+                  Munissez-vous de votre référence de transaction Orange Money avant de lancer le formulaire. L&apos;hébergement est attribué par le comité d&apos;organisation (COC) par ordre d&apos;inscription : les premiers inscrits sont favorisés pour l&apos;hôtel de premier choix (Choix 1).
                 </p>
               </div>
 
