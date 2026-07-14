@@ -1,12 +1,20 @@
 import React, { useState } from "react";
 import { Handshake, Mail, Phone, User, X, ShieldCheck, Heart } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
+import MG from "../assets/images/partenaire/2424.png"
+import buddy from "../assets/images/partenaire/BUDDY_CREATIF.png"
+import orange from "../assets/images/partenaire/ORANGE.png"
+import kentia from "../assets/images/partenaire/Groupe_Kentia.png"
+import Koon from "../assets/images/partenaire/KOON_SPACE.jpg"
+import Midi from "../assets/images/partenaire/Midi_Madagasikara.png"
+import HEI from "../assets/images/partenaire/HEI.png"
+import MJS from "../assets/images/partenaire/MJS.png"
 
 
 const MidiLogo = () => (
   <div className="flex items-center justify-center p-1 h-full w-full select-none">
     <img 
-      src="/src/assets/images/partenaire/Midi_Madagasikara.png"
+      src={Midi}
       alt="Midi" 
       // max-h-full et max-w-full empêchent le PNG de déborder
       // object-contain garde les proportions parfaites
@@ -18,7 +26,7 @@ const MidiLogo = () => (
 const OrangeLogo = () => (
   <div className="flex items-center justify-center p-1 h-full w-full select-none">
     <img 
-      src="/src/assets/images/partenaire/ORANGE.png"
+      src={orange}
       alt="Orange" 
       // max-h-full et max-w-full empêchent le PNG de déborder
       // object-contain garde les proportions parfaites
@@ -30,7 +38,7 @@ const OrangeLogo = () => (
 const KoonSpaceLogo = () => (
   <div className="flex items-center justify-center p-1 h-full w-full select-none">
     <img 
-      src="/src/assets/images/partenaire/KOON_SPACE.jpg"
+      src={Koon}
       alt="Koon" 
       // max-h-full et max-w-full empêchent le PNG de déborder
       // object-contain garde les proportions parfaites
@@ -42,7 +50,7 @@ const KoonSpaceLogo = () => (
 const KentiaLogo = () => (
   <div className="flex items-center justify-center p-1 h-full w-full select-none">
     <img 
-      src="/src/assets/images/partenaire/Groupe_Kentia.png"
+      src={kentia}
       alt="Kentia" 
       // max-h-full et max-w-full empêchent le PNG de déborder
       // object-contain garde les proportions parfaites
@@ -54,7 +62,7 @@ const KentiaLogo = () => (
 const Logo2424 = () => (
   <div className="flex items-center justify-center p-1 h-full w-full select-none">
     <img 
-      src="/src/assets/images/partenaire/2424.png"
+      src={MG}
       alt="MJS" 
       // max-h-full et max-w-full empêchent le PNG de déborder
       // object-contain garde les proportions parfaites
@@ -65,7 +73,7 @@ const Logo2424 = () => (
 const BuddyLogo = () => (
   <div className="flex items-center justify-center p-1 h-full w-full select-none">
     <img 
-      src="/src/assets/images/partenaire/BUDDY_CREATIF.png"
+      src={buddy}
       alt="BUDDY" 
       // max-h-full et max-w-full empêchent le PNG de déborder
       // object-contain garde les proportions parfaites
@@ -77,7 +85,7 @@ const BuddyLogo = () => (
 const HEILogo = () => (
   <div className="flex items-center justify-center p-1 h-full w-full select-none">
     <img 
-      src="/src/assets/images/partenaire/HEI.png"
+      src={HEI}
       alt="HEI" 
       // max-h-full et max-w-full empêchent le PNG de déborder
       // object-contain garde les proportions parfaites
@@ -89,7 +97,7 @@ const HEILogo = () => (
 const MjsLogo = () => (
   <div className="flex items-center justify-center p-0 h-full w-full select-none">
     <img 
-      src="/src/assets/images/partenaire/MJS.png"
+      src={MJS}
       alt="MJS" 
       // max-h-full et max-w-full empêchent le PNG de déborder
       // object-contain garde les proportions parfaites

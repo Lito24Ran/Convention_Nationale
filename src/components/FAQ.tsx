@@ -34,12 +34,16 @@ export default function FAQ() {
     });
   }, [selectedCategory, searchQuery]);
 
+  // Split FAQs into two columns for beautiful side-by-side presentation
+  const leftColFaqs = useMemo(() => filteredFaqs.filter((_, idx) => idx % 2 === 0), [filteredFaqs]);
+  const rightColFaqs = useMemo(() => filteredFaqs.filter((_, idx) => idx % 2 !== 0), [filteredFaqs]);
+
   return (
     <section 
       id="faq" 
       className="py-20 md:py-28 bg-[#FAFBFD] text-gray-950 scroll-mt-12 overflow-hidden relative"
     >
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header from screenshot layout */}
         <div className="text-center mb-12 space-y-4 select-none">
@@ -105,116 +109,181 @@ export default function FAQ() {
           </div>
         </div>
 
-        {/* Dynamic customized Accordion stack centering the items */}
-        <div className="max-w-3xl mx-auto space-y-4">
-          <AnimatePresence mode="popLayout">
-            {filteredFaqs.length > 0 ? (
-              filteredFaqs.map((faq) => {
-                const isOpen = openFaqId === faq.id;
-
-                return (
-                  <motion.div
-                    layout
-                    initial={{ opacity: 0, y: 12 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, scale: 0.95 }}
-                    transition={{ duration: 0.3 }}
-                    key={faq.id}
-                    id={`faq-item-${faq.id}`}
-                    onClick={() => toggleFaq(faq.id)}
-                    className={`transition-all duration-300 border border-transparent select-none cursor-pointer ${
-                      isOpen
-                        ? "bg-[#F3F5F8] rounded-[28px] p-6 sm:p-8 shadow-sm border-gray-200/50"
-                        : "bg-[#EEF4F8] rounded-full py-4 px-6 sm:px-8 hover:bg-[#E5EEF4]"
-                    }`}
-                  >
-                    
-                    {/* Horizontal flexible content area */}
-                    <div className="flex items-center justify-between gap-5 text-left">
-                      
-                      {/* Text labels container */}
-                      <div className="flex-1">
-                        <div className="flex flex-wrap items-center gap-2 mb-1">
-                          <span className="text-[10px] font-sans font-bold uppercase tracking-wider text-[#00A6DF] bg-[#00A6DF]/10 px-2 py-0.5 rounded-md">
+        {/* Dynamic customized Accordion stack in two columns */}
+        {filteredFaqs.length > 0 ? (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 items-start max-w-6xl mx-auto">
+            {/* Left Column */}
+            <div className="space-y-4">
+              <AnimatePresence mode="popLayout">
+                {leftColFaqs.map((faq) => {
+                  const isOpen = openFaqId === faq.id;
+                  return (
+                    <motion.div
+                      layout
+                      initial={{ opacity: 0, y: 12 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, scale: 0.95 }}
+                      transition={{ duration: 0.3 }}
+                      key={faq.id}
+                      id={`faq-item-${faq.id}`}
+                      onClick={() => toggleFaq(faq.id)}
+                      className={`transition-all duration-300 border border-transparent select-none cursor-pointer text-left ${
+                        isOpen
+                          ? "bg-[#F3F5F8] rounded-[24px] p-5 sm:p-6 shadow-sm border-gray-200/50"
+                          : "bg-[#EEF4F8] rounded-[24px] p-5 hover:bg-[#E5EEF4]"
+                      }`}
+                    >
+                      <div className="flex items-start justify-between gap-4">
+                        <div className="flex-1 min-w-0">
+                          <span className="inline-block text-[9px] font-sans font-bold uppercase tracking-wider text-[#00A6DF] bg-[#00A6DF]/10 px-2 py-0.5 rounded-md mb-2">
                             {faq.category}
                           </span>
+                          <h3 
+                            className={`font-sans font-extrabold tracking-tight transition-all duration-200 ${
+                              isOpen 
+                                ? "text-base text-gray-950 animate-fade-in" 
+                                : "text-sm sm:text-base text-gray-900"
+                            }`}
+                          >
+                            {faq.question}
+                          </h3>
+
+                          <AnimatePresence initial={false}>
+                            {isOpen && (
+                              <motion.div
+                                initial={{ height: 0, opacity: 0, marginTop: 0 }}
+                                animate={{ height: "auto", opacity: 1, marginTop: 12 }}
+                                exit={{ height: 0, opacity: 0, marginTop: 0 }}
+                                transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+                                className="overflow-hidden"
+                              >
+                                <p className="text-sm text-gray-600 font-sans font-normal leading-relaxed whitespace-pre-line">
+                                  {faq.answer}
+                                </p>
+                              </motion.div>
+                            )}
+                          </AnimatePresence>
                         </div>
-                        <h3 
-                          className={`font-sans font-extrabold tracking-tight transition-all duration-200 ${
-                            isOpen 
-                              ? "text-base sm:text-lg text-gray-950 animate-fade-in" 
-                              : "text-sm sm:text-base text-gray-900"
-                          }`}
-                        >
-                          {faq.question}
-                        </h3>
 
-                        {/* Collapsed content rendered dynamically */}
-                        <AnimatePresence initial={false}>
-                          {isOpen && (
-                            <motion.div
-                              initial={{ height: 0, opacity: 0, marginTop: 0 }}
-                              animate={{ height: "auto", opacity: 1, marginTop: 12 }}
-                              exit={{ height: 0, opacity: 0, marginTop: 0 }}
-                              transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-                              className="overflow-hidden"
-                            >
-                              <p className="text-sm text-gray-600 font-sans font-normal leading-relaxed text-left pr-2 whitespace-pre-line">
-                                {faq.answer}
-                              </p>
-                            </motion.div>
-                          )}
-                        </AnimatePresence>
+                        <div className="flex-shrink-0 mt-0.5">
+                          <motion.div
+                            animate={{ rotate: isOpen ? 180 : 0 }}
+                            transition={{ duration: 0.3 }}
+                            className="w-9 h-9 rounded-full flex items-center justify-center shadow-sm bg-white border border-gray-100"
+                          >
+                            {isOpen ? (
+                              <X className="h-4 w-4 text-gray-800 stroke-[2.5]" />
+                            ) : (
+                              <Plus className="h-4 w-4 text-gray-800 stroke-[2.5]" />
+                            )}
+                          </motion.div>
+                        </div>
                       </div>
+                    </motion.div>
+                  );
+                })}
+              </AnimatePresence>
+            </div>
 
-                      {/* Circle interactive toggle button container */}
-                      <div className="flex-shrink-0 self-start sm:self-center">
-                        <motion.div
-                          animate={{ rotate: isOpen ? 180 : 0 }}
-                          transition={{ duration: 0.3 }}
-                          className={`w-10 h-10 sm:w-11 sm:h-11 rounded-full flex items-center justify-center shadow-sm bg-white border border-gray-100 font-bold transition-all duration-150 ${
-                            isOpen ? "hover:scale-105" : "hover:scale-[1.03]"
-                          }`}
-                        >
-                          {isOpen ? (
-                            <X className="h-4 w-4 text-gray-800 stroke-[2.5]" />
-                          ) : (
-                            <Plus className="h-4 w-4 text-gray-800 stroke-[2.5]" />
-                          )}
-                        </motion.div>
+            {/* Right Column */}
+            <div className="space-y-4">
+              <AnimatePresence mode="popLayout">
+                {rightColFaqs.map((faq) => {
+                  const isOpen = openFaqId === faq.id;
+                  return (
+                    <motion.div
+                      layout
+                      initial={{ opacity: 0, y: 12 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, scale: 0.95 }}
+                      transition={{ duration: 0.3 }}
+                      key={faq.id}
+                      id={`faq-item-${faq.id}`}
+                      onClick={() => toggleFaq(faq.id)}
+                      className={`transition-all duration-300 border border-transparent select-none cursor-pointer text-left ${
+                        isOpen
+                          ? "bg-[#F3F5F8] rounded-[24px] p-5 sm:p-6 shadow-sm border-gray-200/50"
+                          : "bg-[#EEF4F8] rounded-[24px] p-5 hover:bg-[#E5EEF4]"
+                      }`}
+                    >
+                      <div className="flex items-start justify-between gap-4">
+                        <div className="flex-1 min-w-0">
+                          <span className="inline-block text-[9px] font-sans font-bold uppercase tracking-wider text-[#00A6DF] bg-[#00A6DF]/10 px-2 py-0.5 rounded-md mb-2">
+                            {faq.category}
+                          </span>
+                          <h3 
+                            className={`font-sans font-extrabold tracking-tight transition-all duration-200 ${
+                              isOpen 
+                                ? "text-base text-gray-950 animate-fade-in" 
+                                : "text-sm sm:text-base text-gray-900"
+                            }`}
+                          >
+                            {faq.question}
+                          </h3>
+
+                          <AnimatePresence initial={false}>
+                            {isOpen && (
+                              <motion.div
+                                initial={{ height: 0, opacity: 0, marginTop: 0 }}
+                                animate={{ height: "auto", opacity: 1, marginTop: 12 }}
+                                exit={{ height: 0, opacity: 0, marginTop: 0 }}
+                                transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+                                className="overflow-hidden"
+                              >
+                                <p className="text-sm text-gray-600 font-sans font-normal leading-relaxed whitespace-pre-line">
+                                  {faq.answer}
+                                </p>
+                              </motion.div>
+                            )}
+                          </AnimatePresence>
+                        </div>
+
+                        <div className="flex-shrink-0 mt-0.5">
+                          <motion.div
+                            animate={{ rotate: isOpen ? 180 : 0 }}
+                            transition={{ duration: 0.3 }}
+                            className="w-9 h-9 rounded-full flex items-center justify-center shadow-sm bg-white border border-gray-100"
+                          >
+                            {isOpen ? (
+                              <X className="h-4 w-4 text-gray-800 stroke-[2.5]" />
+                            ) : (
+                              <Plus className="h-4 w-4 text-gray-800 stroke-[2.5]" />
+                            )}
+                          </motion.div>
+                        </div>
                       </div>
-
-                    </div>
-
-                  </motion.div>
-                );
-              })
-            ) : (
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                className="text-center py-12 px-4 bg-[#F3F5F8] rounded-[28px] border border-dashed border-gray-200"
+                    </motion.div>
+                  );
+                })}
+              </AnimatePresence>
+            </div>
+          </div>
+        ) : (
+          <div className="max-w-3xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="text-center py-12 px-4 bg-[#F3F5F8] rounded-[28px] border border-dashed border-gray-200"
+            >
+              <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-gray-100 text-gray-400 mb-3">
+                <Filter className="h-6 w-6" />
+              </div>
+              <h3 className="text-base font-sans font-bold text-gray-900">Aucun résultat trouvé</h3>
+              <p className="text-sm text-gray-500 font-sans max-w-sm mx-auto mt-1">
+                Nous n&apos;avons trouvé aucun élément correspondant à vos critères de recherche &quot;{searchQuery}&quot;.
+              </p>
+              <button
+                onClick={() => {
+                  setSearchQuery("");
+                  setSelectedCategory("all");
+                }}
+                className="mt-4 px-4 py-2 bg-white border border-gray-200 hover:bg-gray-50 text-xs font-sans font-bold rounded-full shadow-sm text-gray-700 transition-all cursor-pointer"
               >
-                <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-gray-100 text-gray-400 mb-3">
-                  <Filter className="h-6 w-6" />
-                </div>
-                <h3 className="text-base font-sans font-bold text-gray-900">Aucun résultat trouvé</h3>
-                <p className="text-sm text-gray-500 font-sans max-w-sm mx-auto mt-1">
-                  Nous n&apos;avons trouvé aucun élément correspondant à vos critères de recherche &quot;{searchQuery}&quot;.
-                </p>
-                <button
-                  onClick={() => {
-                    setSearchQuery("");
-                    setSelectedCategory("all");
-                  }}
-                  className="mt-4 px-4 py-2 bg-white border border-gray-200 hover:bg-gray-50 text-xs font-sans font-bold rounded-full shadow-sm text-gray-700 transition-all cursor-pointer"
-                >
-                  Réinitialiser les filtres
-                </button>
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </div>
+                Réinitialiser les filtres
+              </button>
+            </motion.div>
+          </div>
+        )}
 
         {/* Secondary support footer contact cue */}
         <div className="mt-14 text-center">

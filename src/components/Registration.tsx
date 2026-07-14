@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Shield, Users, ArrowRight, X, Check } from "lucide-react";
+import { Shield, Users, ArrowRight, X, Check, Award, Calendar, AlertCircle, Sparkles, Coffee, Utensils, Hotel, Gift, Briefcase, GraduationCap } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
-import ImageRegistration from "../assets/images/WhatsApp Image 2026-06-17 at 08.27.09.jpeg";
-import ImageRegisration2 from "../assets/images/CoventionN.jpeg";
+import CN_image1 from "../assets/images/WhatsApp Image 2026-06-17 at 08.27.09.jpeg"
+import CN_image2 from "../assets/images/WhatsApp Image 2026-06-17 at 08.32.46.jpeg"
+
 
 type ProgramType = "convention" | "youth";
 
@@ -119,7 +120,7 @@ export default function Registration() {
 
             <div className="w-full md:w-[200px] flex-shrink-0 flex items-center justify-center relative z-10 self-center">
               <img
-                src={ImageRegisration2}
+                src={CN_image1}
                 alt="JCI Convention"
                 className="w-full h-44 md:h-60 object-cover rounded-2xl shadow-md border border-white/10 group-hover:scale-[1.01] transition-transform duration-300"
               />
@@ -158,7 +159,7 @@ export default function Registration() {
 
             <div className="w-full md:w-[200px] flex-shrink-0 flex items-center justify-center relative z-10 self-center">
               <img
-                src={ImageRegistration}
+                src={CN_image2}
                 alt="Youth Summit"
                 className="w-full h-44 md:h-60 object-cover rounded-2xl shadow-md border border-gray-200 group-hover:scale-[1.01] transition-transform duration-300"
               />
@@ -177,7 +178,7 @@ export default function Registration() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={closeModal}
-              className="absolute inset-0 bg-slate-950/60 backdrop-blur-md"
+              className="absolute inset-0 bg-[#060713]/90 backdrop-blur-xl"
             />
 
             <motion.div
@@ -185,185 +186,294 @@ export default function Registration() {
               animate={{ scale: 1, opacity: 1, y: 0 }}
               exit={{ scale: 0.96, opacity: 0, y: 20 }}
               transition={{ type: "spring", duration: 0.4 }}
-              className="w-full max-w-4xl overflow-y-auto max-h-[96vh] relative z-50 px-2 sm:px-6 py-4 flex flex-col space-y-6 scrollbar-none"
+              className="bg-[#0C0D21] border-2 border-amber-500/30 rounded-[36px] w-full max-w-7xl overflow-hidden relative z-50 shadow-2xl max-h-[96vh] overflow-y-auto"
             >
+              {/* Absolutes decorative glow effects inside the modal */}
+              <div className="absolute top-0 left-1/4 -translate-x-1/2 w-96 h-96 bg-[#00A6DF]/20 rounded-full blur-[110px] pointer-events-none" />
+              <div className="absolute bottom-0 right-1/4 translate-x-1/2 w-96 h-96 bg-amber-500/10 rounded-full blur-[110px] pointer-events-none" />
+
               {/* Bouton fermeture croix */}
-              <div className="absolute top-2 right-4 sm:right-6 z-50">
+              <div className="absolute top-6 right-6 z-50">
                 <button
                   type="button"
                   onClick={closeModal}
-                  className="bg-white/10 hover:bg-white/20 text-white p-2.5 rounded-full backdrop-blur-sm transition-colors cursor-pointer"
+                  className="bg-white/10 hover:bg-white/20 text-white p-2.5 rounded-full backdrop-blur-sm transition-colors border border-white/20 cursor-pointer"
                 >
                   <X className="h-5 w-5 stroke-[2.5]" />
                 </button>
               </div>
 
-              {/* Titre principal */}
-              <div className="text-center space-y-1">
-                <h4 className="text-xl sm:text-3xl font-sans font-black uppercase text-white tracking-tight">
-                  {selectedProgram === "convention" ? "CONVENTION NATIONALE 2026" : "YOUTH SUMMIT 2026"}
-                </h4>
-              </div>
+              {/* Premium Graphic Banner at the top of the modal */}
+              <div className="relative w-full overflow-hidden bg-gradient-to-r from-[#0C122E] via-[#101942] to-[#1F1D36] border-b border-amber-500/20 px-6 py-10 sm:px-12 sm:py-12 text-left">
+                
+                {/* Dots / Halftone Grid Pattern Overlay */}
+                <div className="absolute left-0 top-0 bottom-0 w-1/3 opacity-25 pointer-events-none bg-[radial-gradient(#d97706_1.5px,transparent_1.5px)] [background-size:12px_12px]" />
+                
+                {/* Diagonal warm glowing stripe background */}
+                <div className="absolute -right-20 -top-20 w-[450px] h-[350px] bg-gradient-to-br from-amber-500/30 via-blue-600/15 to-transparent rotate-12 blur-3xl pointer-events-none" />
+                <div className="absolute left-1/4 top-1/2 -translate-y-1/2 w-80 h-32 bg-[#00A6DF]/20 rounded-full blur-[80px] pointer-events-none" />
 
-              {/* Nouvelle section Accroche validée par la direction */}
-              <div className="text-center max-w-xl mx-auto px-4 bg-white/5 border border-white/10 py-3 px-6 rounded-2xl backdrop-blur-sm">
-                <p className="text-sm sm:text-base font-sans font-black text-cyan-400 tracking-wide uppercase">
-                  Une génération construit ensemble. Une île se transforme.
-                </p>
-                <p className="text-xs sm:text-sm text-gray-300 font-sans mt-1 font-semibold">
-                  100+ participants · 14 OLs · 9 régions · 3 jours
-                </p>
-              </div>
-
-              {/* Sélecteur de Pack */}
-              {selectedProgram === "convention" && (
-                <div className="bg-white/10 border border-white/10 p-1 rounded-full flex items-center justify-center max-w-[240px] mx-auto shadow-inner backdrop-blur-md">
-                  <button
-                    type="button"
-                    onClick={() => setHasAccommodation(true)}
-                    className={`flex-1 py-2 px-4 rounded-full text-[10px] font-sans font-black uppercase tracking-wider transition-all duration-200 cursor-pointer text-center whitespace-nowrap ${
-                      hasAccommodation 
-                        ? "bg-[#1A3E7E] text-white shadow-md" 
-                        : "text-gray-300 hover:text-white"
-                    }`}
-                  >
-                    Pack Complet
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => setHasAccommodation(false)}
-                    className={`flex-1 py-2 px-4 rounded-full text-[10px] font-sans font-black uppercase tracking-wider transition-all duration-200 cursor-pointer text-center whitespace-nowrap ${
-                      !hasAccommodation 
-                        ? "bg-[#1A3E7E] text-white shadow-md" 
-                        : "text-gray-300 hover:text-white"
-                    }`}
-                  >
-                    Pack Solo
-                  </button>
-                </div>
-              )}
-
-              {/* Grille des tarifs (3 cartes) */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center text-left pt-2 px-2">
-                {(Object.keys(PERIOD_CONFIG) as Array<keyof typeof PERIOD_CONFIG>).map((key) => {
-                  const tier = PERIOD_CONFIG[key];
-                  const isSelected = selectedTier === key;
+                <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center justify-between gap-6 relative z-10">
                   
-                  // Seul l'Early Bird est actif. Les autres affichent leur date d'ouverture.
-                  const isActive = key === "early";
-                  const isNotOpenYet = key !== "early" && now < tier.start;
-                  const isExpired = key !== "early" && now > tier.end;
+                  {/* Left Column: Yellow/Amber Pill & Title info */}
+                  <div className="space-y-4">
+                    <div className="flex items-center space-x-3">
+                      <div className="flex items-center space-x-2">
+                        <span className="flex h-2.5 w-2.5 rounded-full bg-amber-500 animate-ping" />
+                        <span className="text-[10px] sm:text-xs font-mono font-black tracking-widest text-amber-400 uppercase bg-amber-500/10 px-3.5 py-1.5 rounded-full border border-amber-500/20">
+                          INSCRIPTIONS OUVERTES • ACCÈS PRESTIGE
+                        </span>
+                      </div>
+                    </div>
 
-                  const currentPrice = hasAccommodation ? tier.priceComplet : tier.priceSolo;
+                    <div className="space-y-1">
+                      {/* Stylized "Ouverture inscription" text */}
+                      <div className="relative inline-block">
+                        <span className="absolute -inset-1 bg-gradient-to-r from-amber-500/20 to-transparent rounded-lg transform -skew-x-3" />
+                        <h4 className="relative text-base sm:text-lg font-sans font-medium text-amber-400 italic">
+                          Ouverture inscription
+                        </h4>
+                      </div>
 
-                  return (
-                    <div
-                      key={key}
-                      onClick={() => setSelectedTier(key)}
-                      className={`rounded-3xl p-7 flex flex-col justify-between relative transition-all duration-300 select-none cursor-pointer ${
-                        isSelected
-                          ? "bg-[#1A3E7E] text-white shadow-[0_30px_70px_-15px_rgba(0,0,0,0.6)] md:scale-105 z-10 border-none min-h-[520px]"
-                          : "bg-white text-gray-900 border border-gray-100 shadow-xl min-h-[480px] opacity-85 hover:opacity-100 hover:scale-[1.01]"
+                      {/* Main Category Display Title */}
+                      <h3 className="text-2xl sm:text-3xl md:text-4xl font-sans font-black tracking-tight uppercase leading-none">
+                        {selectedProgram === "convention" ? (
+                          <>
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00A6DF] to-cyan-300">CONVENTION</span>{" "}
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-200">NATIONALE</span>
+                          </>
+                        ) : (
+                          <>
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-200">SOMMET</span>{" "}
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00A6DF] to-cyan-300">JEUNESSE</span>
+                          </>
+                        )}
+                      </h3>
+                    </div>
+
+                    {/* Quotation text */}
+                    <p className="text-xs text-gray-300 font-sans italic leading-relaxed max-w-xl pt-2 border-l-2 border-amber-500/40 pl-3">
+                      &ldquo;Une génération construit ensemble. Une île se transforme.&rdquo;
+                    </p>
+                  </div>
+
+                  {/* Right Column: Statistics Counter Boxes */}
+                  <div className="flex flex-wrap md:flex-col items-start md:items-end gap-3 sm:gap-4 justify-start md:justify-center">
+                    <div className="bg-white/5 border border-white/10 px-4 py-2 rounded-2xl flex items-center gap-2.5">
+                      <Users className="h-4 w-4 text-[#00A6DF]" />
+                      <div className="text-left md:text-right">
+                        <div className="text-xs font-mono font-black text-white">100+ PARTICIPANTS</div>
+                        <div className="text-[9px] text-gray-400 uppercase font-sans">Capacité maximum</div>
+                      </div>
+                    </div>
+
+                    <div className="bg-white/5 border border-white/10 px-4 py-2 rounded-2xl flex items-center gap-2.5">
+                      <Award className="h-4 w-4 text-amber-400" />
+                      <div className="text-left md:text-right">
+                        <div className="text-xs font-mono font-black text-white">14 OLs & 9 RÉGIONS</div>
+                        <div className="text-[9px] text-gray-400 uppercase font-sans">Représentation nationale</div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              {/* Modal Core Layout Content */}
+              <div className="p-6 sm:p-10 md:p-14 pt-8 md:pt-10 relative z-10 text-white space-y-6">
+                
+                {/* Sélecteur de Pack */}
+                {selectedProgram === "convention" && (
+                  <div className="bg-white/5 border border-white/10 p-1 rounded-full flex items-center justify-center max-w-[240px] mx-auto shadow-inner backdrop-blur-md">
+                    <button
+                      type="button"
+                      onClick={() => setHasAccommodation(true)}
+                      className={`flex-1 py-2 px-4 rounded-full text-[10px] font-sans font-black uppercase tracking-wider transition-all duration-200 cursor-pointer text-center whitespace-nowrap ${
+                        hasAccommodation 
+                          ? "bg-gradient-to-r from-[#00A6DF] to-amber-500 text-slate-950 shadow-md font-black" 
+                          : "text-gray-300 hover:text-white"
                       }`}
                     >
-                      <div>
-                        {/* Affichage Prix */}
-                        <span className={`text-3xl font-sans font-black block tracking-tight ${
-                          isSelected ? "text-white" : "text-gray-950"
-                        }`}>
-                          {currentPrice}
-                        </span>
+                      Pack Complet
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setHasAccommodation(false)}
+                      className={`flex-1 py-2 px-4 rounded-full text-[10px] font-sans font-black uppercase tracking-wider transition-all duration-200 cursor-pointer text-center whitespace-nowrap ${
+                        !hasAccommodation 
+                          ? "bg-gradient-to-r from-[#00A6DF] to-amber-500 text-slate-950 shadow-md font-black" 
+                          : "text-gray-300 hover:text-white"
+                      }`}
+                    >
+                      Pack Solo
+                    </button>
+                  </div>
+                )}
 
-                        {/* Label de l'offre */}
-                        <h5 className={`text-base font-sans font-black uppercase mt-1 tracking-wide ${
-                          isSelected ? "text-cyan-400" : "text-[#1A3E7E]"
-                        }`}>
-                          {tier.label}
-                        </h5>
+                {/* Grille des tarifs (3 cartes) */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch text-left pt-4 px-2">
+                  {(Object.keys(PERIOD_CONFIG) as Array<keyof typeof PERIOD_CONFIG>).map((key) => {
+                    const tier = PERIOD_CONFIG[key];
+                    const isSelected = selectedTier === key;
+                    
+                    const isActive = key === "early";
+                    const isNotOpenYet = key !== "early" && now < tier.start;
+                    const isExpired = key !== "early" && now > tier.end;
 
-                        {/* Dates d'application */}
-                        <span className={`text-[11px] font-sans font-bold block mt-2 ${
-                          isSelected ? "text-white/70" : "text-gray-400"
-                        }`}>
-                          {tier.dateStr}
-                        </span>
+                    const currentPrice = hasAccommodation ? tier.priceComplet : tier.priceSolo;
 
-                        {/* Inclusions identiques sur les 3 cartes (Harmonisées) */}
-                        <div className={`border-t pt-5 mt-5 ${
-                          isSelected ? "border-white/10" : "border-gray-100"
-                        }`}>
-                          <ul className="space-y-3 text-[11px] font-sans font-medium">
-                            <li className="flex items-start gap-2.5">
-                              <Check className={`h-4 w-4 flex-shrink-0 mt-0.5 ${
-                                isSelected ? "text-white" : "text-[#00A6DF]"
-                              }`} />
-                              <span className={isSelected ? "text-white/90" : "text-gray-600"}>
-                                3 déjeuners & 3 dîners inclus
+                    // Text labels matching the image
+                    const labelTranslations = {
+                      early: "LÈVE-TÔT",
+                      standard: "STANDARD",
+                      last: "DERNIÈRE CHANCE"
+                    };
+
+                    return (
+                      <div
+                        key={key}
+                        onClick={() => {
+                          if (isActive) {
+                            setSelectedTier(key);
+                          }
+                        }}
+                        className={`rounded-[32px] p-8 flex flex-col justify-between relative transition-all duration-300 select-none overflow-hidden ${
+                          isActive
+                            ? "bg-[#0D0E25] text-white border-2 border-amber-500/80 shadow-[0_15px_40px_rgba(245,158,11,0.15)] md:scale-[1.03] z-10"
+                            : "bg-[#090A1A] text-gray-100 border border-white/5 opacity-70 cursor-not-allowed"
+                        }`}
+                      >
+                        {/* Ribbon "OUVERT" or "FERMÉ" on the top right for active/inactive */}
+                        {isActive && (
+                          <div className="absolute top-0 right-0 bg-amber-500 text-slate-950 font-sans font-black text-[9px] tracking-widest uppercase px-4 py-1.5 rounded-bl-xl shadow-md">
+                            OUVERT
+                          </div>
+                        )}
+
+                        <div className="space-y-6">
+                          {/* Label de l'offre en haut centré */}
+                          <div className="flex justify-center pt-2">
+                            <span className={`px-5 py-1.5 rounded-full text-[10px] font-sans font-black tracking-widest uppercase border ${
+                              isActive 
+                                ? "bg-amber-500/10 border-amber-500/25 text-amber-400" 
+                                : "bg-white/5 border-white/10 text-gray-400"
+                            }`}>
+                              {labelTranslations[key]}
+                            </span>
+                          </div>
+
+                          {/* Affichage Prix prestigieux centré */}
+                          <div className="text-center space-y-1">
+                            <span className="text-4xl font-sans font-black block tracking-tight text-white drop-shadow-md">
+                              {currentPrice}
+                            </span>
+                            
+                            {/* Dates avec icône de calendrier */}
+                            <div className="flex items-center justify-center gap-1.5 pt-1.5">
+                              <Calendar className={`h-3.5 w-3.5 ${isActive ? "text-amber-400" : "text-gray-500"}`} />
+                              <span className={`text-[10px] font-sans font-black uppercase tracking-wider ${
+                                isActive ? "text-amber-400" : "text-gray-500"
+                              }`}>
+                                {tier.dateStr}
                               </span>
-                            </li>
-                            <li className="flex items-start gap-2.5">
-                              <Check className={`h-4 w-4 flex-shrink-0 mt-0.5 ${
-                                isSelected ? "text-white" : "text-[#00A6DF]"
-                              }`} />
-                              <span className={isSelected ? "text-white/90" : "text-gray-600"}>
-                                5 pauses-café + kit complet
-                              </span>
-                            </li>
-                            <li className="flex items-start gap-2.5">
+                            </div>
+                          </div>
+
+                          {/* Séparateur horizontal net */}
+                          <div className="border-t border-white/10 my-4" />
+
+                          {/* Liste des inclusions inspirée du modèle */}
+                          <div className="space-y-4 pt-1">
+                            {[
+                              "Accès complet aux 3 jours de la Convention & Sommet Jeunesse",
+                              "Toutes les conférences plénières & panels d'experts",
+                              "Choix parmi les ateliers pratiques exclusifs",
+                              "Soirée Networking Cocktail VIP inclus",
+                              "Soirée de Clôture avec spectacle & concert d'artistes"
+                            ].map((feature, idx) => (
+                              <div key={idx} className="flex items-start gap-3">
+                                <Check className={`h-4 w-4 flex-shrink-0 mt-0.5 ${
+                                  isActive ? "text-[#00A6DF]" : "text-gray-700"
+                                }`} />
+                                <span className={`text-[11px] font-sans font-medium leading-relaxed ${
+                                  isActive ? "text-white/90" : "text-gray-500"
+                                }`}>
+                                  {feature}
+                                </span>
+                              </div>
+                            ))}
+
+                            {/* Option d'hébergement dynamique */}
+                            <div className="flex items-start gap-3 pt-1">
                               {hasAccommodation ? (
                                 <>
                                   <Check className={`h-4 w-4 flex-shrink-0 mt-0.5 ${
-                                    isSelected ? "text-white" : "text-[#00A6DF]"
+                                    isActive ? "text-[#00A6DF]" : "text-gray-700"
                                   }`} />
-                                  <span className={isSelected ? "text-white/90" : "text-gray-600"}>
-                                    3 nuitées + 2 petits-déjeuners
+                                  <span className={`text-[11px] font-sans font-medium leading-relaxed ${
+                                    isActive ? "text-white/90" : "text-gray-500"
+                                  }`}>
+                                    Hébergement premium inclus (3 nuitées)
                                   </span>
                                 </>
                               ) : (
-                                <div className="pl-6.5">
-                                  <span className={`font-bold ${isSelected ? "text-amber-300" : "text-amber-600"}`}>
-                                    Accès Solo (Sans hôtel)
+                                <>
+                                  <div className={`h-1.5 w-1.5 rounded-full mt-2 ml-1.5 flex-shrink-0 ${
+                                    isActive ? "bg-amber-400 animate-pulse" : "bg-gray-700"
+                                  }`} />
+                                  <span className={`text-[11px] font-sans font-black leading-relaxed pl-1 ${
+                                    isActive ? "text-amber-400" : "text-gray-500"
+                                  }`}>
+                                    Accès Solo (Hébergement non inclus)
                                   </span>
-                                </div>
+                                </>
                               )}
-                            </li>
-                          </ul>
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Bouton d'action et sous-texte */}
+                        <div className="mt-8 pt-4">
+                          <button
+                            type="button"
+                            disabled={!isActive}
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              if (isActive) {
+                                const url = selectedProgram === "convention" ? "https://tally.so/r/dWVbEo" : "https://tally.so/r/MegLYX";
+                                window.open(url, "_blank");
+                              }
+                            }}
+                            className={`w-full py-3.5 px-6 rounded-xl font-sans font-black text-[11px] tracking-widest uppercase transition-all duration-300 text-center flex items-center justify-center gap-2 relative overflow-hidden ${
+                              !isActive
+                                ? "bg-[#14152A] text-gray-500 border border-white/5 cursor-not-allowed"
+                                : "bg-gradient-to-r from-[#00A6DF] to-amber-500 hover:from-amber-500 hover:to-[#00A6DF] text-slate-950 font-black cursor-pointer shadow-lg shadow-amber-500/10 hover:shadow-xl hover:shadow-cyan-500/20 hover:scale-[1.02] active:scale-95"
+                            }`}
+                          >
+                            <span>{isActive ? "S'INSCRIRE" : "BIENTÔT DISPONIBLE"}</span>
+                            {isActive && <ArrowRight className="h-4 w-4" />}
+                          </button>
+                          
+                          {/* Message de statut en bas */}
+                          <span className="block text-center text-[10px] text-gray-500 font-sans mt-2.5">
+                            {isActive ? "Redirection sécurisée" : `Ouverture le ${tier.id === "standard" ? "3 août" : "24 août"}`}
+                          </span>
                         </div>
                       </div>
+                    );
+                  })}
+                </div>
 
-                      {/* Bouton d'action sécurisé (Bloqué pour Standard / Last) */}
-                      <button
-                        type="button"
-                        disabled={!isActive}
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          if (isActive) {
-                            const url = selectedProgram === "convention" ? "https://tally.so/r/dWVbEo" : "https://tally.so/r/MegLYX";
-                            window.open(url, "_blank");
-                          }
-                        }}
-                        className={`w-full py-3 px-4 rounded-full font-sans font-black text-xs tracking-wide transition-all text-center mt-6 shadow-sm ${
-                          !isActive
-                            ? "bg-gray-100 text-gray-400 cursor-not-allowed border border-gray-200"
-                            : isSelected
-                            ? "bg-white text-[#1A3E7E] hover:bg-gray-50 font-black cursor-pointer"
-                            : "bg-[#1A3E7E] text-white hover:bg-[#133063] font-bold cursor-pointer"
-                        }`}
-                      >
-                        {isExpired ? "Expiré" : isNotOpenYet ? tier.openDateStr : "S'inscrire"}
-                      </button>
-                    </div>
-                  );
-                })}
+
+
+                {/* Note de bas de page stratégique */}
+                <div className="text-[11px] text-gray-400 font-sans font-medium leading-relaxed pt-4 text-center max-w-2xl mx-auto border-t border-white/10">
+                  <p>
+                    Munissez-vous de votre référence de transaction Orange Money avant de lancer le formulaire. L&apos;hébergement est attribué par le comité d&apos;organisation (COC) par ordre d&apos;inscription : les premiers inscrits sont favorisés pour l&apos;hôtel de premier choix (Choix 1).
+                  </p>
+                </div>
+
               </div>
-
-              {/* Nouvelle note de bas de page stratégique (Justification de l'augmentation) */}
-              <div className="text-[11px] text-gray-300 font-sans font-medium leading-relaxed pt-4 text-center max-w-2xl mx-auto border-t border-white/10">
-                <p>
-                  Munissez-vous de votre référence de transaction Orange Money avant de lancer le formulaire. L&apos;hébergement est attribué par le comité d&apos;organisation (COC) par ordre d&apos;inscription : les premiers inscrits sont favorisés pour l&apos;hôtel de premier choix (Choix 1).
-                </p>
-              </div>
-
             </motion.div>
           </div>
         )}
