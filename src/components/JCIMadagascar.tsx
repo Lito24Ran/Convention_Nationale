@@ -31,7 +31,7 @@ export default function JCIMadagascar() {
               {/* Subtle category pill for modern layout context */}
               <div id="jci-pill" className="inline-flex items-center space-x-2 bg-sky-550/10 border border-sky-400/20 px-3.5 py-1.5 rounded-full w-fit">
                 <span className="text-xs font-mono tracking-widest uppercase font-extrabold text-[#00A6DF]">
-                  ORGANISATION MÈRE
+                  ORGANISATION Nationale
                 </span>
                 <Globe className="h-3.5 w-3.5 text-[#00A6DF] animate-spin-slow" />
               </div>
@@ -44,7 +44,7 @@ export default function JCIMadagascar() {
               {/* Text paragraph with the unique inline stylized underlines to replicate the visual mockup perfectly */}
               <div className="space-y-6 text-lg sm:text-xl font-sans text-gray-800 font-medium leading-relaxed md:leading-loose">
                 <p className="decoration-1 decoration-dashed md:decoration-solid">
-                  JCI Madagascar, en tant que chambre nationale, fédère les chambres locales malgaches et organise chaque année sa Convention Nationale. JCI Iarivo, chambre locale basée à Antananarivo, est le comité organisateur officiel de l&apos;édition 2026.
+                  JCI Madagascar, en tant que organisation nationale, fédère les chambres locales malgaches et organise chaque année sa Convention Nationale. JCI Iarivo, chambre locale basée à Antananarivo, est le comité organisateur officiel de l&apos;édition 2026.
                 </p>
               </div>
             </motion.div>

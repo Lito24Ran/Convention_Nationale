@@ -290,13 +290,13 @@ export default function Partners() {
           </div>
 
           <div className="relative z-10 flex-shrink-0">
-            <button
+             <a
               id="btn-partner-contact"
-              onClick={() => setModalOpen(true)}
-              className="bg-[#0F1026] hover:bg-[#1B1D42] text-white font-sans font-extrabold text-xs sm:text-sm tracking-wide uppercase px-8 py-3.5 sm:py-4 rounded-xl shadow-lg active:scale-95 transition-all duration-200 cursor-pointer select-none"
+              href="mailto:jciiarivo@gmail.com?subject=Demande de Partenariat - Convention Nationale 2026"
+              className="inline-block bg-[#0F1026] hover:bg-[#1B1D42] text-white font-sans font-extrabold text-xs sm:text-sm tracking-wide uppercase px-8 py-3.5 sm:py-4 rounded-xl shadow-lg hover:shadow-cyan-950/25 active:scale-95 transition-all duration-200 text-center select-none"
             >
               Contactez-nous
-            </button>
+            </a>
           </div>
         </div>
       </div>

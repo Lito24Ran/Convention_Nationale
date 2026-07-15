@@ -45,9 +45,9 @@ export default function Hero({ onRegisterClick, onThemesClick }: HeroProps) {
 
 
 
-  // Simple countdown calculation for 22 June 2026
+  // Simple countdown calculation for 1 October 2026 at 00:00:00
   const calculateTimeLeft = () => {
-    const targetDate = new Date("2026-06-22T08:30:00");
+    const targetDate = new Date("2026-10-01T00:00:00");
     const difference = +targetDate - +new Date();
     
     let timeLeft = {
@@ -89,28 +89,29 @@ export default function Hero({ onRegisterClick, onThemesClick }: HeroProps) {
       
       {/* Background with crossfade and high-contrast atmospheric filters */}
       <div className="absolute inset-0 overflow-hidden">
-      <div className="absolute inset-0 w-full h-full">
-        {carouselSlides.map((slide, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: index === currentSlide ? 1 : 0 }}
-            transition={{ duration: 1.5, ease: "easeOut" }}
-            className="absolute inset-0 w-full h-full"
-          >
-            <img
-              src={slide.image}
-              alt="Convention Background Slide"
-              className="w-full h-full object-cover select-none"
-            />
-          </motion.div>
-        ))}
-      </div>
+        <div className="absolute inset-0 w-full h-full">
+          {carouselSlides.map((slide, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: index === currentSlide ? 1 : 0 }}
+              transition={{ duration: 1.5, ease: "easeOut" }}
+              className="absolute inset-0 w-full h-full"
+            >
+              <img
+                src={slide.image}
+                alt="Convention Background Slide"
+                className="w-full h-full object-cover select-none"
+                referrerPolicy="no-referrer"
+              />
+            </motion.div>
+          ))}
+        </div>
 
-  {/* Overlays */}
-  <div className="absolute inset-0 bg-gradient-to-r from-[#0F1026]/65 via-[#0F1026]/50 to-[#050614]/40 z-10" />
-  <div className="absolute inset-0 bg-gradient-to-t from-[#0C0D21] via-[#0F1026]/20 to-[#0F1026]/50 z-10" />
-</div>
+        {/* Overlays */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0F1026]/65 via-[#0F1026]/50 to-[#050614]/40 z-10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0C0D21] via-[#0F1026]/20 to-[#0F1026]/50 z-10" />
+      </div>
 
       {/* Main hero grid centering the JCI content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-16 md:py-28 flex-grow flex items-center relative z-10">
@@ -243,4 +244,3 @@ export default function Hero({ onRegisterClick, onThemesClick }: HeroProps) {
     </section>
   );
 }
-
