@@ -31,7 +31,7 @@ export default function Header({ onNavigate, activeSection }: HeaderProps) {
     { label: "Programme", id: "program" },
     { label: "Youth Summit", id: "youth-summit-feature" },
     { label: "Formateurs", id: "formateurs" },
-    { label: "Tarifs", id: "registration" },
+    // { label: "Tarifs", id: "registration" },
     { label: "Partenaires", id: "partners" },
     { label: "Actualités", id: "blog" },
     { label: "FAQ", id: "faq" },
