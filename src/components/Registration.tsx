@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Shield, Users, ArrowRight, X, Check, Award, Calendar, AlertCircle, Sparkles, Coffee, Utensils, Hotel, Gift, Briefcase, GraduationCap } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
-import CN_image1 from "../assets/images/WhatsApp Image 2026-06-17 at 08.27.09.jpeg"
-import CN_image2 from "../assets/images/WhatsApp Image 2026-06-17 at 08.32.46.jpeg"
+import Image_CN from "../assets/images/WhatsApp Image 2026-06-17 at 08.32.46.jpeg"
+import Image_CN2 from "../assets/images/WhatsApp Image 2026-06-17 at 08.32.43.jpeg"
 
 
 type ProgramType = "convention" | "youth";
@@ -120,7 +120,7 @@ export default function Registration() {
 
             <div className="w-full md:w-[200px] flex-shrink-0 flex items-center justify-center relative z-10 self-center">
               <img
-                src={CN_image1}
+                src={Image_CN}
                 alt="JCI Convention"
                 className="w-full h-44 md:h-60 object-cover rounded-2xl shadow-md border border-white/10 group-hover:scale-[1.01] transition-transform duration-300"
               />
@@ -159,7 +159,7 @@ export default function Registration() {
 
             <div className="w-full md:w-[200px] flex-shrink-0 flex items-center justify-center relative z-10 self-center">
               <img
-                src={CN_image2}
+                src={Image_CN2}
                 alt="Youth Summit"
                 className="w-full h-44 md:h-60 object-cover rounded-2xl shadow-md border border-gray-200 group-hover:scale-[1.01] transition-transform duration-300"
               />
@@ -385,16 +385,21 @@ export default function Registration() {
                           {/* Liste des inclusions inspirée du modèle */}
                           <div className="space-y-4 pt-1">
                             {[
-                              "Accès complet aux 3 jours de la Convention & Sommet Jeunesse",
-                              "Toutes les conférences plénières & panels d'experts",
-                              "Choix parmi les ateliers pratiques exclusifs",
-                              "Soirée Networking Cocktail VIP inclus",
-                              "Soirée de Clôture avec spectacle & concert d'artistes"
+                              "Une formation pratique sur l'accès réel au financement.",
+                              "Des ateliers au choix : Personal Branding, Marketing Digital, Pitcher son projet, Trouver des financements, Construire un réseau stratégique.",
+                              "Des témoignages d'entrepreneurs malagasy ayant réussi ce parcours.",
+                              "Une soirée networking cocktail VIP et une soirée de clôture avec spectacle culturel et concert.",
+                              "Kit participant, sans frais annexes.",
+                              "Pour les membres JCI, la formation certifiante, reconnue à l'international, est incluse."
                             ].map((feature, idx) => (
                               <div key={idx} className="flex items-start gap-3">
-                                <Check className={`h-4 w-4 flex-shrink-0 mt-0.5 ${
-                                  isActive ? "text-[#00A6DF]" : "text-gray-700"
-                                }`} />
+                                <div className={`flex-shrink-0 h-4.5 w-4.5 rounded-full flex items-center justify-center border mt-0.5 ${
+                                  isActive 
+                                    ? "border-[#00A6DF]/40 bg-[#00A6DF]/10 text-[#00A6DF]" 
+                                    : "border-gray-700 bg-gray-700/5 text-gray-500"
+                                }`}>
+                                  <Check className="h-2.5 w-2.5 stroke-[3]" />
+                                </div>
                                 <span className={`text-[11px] font-sans font-medium leading-relaxed ${
                                   isActive ? "text-white/90" : "text-gray-500"
                                 }`}>
@@ -407,9 +412,13 @@ export default function Registration() {
                             <div className="flex items-start gap-3 pt-1">
                               {hasAccommodation ? (
                                 <>
-                                  <Check className={`h-4 w-4 flex-shrink-0 mt-0.5 ${
-                                    isActive ? "text-[#00A6DF]" : "text-gray-700"
-                                  }`} />
+                                  <div className={`flex-shrink-0 h-4.5 w-4.5 rounded-full flex items-center justify-center border mt-0.5 ${
+                                    isActive 
+                                      ? "border-[#00A6DF]/40 bg-[#00A6DF]/10 text-[#00A6DF]" 
+                                      : "border-gray-700 bg-gray-700/5 text-gray-500"
+                                  }`}>
+                                    <Check className="h-2.5 w-2.5 stroke-[3]" />
+                                  </div>
                                   <span className={`text-[11px] font-sans font-medium leading-relaxed ${
                                     isActive ? "text-white/90" : "text-gray-500"
                                   }`}>

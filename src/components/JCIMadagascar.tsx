@@ -1,6 +1,8 @@
 import React from "react";
 import { motion } from "motion/react";
 import { Award, ShieldCheck, Globe } from "lucide-react";
+import union from "../assets/images/Union_image.jpeg";
+import Image10 from "../assets/images/Image10.jpeg";
 
 export default function JCIMadagascar() {
   // Generated high-quality image assets
@@ -89,7 +91,7 @@ export default function JCIMadagascar() {
                 className="absolute w-[220px] h-[220px] sm:w-[280px] sm:h-[280px] rounded-full overflow-hidden shadow-2xl border-[3.5px] border-[#00A6DF] z-20 cursor-pointer bg-neutral-100"
               >
                 <img
-                  src={imgTeam}
+                  src={union}
                   alt="JCI Madagascar Team Portrait"
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
@@ -108,7 +110,7 @@ export default function JCIMadagascar() {
                 className="absolute w-[220px] h-[220px] sm:w-[280px] sm:h-[280px] rounded-full overflow-hidden shadow-2xl border-[3.5px] border-[#00A6DF] z-10 cursor-pointer bg-neutral-100"
               >
                 <img
-                  src={imgEvent}
+                  src={Image10}
                   alt="JCI Madagascar Event Session"
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"

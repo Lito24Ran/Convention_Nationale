@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Calendar, Shield } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
-import JCILogo from "../assets/images/LogoJCI2.jpeg"
+import LogoJCI from "../assets/images/LogoJCI2.jpeg"
 
 interface HeaderProps {
   onNavigate: (sectionId: string) => void;
@@ -28,7 +28,8 @@ export default function Header({ onNavigate, activeSection }: HeaderProps) {
   const navItems = [
     { label: "Accueil", id: "hero" },
     { label: "À propos", id: "about" },
-    { label: "Youth Summit", id: "program" },
+    { label: "Programme", id: "program" },
+    { label: "Youth Summit", id: "youth-summit-feature" },
     { label: "Formateurs", id: "formateurs" },
     { label: "Tarifs", id: "registration" },
     { label: "Partenaires", id: "partners" },
@@ -60,7 +61,7 @@ export default function Header({ onNavigate, activeSection }: HeaderProps) {
             className="flex items-center space-x-2.5 cursor-pointer group select-none py-1"
           >
             <img 
-              src={JCILogo} 
+              src={LogoJCI} 
               alt="logoJCI" 
               className="h-10 sm:h-12 w-auto object-contain transition-all duration-300 transform group-hover:scale-105 filter drop-shadow-[0_2px_8px_rgba(0,166,223,0.15)]" 
             />
@@ -73,7 +74,7 @@ export default function Header({ onNavigate, activeSection }: HeaderProps) {
               const isActive = 
                 activeSection === item.id || 
                 (item.id === "about" && (activeSection === "who-we-are" || activeSection === "jci-madagascar")) ||
-                (item.id === "program" && (activeSection === "intervenants" || activeSection === "youth-summit-feature" || activeSection === "conferenciers"));
+                (item.id === "program" && (activeSection === "intervenants" || activeSection === "conferenciers"));
                 
               return (
                 <button
@@ -139,7 +140,7 @@ export default function Header({ onNavigate, activeSection }: HeaderProps) {
                 const isActive = 
                   activeSection === item.id || 
                   (item.id === "about" && (activeSection === "who-we-are" || activeSection === "jci-madagascar")) ||
-                  (item.id === "program" && (activeSection === "intervenants" || activeSection === "youth-summit-feature" || activeSection === "conferenciers"));
+                  (item.id === "program" && (activeSection === "intervenants" || activeSection === "conferenciers"));
 
                 return (
                   <button

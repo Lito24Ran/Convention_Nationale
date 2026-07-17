@@ -46,7 +46,8 @@ membres, dirigeants et partenaires. Temps fort du calendrier institutionnel, esp
 décision stratégique.
               </p>
               <p className="text-sm sm:text-base text-gray-500">
-                Pendant trois jours intenses de réflexion collective, nous aborderons de manière pragmatique les enjeux cardinaux de notre ère : le déploiement éthique de l&apos;intelligence artificielle, la restructuration durable liée à l&apos;adaptation climatique, et le déclin des organisations hiérarchiques au profit d&apos;écosystèmes agiles et transversaux.
+                Pendant trois jours intenses de réflexion collective, d'échanges constructifs et de collaboration, la Convention Nationale rassemblera des participants venus de différents horizons autour d'une ambition commune : bâtir des solutions innovantes, renforcer le leadership et favoriser un impact durable. À travers des conférences, des ateliers, des débats et des moments de partage, cet événement constituera une occasion unique d'apprendre, de créer des liens et de transformer les idées en actions concrètes au service de notre communauté et de notre avenir.
+
               </p>
             </div>
 

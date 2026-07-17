@@ -17,6 +17,7 @@ import Blog from "./components/Blog";
 import FAQ from "./components/FAQ";
 import Footer from "./components/Footer";
 import Formateurs from "./components/Formateur";
+import YouthSummit from "./components/Youth_Summit";
 
 export default function App() {
   const [activeSection, setActiveSection] = useState("hero");
@@ -76,12 +77,13 @@ export default function App() {
       {/* Core sections */}
       <main id="main-content-flow">
         <Hero
-          onRegisterClick={() => handleScrollToSection("registration")}
+          onRegisterClick={() => handleScrollToSection("youth-summit-feature")}
           onThemesClick={() => handleScrollToSection("about")}
         />
         <About />
         <Program />
         {/* <Speakers /> */}
+        <YouthSummit/>
          <Formateurs />
         <Registration />
         <WhoWeAre />

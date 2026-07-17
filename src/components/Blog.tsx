@@ -3,6 +3,7 @@ import { ARTICLES, Article } from "../types";
 import { Calendar, Clock, ArrowRight, X, Search, Filter, BookOpen } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 
+
 const CATEGORIES = [
   { id: "all", label: "Tout" },
   { id: "Événement", label: "Événement" },
