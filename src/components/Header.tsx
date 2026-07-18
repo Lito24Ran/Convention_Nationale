@@ -3,6 +3,7 @@ import { Menu, X, Calendar, Shield } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import LogoJCI from "../assets/images/LogoJCI2.jpeg"
 
+
 interface HeaderProps {
   onNavigate: (sectionId: string) => void;
   activeSection: string;
@@ -31,7 +32,7 @@ export default function Header({ onNavigate, activeSection }: HeaderProps) {
     { label: "Programme", id: "program" },
     { label: "Youth Summit", id: "youth-summit-feature" },
     { label: "Formateurs", id: "formateurs" },
-    // { label: "Tarifs", id: "registration" },
+    { label: "Tarifs", id: "registration" },
     { label: "Partenaires", id: "partners" },
     { label: "Actualités", id: "blog" },
     { label: "FAQ", id: "faq" },
@@ -102,13 +103,20 @@ export default function Header({ onNavigate, activeSection }: HeaderProps) {
 
           {/* Header Action: Pill-shaped high-ticket gradient button */}
           <div id="desktop-actions" className="hidden lg:flex items-center">
-            <button
-              id="cta-header-register"
-              onClick={() => handleLinkClick("registration")}
-              className="bg-gradient-to-r from-[#00A6DF] to-amber-500 hover:from-amber-500 hover:to-[#00A6DF] text-slate-950 px-6 py-2.5 rounded-full text-[10px] font-sans font-black tracking-widest uppercase shadow-md shadow-amber-500/10 hover:shadow-lg hover:shadow-cyan-500/20 active:scale-95 transition-all duration-300 cursor-pointer"
-            >
-              S&apos;inscrire
-            </button>
+            <div className="relative group">
+              {/* Soft purple-to-teal diffuse background glow */}
+              <div className="absolute -inset-1.5 rounded-2xl bg-gradient-to-r from-[#A855F7] via-[#00A6DF] to-[#10B981] opacity-60 group-hover:opacity-100 blur-xl transition-all duration-500 pointer-events-none" />
+              {/* Sharper gradient border layer */}
+              <div className="absolute -inset-[1px] rounded-2xl bg-gradient-to-r from-[#A855F7]/30 to-[#10B981]/30 opacity-40 group-hover:opacity-80 blur-[2px] transition-all duration-500 pointer-events-none" />
+              
+              <button
+                id="cta-header-register"
+                onClick={() => handleLinkClick("registration")}
+                className="relative bg-[#090A1F] hover:bg-[#0E0F2E] text-white px-6 py-2.5 rounded-2xl text-[11px] font-sans font-black tracking-widest uppercase active:scale-95 transition-all duration-300 cursor-pointer border border-white/10"
+              >
+                S&apos;inscrire
+              </button>
+            </div>
           </div>
 
           {/* Mobile menu button */}
@@ -158,13 +166,18 @@ export default function Header({ onNavigate, activeSection }: HeaderProps) {
                 );
               })}
               <div className="pt-4 border-t border-white/5 flex flex-col space-y-3 px-4">
-                <button
-                  id="mobile-cta-register"
-                  onClick={() => handleLinkClick("registration")}
-                  className="w-full text-center bg-gradient-to-r from-[#00A6DF] to-amber-500 text-slate-950 font-sans font-black py-3.5 rounded-xl shadow-lg cursor-pointer tracking-widest uppercase"
-                >
-                  S&apos;inscrire
-                </button>
+                <div className="relative group w-full">
+                  {/* Soft purple-to-teal diffuse background glow */}
+                  <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-[#A855F7] via-[#00A6DF] to-[#10B981] opacity-50 blur-lg pointer-events-none" />
+                  
+                  <button
+                    id="mobile-cta-register"
+                    onClick={() => handleLinkClick("registration")}
+                    className="relative w-full text-center bg-[#090A1F] text-white font-sans font-black py-3.5 rounded-2xl shadow-lg cursor-pointer tracking-widest uppercase border border-white/10"
+                  >
+                    S&apos;inscrire
+                  </button>
+                </div>
               </div>
             </div>
           </motion.div>

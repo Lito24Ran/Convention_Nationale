@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Shield, Users, ArrowRight, X, Check, Award, Calendar, AlertCircle, Sparkles, Coffee, Utensils, Hotel, Gift, Briefcase, GraduationCap } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
-import Image_CN from "../assets/images/WhatsApp Image 2026-06-17 at 08.32.46.jpeg"
-import Image_CN2 from "../assets/images/WhatsApp Image 2026-06-17 at 08.32.43.jpeg"
-
+import JCi_image from "../assets/images/WhatsApp Image 2026-06-17 at 08.32.46.jpeg";
+import JCI_IMAGE2 from  "../assets/images/WhatsApp Image 2026-06-17 at 08.32.43.jpeg"
 
 type ProgramType = "convention" | "youth";
 
@@ -99,18 +98,30 @@ export default function Registration() {
               </div>
 
               <div className="space-y-3">
-                <button
-                  disabled={isRegistrationClosedGlobal}
-                  onClick={() => openModal("convention")}
-                  className={`w-full font-sans font-black text-xs tracking-wider py-4 px-6 rounded-xl uppercase flex items-center justify-center gap-2 transition-all duration-200 select-none ${
-                    isRegistrationClosedGlobal 
-                      ? "bg-gray-700 text-gray-400 cursor-not-allowed" 
-                      : "bg-[#00A6DF] hover:bg-sky-400 text-white active:scale-95 cursor-pointer"
-                  }`}
-                >
-                  {isRegistrationClosedGlobal ? "Inscriptions Clôturées" : "S'inscrire à la CN"}
-                  <ArrowRight className="h-4 w-4 stroke-[2.5]" />
-                </button>
+                {!isRegistrationClosedGlobal ? (
+                  <div className="relative group w-full">
+                    {/* Soft purple-to-teal diffuse background glow */}
+                    <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-[#A855F7] via-[#00A6DF] to-[#10B981] opacity-50 group-hover:opacity-90 blur-lg transition-all duration-500 pointer-events-none" />
+                    {/* Sharper gradient border layer */}
+                    <div className="absolute -inset-[1px] rounded-2xl bg-gradient-to-r from-[#A855F7]/20 to-[#10B981]/20 opacity-30 group-hover:opacity-75 blur-[1px] transition-all duration-500 pointer-events-none" />
+
+                    <button
+                      onClick={() => openModal("convention")}
+                      className="relative w-full font-sans font-black text-xs tracking-wider py-4 px-6 rounded-2xl bg-[#00A6DF] hover:bg-[#0089b8] text-white uppercase flex items-center justify-center gap-2 transition-all duration-200 active:scale-95 cursor-pointer border border-white/10"
+                    >
+                      S&apos;inscrire à la CN
+                      <ArrowRight className="h-4 w-4 stroke-[2.5]" />
+                    </button>
+                  </div>
+                ) : (
+                  <button
+                    disabled
+                    className="w-full font-sans font-black text-xs tracking-wider py-4 px-6 rounded-2xl bg-gray-700 text-gray-400 cursor-not-allowed uppercase flex items-center justify-center gap-2 select-none"
+                  >
+                    Inscriptions Clôturées
+                    <ArrowRight className="h-4 w-4 stroke-[2.5]" />
+                  </button>
+                )}
                 <p className="text-[11px] text-white/50 font-sans flex items-center gap-1.5">
                   <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
                   Validation sur référence Orange Money
@@ -120,7 +131,7 @@ export default function Registration() {
 
             <div className="w-full md:w-[200px] flex-shrink-0 flex items-center justify-center relative z-10 self-center">
               <img
-                src={Image_CN}
+                src={JCi_image}
                 alt="JCI Convention"
                 className="w-full h-44 md:h-60 object-cover rounded-2xl shadow-md border border-white/10 group-hover:scale-[1.01] transition-transform duration-300"
               />
@@ -143,13 +154,20 @@ export default function Registration() {
               </div>
 
               <div className="space-y-3">
-                <button
-                  onClick={() => window.open("https://tally.so/r/MegLYX", "_blank")}
-                  className="w-full bg-[#1A3E7E] hover:bg-[#133063] text-white font-sans font-black text-xs tracking-wider py-4 px-6 rounded-xl uppercase flex items-center justify-center gap-2 transition-all duration-200 active:scale-95 cursor-pointer select-none"
-                >
-                  S&apos;inscrire au YS
-                  <ArrowRight className="h-4 w-4 stroke-[2.5]" />
-                </button>
+                <div className="relative group w-full">
+                  {/* Soft purple-to-teal diffuse background glow */}
+                  <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-[#A855F7] via-[#00A6DF] to-[#10B981] opacity-30 group-hover:opacity-70 blur-lg transition-all duration-500 pointer-events-none" />
+                  {/* Sharper gradient border layer */}
+                  <div className="absolute -inset-[1px] rounded-2xl bg-gradient-to-r from-[#A855F7]/10 to-[#10B981]/10 opacity-20 group-hover:opacity-50 blur-[1px] transition-all duration-500 pointer-events-none" />
+
+                  <button
+                    onClick={() => window.open("https://tally.so/r/MegLYX", "_blank")}
+                    className="relative w-full font-sans font-black text-xs tracking-wider py-4 px-6 rounded-2xl bg-[#1A3E7E] hover:bg-[#133063] text-white uppercase flex items-center justify-center gap-2 transition-all duration-200 active:scale-95 cursor-pointer border border-white/10"
+                  >
+                    S&apos;inscrire au YS
+                    <ArrowRight className="h-4 w-4 stroke-[2.5]" />
+                  </button>
+                </div>
                 <p className="text-[11px] text-gray-400 font-sans flex items-center gap-1.5">
                   <span className="h-1.5 w-1.5 rounded-full bg-[#1A3E7E] animate-pulse" />
                   Confirmation immédiate par email
@@ -159,7 +177,7 @@ export default function Registration() {
 
             <div className="w-full md:w-[200px] flex-shrink-0 flex items-center justify-center relative z-10 self-center">
               <img
-                src={Image_CN2}
+                src={JCI_IMAGE2}
                 alt="Youth Summit"
                 className="w-full h-44 md:h-60 object-cover rounded-2xl shadow-md border border-gray-200 group-hover:scale-[1.01] transition-transform duration-300"
               />
@@ -443,25 +461,35 @@ export default function Registration() {
 
                         {/* Bouton d'action et sous-texte */}
                         <div className="mt-8 pt-4">
-                          <button
-                            type="button"
-                            disabled={!isActive}
-                            onClick={(e) => {
-                              e.stopPropagation();
-                              if (isActive) {
-                                const url = selectedProgram === "convention" ? "https://tally.so/r/dWVbEo" : "https://tally.so/r/MegLYX";
-                                window.open(url, "_blank");
-                              }
-                            }}
-                            className={`w-full py-3.5 px-6 rounded-xl font-sans font-black text-[11px] tracking-widest uppercase transition-all duration-300 text-center flex items-center justify-center gap-2 relative overflow-hidden ${
-                              !isActive
-                                ? "bg-[#14152A] text-gray-500 border border-white/5 cursor-not-allowed"
-                                : "bg-gradient-to-r from-[#00A6DF] to-amber-500 hover:from-amber-500 hover:to-[#00A6DF] text-slate-950 font-black cursor-pointer shadow-lg shadow-amber-500/10 hover:shadow-xl hover:shadow-cyan-500/20 hover:scale-[1.02] active:scale-95"
-                            }`}
-                          >
-                            <span>{isActive ? "S'INSCRIRE" : "BIENTÔT DISPONIBLE"}</span>
-                            {isActive && <ArrowRight className="h-4 w-4" />}
-                          </button>
+                          {isActive ? (
+                            <div className="relative group w-full">
+                              {/* Soft purple-to-teal diffuse background glow */}
+                              <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-[#A855F7] via-[#00A6DF] to-[#10B981] opacity-60 group-hover:opacity-100 blur-lg transition-all duration-500 pointer-events-none" />
+                              {/* Sharper gradient border layer */}
+                              <div className="absolute -inset-[1px] rounded-2xl bg-gradient-to-r from-[#A855F7]/30 to-[#10B981]/30 opacity-40 group-hover:opacity-80 blur-[2px] transition-all duration-500 pointer-events-none" />
+
+                              <button
+                                type="button"
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  const url = selectedProgram === "convention" ? "https://tally.so/r/dWVbEo" : "https://tally.so/r/MegLYX";
+                                  window.open(url, "_blank");
+                                }}
+                                className="relative w-full py-3.5 px-6 bg-[#090A1F] hover:bg-[#0E0F2E] text-white rounded-2xl font-sans font-black text-[11px] tracking-widest uppercase active:scale-95 transition-all duration-300 cursor-pointer border border-white/10 flex items-center justify-center gap-2"
+                              >
+                                <span>S&apos;INSCRIRE</span>
+                                <ArrowRight className="h-4 w-4" />
+                              </button>
+                            </div>
+                          ) : (
+                            <button
+                              type="button"
+                              disabled
+                              className="w-full py-3.5 px-6 rounded-2xl font-sans font-black text-[11px] tracking-widest uppercase transition-all duration-300 text-center bg-[#14152A] text-gray-500 border border-white/5 cursor-not-allowed"
+                            >
+                              <span>BIENTÔT DISPONIBLE</span>
+                            </button>
+                          )}
                           
                           {/* Message de statut en bas */}
                           <span className="block text-center text-[10px] text-gray-500 font-sans mt-2.5">
