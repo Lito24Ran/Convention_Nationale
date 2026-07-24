@@ -106,7 +106,7 @@ export default function Registration() {
                     <div className="absolute -inset-[1px] rounded-2xl bg-gradient-to-r from-[#A855F7]/20 to-[#10B981]/20 opacity-30 group-hover:opacity-75 blur-[1px] transition-all duration-500 pointer-events-none" />
 
                     <button
-                      onClick={() => openModal("convention")}
+                      onClick={() => openModal("convention")} 
                       className="relative w-full font-sans font-black text-xs tracking-wider py-4 px-6 rounded-2xl bg-[#00A6DF] hover:bg-[#0089b8] text-white uppercase flex items-center justify-center gap-2 transition-all duration-200 active:scale-95 cursor-pointer border border-white/10"
                     >
                       S&apos;inscrire à la CN
@@ -161,7 +161,7 @@ export default function Registration() {
                   <div className="absolute -inset-[1px] rounded-2xl bg-gradient-to-r from-[#A855F7]/10 to-[#10B981]/10 opacity-20 group-hover:opacity-50 blur-[1px] transition-all duration-500 pointer-events-none" />
 
                   <button
-                    onClick={() => window.open("https://tally.so/r/MegLYX", "_blank")}
+                    // onClick={() => window.open("https://tally.so/r/MegLYX", "_blank")}
                     className="relative w-full font-sans font-black text-xs tracking-wider py-4 px-6 rounded-2xl bg-[#1A3E7E] hover:bg-[#133063] text-white uppercase flex items-center justify-center gap-2 transition-all duration-200 active:scale-95 cursor-pointer border border-white/10"
                   >
                     S&apos;inscrire au YS
@@ -342,7 +342,7 @@ export default function Registration() {
 
                     // Text labels matching the image
                     const labelTranslations = {
-                      early: "LÈVE-TÔT",
+                      early: "Early Bird",
                       standard: "STANDARD",
                       last: "DERNIÈRE CHANCE"
                     };

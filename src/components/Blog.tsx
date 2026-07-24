@@ -3,7 +3,6 @@ import { ARTICLES, Article } from "../types";
 import { Calendar, Clock, ArrowRight, X, Search, Filter, BookOpen } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 
-
 const CATEGORIES = [
   { id: "all", label: "Tout" },
   { id: "Événement", label: "Événement" },
@@ -231,19 +230,10 @@ export default function Blog() {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
               transition={{ type: "spring", damping: 25, stiffness: 350 }}
-              className="bg-[#151631] border border-white/10 rounded-[32px] max-w-2xl w-full overflow-hidden shadow-2xl relative flex flex-col max-h-[85vh] z-10"
+              className="bg-[#151631] border border-white/10 rounded-[32px] max-w-2xl w-full overflow-y-auto custom-scrollbar shadow-2xl relative flex flex-col max-h-[85vh] z-10 scroll-smooth"
             >
-              {/* Close Button on top of image */}
-              <button
-                onClick={() => setActiveArticle(null)}
-                className="absolute top-4 right-4 z-20 bg-black/60 hover:bg-[#0F1026] text-white p-2.5 rounded-full transition-colors cursor-pointer border border-white/10"
-                aria-label="Fermer la lecture"
-              >
-                <X className="h-5 w-5" />
-              </button>
-
-              {/* Cover Image Section */}
-              <div className="aspect-[16/9] w-full relative bg-[#101124]">
+              {/* Cover Image Section (Scrolls up naturally with the content) */}
+              <div className="aspect-[16/9] w-full relative bg-[#101124] shrink-0">
                 <img
                   src={activeArticle.image}
                   alt={activeArticle.title}
@@ -256,10 +246,19 @@ export default function Blog() {
                 <span className="absolute bottom-4 left-6 bg-amber-400 text-[#0F1026] text-[10px] font-sans font-black tracking-widest uppercase px-3 py-1 rounded-md shadow-md">
                   {activeArticle.category}
                 </span>
+
+                {/* Close Button on top of image */}
+                <button
+                  onClick={() => setActiveArticle(null)}
+                  className="absolute top-4 right-4 z-30 bg-black/60 hover:bg-[#0F1026] text-white p-2.5 rounded-full transition-colors cursor-pointer border border-white/10"
+                  aria-label="Fermer la lecture"
+                >
+                  <X className="h-5 w-5" />
+                </button>
               </div>
 
-              {/* Scrollable text details */}
-              <div className="p-6 sm:p-8 overflow-y-auto custom-scrollbar flex-1 text-left space-y-6">
+              {/* Text details (scrolls normally) */}
+              <div className="p-6 sm:p-8 text-left space-y-6 relative z-10 bg-[#151631]">
                 
                 {/* Meta details */}
                 <div className="flex items-center space-x-4 text-xs font-mono text-gray-400 uppercase tracking-wider">

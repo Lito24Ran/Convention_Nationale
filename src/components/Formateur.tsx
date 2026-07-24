@@ -9,6 +9,19 @@ import image5 from "../assets/images/image5.jpeg";
 import image6 from "../assets/images/image6.jpeg";
 import image7 from "../assets/images/image7.jpeg";
 import image8 from "../assets/images/image8.jpeg";
+import image9 from "../assets/images/Guinélon.jpeg";
+import image10 from "../assets/images/Mercedes.jpeg";
+import Tsimihipa from "../assets/images/Tsimihipa.jpeg";
+import Mamy from "../assets/images/Mamy.jpeg";
+import image12 from "../assets/images/image12.jpg";
+import image11 from "../assets/images/image_je_me_souvien_pas_pardon.jpg";
+import Hugs from "../assets/images/Huges.png";
+import Tsinjoniaina from "../assets/images/Tsinjoniaina.png";
+import Bruno from "../assets/images/Bruno.jpeg";
+import Nielsen from "../assets/images/Nielsen.webp";
+import MamyRabelaza from "../assets/images/Mamy2.jpeg";
+import Caroline from "../assets/images/Caroline2.jpeg"
+
 import placehoder from "../assets/images/placeholder_Formateurs.png"
 
 // Inline stylesheet for seamless, GPU-accelerated infinite horizontal marquees
@@ -109,11 +122,11 @@ export default function Formateurs() {
     {
       name: "RANDRIAMANARINA Meva Wanda",
       role: "Formatrice JCI",
-      company: "JCI Madagascar",
+      company: "JCI Iarivo",
       image: image1,
       email: "mevawanda@gmail.com",
       phone: "",
-      location: "Madagascar",
+      location: "Antananarivo",
       courses: "JCI Explore, JCI Discover"
     },
     {
@@ -127,69 +140,69 @@ export default function Formateurs() {
       courses: "Project Management, JCI Explore, Effective Leadership, JCI Discover, Networking, Engage, Empower, Grow!"
     },
     {
-      name: "Andry Jean Marc Rakotomanjaka",
+      name: "Andry Jean Marc RAKOTOMANJAKA",
       role: "Formateur JCI",
-      company: "JCI Madagascar",
+      company: "JCI Antananarivo",
       image: image3,
       email: "ajmrakotomanjaka@gmail.com",
       phone: "",
-      location: "Madagascar",
+      location: "Antananarivo",
       courses: "Social Responsibility"
     },
     {
       name: "RAVELOMAHAFALY Andriamihaja Guénolé",
       role: "Formateur Certifié JCI",
       company: "JCI Toliara",
-      image: placehoder,
+      image: image9,
       email: "andriamihaja.guenole@gmail.com",
       phone: "261348408489",
       location: "Antananarivo",
       courses: "Effective Communication: Building a Foundation, Project Management, JCI Explore, Facilitator, Presenter, Effective Leadership, JCI Discover, Effective Communication: Crafting your message"
     },
     {
-      name: "Lovanirina Razakamananandro",
+      name: "Lovanirina RAZAKAMANANDRO",
       role: "Formatrice JCI",
-      company: "JCI Madagascar",
+      company: "JCI Iarivo",
       image: image4,
       email: "lovanirina.rzk@gmail.com",
       phone: "",
-      location: "Madagascar",
+      location: "Antananarivo",
       courses: "JCI Discover, Project Management, Facilitator, Networking"
     },
     {
       name: "Mercedes Ratsirahonana",
       role: "Formatrice JCI",
-      company: "JCI Madagascar",
-      image: placehoder,
+      company: "JCI Iarivo",
+      image: image10,
       email: "mercedes.rakotomalala@gmail.com",
       phone: "",
-      location: "Madagascar",
+      location: "Antananarivo",
       courses: "JCI Discover, Project Management"
     },
     {
       name: "Tsimihipa ANDRIAMAZAVARIVO",
       role: "Formateur JCI",
-      company: "JCI Madagascar",
-      image: placehoder,
+      company: "JCI Iarivo",
+      image: Tsimihipa,
       email: "tsimihipa@gmail.com",
       phone: "",
-      location: "Madagascar",
+      location: "Antananarivo",
       courses: "Project Management, Social Responsibility, JCI Discover, Effective Communication: Building a Foundation"
     },
     {
-      name: "Karine Rabarijohn",
+      name: "Karine RABARIJOHN",
       role: "Formatrice JCI",
-      company: "JCI Madagascar",
+      company: "JCI Antananarivo",
       image: placehoder,
       email: "kamira.madagascar@gmail.com",
       phone: "",
-      location: "Madagascar",
+      location: "Antananarivo",
       courses: "Effective Communication: Crafting your message, Engage, Empower, Grow!, Networking, Effective Meetings, JCI Discover"
     },
     {
       name: "RATSIMBAZAFY Sandra Tiana",
       role: "Formatrice JCI",
-      company: "JCI Madagascar",
+      company: "JCI Ilon' Iarivo",
       image: image5,
       email: "sandratiana@outlook.com",
       phone: "",
@@ -197,23 +210,23 @@ export default function Formateurs() {
       courses: "JCI Explore, Effective Leadership, Facilitator, JCI Discover"
     },
     {
-      name: "Hery Rason",
+      name: "Hery RASON",
       role: "Formateur JCI",
-      company: "JCI Madagascar",
+      company: "JCI Iarivo",
       image: image6,
       email: "heryrason@gmail.com",
       phone: "",
-      location: "Madagascar",
+      location: "Antananarivo",
       courses: "Project Management"
     },
     {
       name: "Miray RASIDY",
       role: "Formatrice JCI",
-      company: "JCI Madagascar",
+      company: "JCI Mayendeleyo",
       image: placehoder,
       email: "mirayrasidy@gmail.com",
       phone: "",
-      location: "Madagascar",
+      location: "Antananarivo",
       courses: "Engage, Empower, Grow!, JCI Explore, Project Management, JCI Admin, Social Responsibility, Facilitator, Networking"
     },
     {
@@ -232,68 +245,68 @@ export default function Formateurs() {
     {
       name: "MAMONJY Tefinjanahary Marc Gaël",
       role: "Formateur JCI",
-      company: "JCI Madagascar",
+      company: "JCI Toliara",
       image: image8,
       email: "tmarcgael@gmail.com",
       phone: "034 62 963 41",
-      location: "Madagascar",
+      location: "Toliara",
       courses: "Effective Communication: Building a Foundation, Facilitator, Presenter, JCI Discover"
     },
     {
       name: "RAJAONARIVONY Mamy Herimampionona",
       role: "Formateur JCI",
-      company: "JCI Madagascar",
-      image: placehoder,
+      company: "JCI Toliara",
+      image: Mamy,
       email: "mampiononarajaonarivony@gmail.com",
       phone: "",
-      location: "Madagascar",
+      location: "Toliara",
       courses: "JCI Explore, Effective Leadership, Effective Communication: Building a Foundation, Facilitator, Presenter, Project Management, JCI Discover"
     },
     {
-      name: "Velompanahy Rasolofoarivony",
+      name: "Velompanahy RASOLOFOARIVONY",
       role: "Formateur JCI",
-      company: "JCI Madagascar",
-      image: placehoder,
+      company: "JCI Toliara",
+      image: image11,
       email: "n.velompanahy@gmail.com",
       phone: "",
-      location: "Madagascar",
+      location: "Toliara",
       courses: "JCI Discover"
     },
     {
       name: "RANRIAMANANA Nielsen Robert",
       role: "Formateur JCI",
-      company: "JCI Madagascar",
-      image: placehoder,
+      company: "JCI Mahajanga",
+      image: Nielsen,
       email: "randriamananarobertn@gmail.com",
       phone: "",
-      location: "Madagascar",
+      location: "Mahajanga",
       courses: "Engage, Empower, Grow!"
     },
     {
       name: "Dylan RAMANOARA",
       role: "Formateur JCI",
-      company: "JCI Madagascar",
-      image: placehoder,
+      company: "JCI Ilon' Iarivo",
+      image: image12,
       email: "macdylan77@yahoo.fr",
       phone: "",
-      location: "Madagascar",
+      location: "Antananarivo",
       courses: "Networking"
     },
     {
-      name: "Nandrianina Miora Razanakarivo",
+      name: "Nandrianina Miora RAZANAKARIVO",
       role: "Formatrice JCI",
-      company: "JCI Madagascar",
+      company: "JCI Mayendeleyo",
       image: placehoder,
       email: "miurrazaa@gmail.com",
       phone: "",
-      location: "Madagascar",
+      location: "Antananarivo",
       courses: "Effective Communication: Crafting your message, Social Responsibility, Effective Meetings, JCI Discover, Effective Communication: Building a Foundation, JCI Impact, Project Management"
     },
     {
       name: "HAMBA Tianjara Hugues",
       role: "Formateur Certifié JCI",
       company: "JCI Nosy-Be",
-      image: placehoder,
+      image: Hugs,
       email: "hthugues@gmail.com",
       phone: "261321107426",
       location: "Nosy Be",
@@ -302,38 +315,38 @@ export default function Formateurs() {
     {
       name: "RAHARINAIVO Lovasoa Mandimby",
       role: "Formateur JCI",
-      company: "JCI Madagascar",
+      company: "",
       image: placehoder,
       email: "alphiraha@gmail.com",
       phone: "",
-      location: "Madagascar",
+      location: "",
       courses: "Facilitator, Networking, Social Responsibility, Presenter, JCI Discover"
     },
     {
       name: "Tsinjoniaina RAKOTOVAO",
       role: "Formatrice JCI",
-      company: "JCI Madagascar",
-      image: placehoder,
+      company: "JCI Mahajanga",
+      image: Tsinjoniaina,
       email: "aina.tsinjo@gmail.com",
       phone: "033 28 121 26",
-      location: "Madagascar",
+      location: "Mahajanaga",
       courses: "JCI Discover, JCI Explore"
     },
     {
       name: "RATOVOARISON Bruno Marcelino",
       role: "Formateur JCI",
-      company: "JCI Madagascar",
-      image: placehoder,
+      company: "JCI Toliara",
+      image: Bruno,
       email: "est.brunomarcelino@gmail.com",
       phone: "034 68 993 39",
-      location: "Madagascar",
+      location: "Toliara",
       courses: "Presenter, JCI Discover"
     },
     {
-      name: "Rabearilaza Mamy",
+      name: "RABEARILAZA Mamy",
       role: "Formateur JCI",
       company: "JCI Antananarivo",
-      image: placehoder,
+      image: MamyRabelaza,
       email: "mamy.rabearilaza@gmail.com",
       phone: "320749511",
       location: "Antananarivo",
@@ -350,10 +363,10 @@ export default function Formateurs() {
       courses: "Project Management"
     },
     {
-      name: "Rakotovao Caroline",
+      name: "RAKOTOVAO Caroline",
       role: "Formatrice JCI",
       company: "JCI Ilon'Iarivo",
-      image: placehoder,
+      image: Caroline,
       email: "caroline.rakotovao@gmail.com",
       phone: "whatsapp +33761295552 / tel 0386194970",
       location: "Antananarivo",
@@ -455,7 +468,7 @@ export default function Formateurs() {
                   <img
                     src={selectedFormateur.image}
                     alt={selectedFormateur.name}
-                    className="absolute inset-0 w-full h-full object-cover"
+                    className="absolute inset-0 w-ful h-full object-cover"
                     referrerPolicy="no-referrer"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-[#141530] via-transparent to-transparent opacity-100 z-10" />
@@ -464,7 +477,7 @@ export default function Formateurs() {
                 <div className="md:col-span-7 p-6 sm:p-9 flex flex-col justify-between space-y-5">
                   
                   <div>
-                    <h3 className="text-xl sm:text-2xl font-sans font-black text-white tracking-tight uppercase leading-snug">
+                    <h3 className="text-xl sm:text-xl font-sans font-black text-white tracking-tight uppercase leading-snug">
                       {selectedFormateur.name}
                     </h3>
                     <p className="text-[#00A6DF] font-sans text-xs sm:text-sm font-bold mt-2">

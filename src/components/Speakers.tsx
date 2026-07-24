@@ -209,7 +209,7 @@ const conferenciers: SpeakerMock[] = [
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 mb-12 sm:mb-16">
           <div className="flex flex-col md:flex-row items-start justify-between gap-6 md:gap-14">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-sans font-black tracking-tight uppercase">
-              Conferenciers
+              Conférenciers
             </h2>
             <p className="max-w-2xl text-sm sm:text-base text-gray-300 font-sans leading-relaxed text-left">
               Rencontrez nos intervenants lors de cette Convention Nationale et échangez avec des experts passionnés autour de thématiques inspirantes et innovantes.

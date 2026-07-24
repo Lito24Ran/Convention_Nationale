@@ -30,12 +30,12 @@ export default function YouthSummit() {
             {/* Elegant spacing and clean sans-serif typography */}
             <p className="space-y-10 text-base sm:text-lg text-gray-600 font-sans leading-relaxed">
               Forum jeunesse à forte valeur ajoutée, conçu 
-              pour galvaniser la jeunesse malgache autour des enjeux de 
+              pour galvaniser la jeunesse malagasy autour des enjeux de 
               leadership, d&apos;entrepreneuriat et de développement 
               durable. Événement satellite de la Convention Nationale.
             </p>
             <p className="text-sm sm:text-base text-gray-500">
-              Pendant trois jours intenses de réflexion collective, d'innovation et de partage, le<strong className="text-[#0F1026] font-semibold"> Youth Summit</strong>  réunira des jeunes leaders, entrepreneurs, étudiants et acteurs du changement autour d'une même vision : inspirer, apprendre et agir. À travers des conférences inspirantes, des ateliers interactifs, des panels de discussion et des activités collaboratives, les participants développeront leurs compétences, élargiront leur réseau et feront émerger des initiatives porteuses d'un impact positif pour leurs communautés et les générations futures.
+              Pendant deux jours pour transformer l'ambition entrepreneuriale en projets concrets. <strong className="text-[#0F1026] font-semibold"> Youth Summit</strong>  réunira des jeunes leaders, entrepreneurs, étudiants et acteurs du changement autour d'une même vision : inspirer, apprendre et agir. À travers des conférences inspirantes, des ateliers interactifs, des panels de discussion et des activités collaboratives, les participants développeront leurs compétences, élargiront leur réseau et feront émerger des initiatives porteuses d'un impact positif pour leurs communautés et les générations futures.
 
             </p>
           </div>

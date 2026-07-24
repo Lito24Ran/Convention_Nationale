@@ -14,7 +14,7 @@ const CATEGORIES = [
 ];
 
 export default function FAQ() {
-  const [selectedCategory, setSelectedCategory] = useState<string>("all");
+  const [selectedCategory, setSelectedCategory] = useState<string>("Inscriptions");
   const [searchQuery, setSearchQuery] = useState<string>("");
   const [openFaqId, setOpenFaqId] = useState<string | null>(null);
 
@@ -290,18 +290,18 @@ export default function FAQ() {
           <p className="text-xs text-gray-400 font-sans">
             Des questions supplémentaires sur la JCI Convention ? Écrivez-nous à :{" "}
             <a 
-              href="mailto:jciiarivo@gmail.com" 
+              href="mailto:cn@jcimada.org" 
               className="text-[#00A6DF] font-bold hover:underline"
             >
-              jciiarivo@gmail.com
+              cn@jcimada.org
             </a>
-            {" "}ou à{" "}
-            <a 
+            {/* {" "}ou à{" "} */}
+            {/* <a 
               href="mailto:bliarivo@googlegroups.com" 
               className="text-[#00A6DF] font-bold hover:underline"
             >
               bliarivo@googlegroups.com
-            </a>
+            </a> */}
           </p>
         </div>
 

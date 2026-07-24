@@ -1,24 +1,25 @@
 import React, { useState } from "react";
 import { Handshake, Mail, Phone, User, X, ShieldCheck, Heart } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
-import MG from "../assets/images/partenaire/2424.png"
-import buddy from "../assets/images/partenaire/BUDDY_CREATIF.png"
-import orange from "../assets/images/partenaire/ORANGE.png"
-import kentia from "../assets/images/partenaire/Groupe_Kentia.png"
-import Koon from "../assets/images/partenaire/KOON_SPACE.jpg"
-import Midi from "../assets/images/partenaire/Midi_Madagasikara.png"
-import HEI from "../assets/images/partenaire/HEI.png"
-import MJS from "../assets/images/partenaire/MJS.png"
-
+import MG from "../assets/images/partenaire/2424.png";
+import buddy from "../assets/images/partenaire/BUDDY_CREATIF.png";
+import orange from "../assets/images/partenaire/ORANGE.png";
+import kentia from "../assets/images/partenaire/Groupe_Kentia.png";
+import Koon from "../assets/images/partenaire/KOON_SPACE.jpg";
+import Midi from "../assets/images/partenaire/Midi_Madagasikara.png";
+import HEI from "../assets/images/partenaire/HEI.png";
+import MJS from "../assets/images/partenaire/MJS.png";
+import Data from "../assets/images/Databridge.jpeg";
+import Mandala from "../assets/images/Mandala_Partenaire.jpeg";
+import JanteCo from "../assets/images/JanteCo_Partenaire.jpeg";
+import Filo from "../assets/images/LogoFilo.jpeg";
 
 const MidiLogo = () => (
   <div className="flex items-center justify-center p-1 h-full w-full select-none">
     <img 
       src={Midi}
       alt="Midi" 
-      // max-h-full et max-w-full empêchent le PNG de déborder
-      // object-contain garde les proportions parfaites
-       className="w-[85%] h-[85%] object-contain transition-transform duration-300 hover:scale-105"
+      className="w-[85%] h-[85%] object-contain transition-transform duration-300 hover:scale-105"
     />
   </div>
 );
@@ -28,8 +29,6 @@ const OrangeLogo = () => (
     <img 
       src={orange}
       alt="Orange" 
-      // max-h-full et max-w-full empêchent le PNG de déborder
-      // object-contain garde les proportions parfaites
       className="max-h-full max-w-full object-contain transition-transform duration-300 hover:scale-105" 
     />
   </div>
@@ -40,8 +39,6 @@ const KoonSpaceLogo = () => (
     <img 
       src={Koon}
       alt="Koon" 
-      // max-h-full et max-w-full empêchent le PNG de déborder
-      // object-contain garde les proportions parfaites
       className="max-h-full max-w-full object-contain transition-transform duration-300 hover:scale-105" 
     />
   </div>
@@ -52,8 +49,6 @@ const KentiaLogo = () => (
     <img 
       src={kentia}
       alt="Kentia" 
-      // max-h-full et max-w-full empêchent le PNG de déborder
-      // object-contain garde les proportions parfaites
       className="w-[85%] h-[85%] object-contain transition-transform duration-300 hover:scale-105" 
     />
   </div>
@@ -64,20 +59,17 @@ const Logo2424 = () => (
     <img 
       src={MG}
       alt="MJS" 
-      // max-h-full et max-w-full empêchent le PNG de déborder
-      // object-contain garde les proportions parfaites
       className="max-h-full max-w-full object-contain transition-transform duration-300 hover:scale-105" 
     />
   </div>
 );
+
 const BuddyLogo = () => (
   <div className="flex items-center justify-center p-1 h-full w-full select-none">
     <img 
       src={buddy}
       alt="BUDDY" 
-      // max-h-full et max-w-full empêchent le PNG de déborder
-      // object-contain garde les proportions parfaites
-       className="w-[85%] h-[85%] object-contain transition-transform duration-300 hover:scale-105"
+      className="w-[85%] h-[85%] object-contain transition-transform duration-300 hover:scale-105"
     />
   </div>
 );
@@ -87,8 +79,6 @@ const HEILogo = () => (
     <img 
       src={HEI}
       alt="HEI" 
-      // max-h-full et max-w-full empêchent le PNG de déborder
-      // object-contain garde les proportions parfaites
       className="w-[85%] h-[85%] object-contain transition-transform duration-300 hover:scale-105"
     />
   </div>
@@ -99,8 +89,46 @@ const MjsLogo = () => (
     <img 
       src={MJS}
       alt="MJS" 
-      // max-h-full et max-w-full empêchent le PNG de déborder
-      // object-contain garde les proportions parfaites
+      className="w-[85%] h-[85%] object-contain transition-transform duration-300 hover:scale-105" 
+    />
+  </div>
+);
+
+const DatabridgeLogo = () => (
+  <div className="flex items-center justify-center p-0 h-full w-full select-none">
+    <img 
+      src={Data}
+      alt="Databridge" 
+      className="w-[85%] h-[85%] object-contain transition-transform duration-300 hover:scale-105" 
+    />
+  </div>
+);
+
+const JanteCoLogo = () => (
+  <div className="flex items-center justify-center p-0 h-full w-full select-none">
+    <img 
+      src={JanteCo}
+      alt="JanteCo" 
+      className="w-[85%] h-[85%] object-contain transition-transform duration-300 hover:scale-105" 
+    />
+  </div>
+);
+
+const MandalaLogo = () => (
+  <div className="flex items-center justify-center p-0 h-full w-full select-none">
+    <img 
+      src={Mandala}
+      alt="Mandala" 
+      className="w-[85%] h-[85%] object-contain transition-transform duration-300 hover:scale-105" 
+    />
+  </div>
+);
+
+const FiloAgency = () => (
+  <div className="flex items-center justify-center p-0 h-full w-full select-none">
+    <img 
+      src={Filo}
+      alt="Filo Agency" 
       className="w-[85%] h-[85%] object-contain transition-transform duration-300 hover:scale-105" 
     />
   </div>
@@ -112,16 +140,21 @@ const nationalLogos = [
   { id: "orange", component: <OrangeLogo /> },
   { id: "koon", component: <KoonSpaceLogo /> },
   { id: "kentia", component: <KentiaLogo /> },
-  { id: "24", component: <Logo2424 /> }
+  { id: "24", component: <Logo2424 /> },
+
 ];
 
 const localLogos = [
   { id: "buddy", component: <BuddyLogo /> },
-  { id: "hei", component: <HEILogo /> }
+  { id: "hei", component: <HEILogo /> },
+  { id: "filo", component: <FiloAgency /> },
+    { id: "janteco", component: <JanteCoLogo /> },
+  { id: "databridge", component: <DatabridgeLogo /> },
+  { id: "mandala", component: <MandalaLogo /> }
 ];
 
 const institutionalLogos = [
-  { id: "mjs", component: <MjsLogo /> }
+  // { id: "mjs", component: <MjsLogo /> }
 ];
 
 export default function Partners() {
@@ -132,10 +165,23 @@ export default function Partners() {
   const [contactPhone, setContactPhone] = useState("");
   const [isSent, setIsSent] = useState(false);
 
-  // Replications adaptées pour le défilement infini fluide
-  const nationalItems = [...nationalLogos, ...nationalLogos, ...nationalLogos, ...nationalLogos];
-  const localItems = [...localLogos, ...localLogos, ...localLogos, ...localLogos, ...localLogos, ...localLogos, ...localLogos, ...localLogos];
-  const institutionalItems = [...institutionalLogos, ...institutionalLogos, ...institutionalLogos, ...institutionalLogos, ...institutionalLogos, ...institutionalLogos, ...institutionalLogos, ...institutionalLogos, ...institutionalLogos, ...institutionalLogos, ...institutionalLogos, ...institutionalLogos];
+  // Détecter si on a assez de partenaires pour scroller (au moins 3)
+  const nationalShouldScroll = nationalLogos.length >= 3;
+  const localShouldScroll = localLogos.length >= 3;
+  const institutionalShouldScroll = institutionalLogos.length >= 3;
+
+  // Replications adaptées pour le défilement infini fluide si défilement requis, sinon juste afficher une fois
+  const nationalItems = nationalShouldScroll 
+    ? [...nationalLogos, ...nationalLogos, ...nationalLogos, ...nationalLogos] 
+    : nationalLogos;
+  
+  const localItems = localShouldScroll 
+    ? [...localLogos, ...localLogos, ...localLogos, ...localLogos, ...localLogos, ...localLogos, ...localLogos, ...localLogos] 
+    : localLogos;
+  
+  const institutionalItems = institutionalShouldScroll 
+    ? [...institutionalLogos, ...institutionalLogos, ...institutionalLogos, ...institutionalLogos, ...institutionalLogos, ...institutionalLogos, ...institutionalLogos, ...institutionalLogos] 
+    : institutionalLogos;
 
   const handleContactSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -197,14 +243,14 @@ export default function Partners() {
         </div>
       </div>
 
-      {/* --- BLOCS DE FIL TRIPLE (Espace vertical réduit à space-y-6) --- */}
+      {/* --- BLOCS DE FIL TRIPLE --- */}
       <div className="space-y-6 relative w-full overflow-hidden py-2">
         
         {/* Masques dégradés latéraux */}
         <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-40 bg-gradient-to-r from-[#0F1026] to-transparent z-20 pointer-events-none" />
         <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-40 bg-gradient-to-l from-[#0F1026] to-transparent z-20 pointer-events-none" />
 
-        {/* BLOCK 1: NATIONAUX (Centré) */}
+        {/* BLOCK 1: NATIONAUX */}
         <div className="space-y-2">
           <div className="w-full text-center px-4">
             <span className="text-[10px] font-mono tracking-widest font-bold text-[#45BAAF]/80 uppercase inline-block">
@@ -212,8 +258,7 @@ export default function Partners() {
             </span>
           </div>
           <div className="bg-black/10 py-2.5 border-t border-b border-white/5">
-            {/* Espace entre les logos réduit avec gap-4 */}
-            <div className="animate-marquee-left-track flex items-center gap-4 px-2">
+            <div className={nationalShouldScroll ? "animate-marquee-left-track gap-4 px-2" : "flex flex-wrap items-center justify-center gap-4 px-4 w-full"}>
               {nationalItems.map((item, idx) => (
                 <div
                   key={`nat-${item.id}-${idx}`}
@@ -228,7 +273,7 @@ export default function Partners() {
           </div>
         </div>
 
-        {/* BLOCK 2: LOCAUX (Centré) */}
+        {/* BLOCK 2: LOCAUX */}
         <div className="space-y-2">
           <div className="w-full text-center px-4">
             <span className="text-[10px] font-mono tracking-widest font-bold text-[#45BAAF]/80 uppercase inline-block">
@@ -236,8 +281,7 @@ export default function Partners() {
             </span>
           </div>
           <div className="bg-black/10 py-2.5 border-t border-b border-white/5">
-            {/* Espace entre les logos réduit avec gap-4 */}
-            <div className="animate-marquee-right-track flex items-center gap-4 px-2">
+            <div className={localShouldScroll ? "animate-marquee-right-track gap-4 px-2" : "flex flex-wrap items-center justify-center gap-4 px-4 w-full"}>
               {localItems.map((item, idx) => (
                 <div
                   key={`loc-${item.id}-${idx}`}
@@ -252,7 +296,7 @@ export default function Partners() {
           </div>
         </div>
 
-        {/* BLOCK 3: INSTITUTIONS (Centré) */}
+        {/* BLOCK 3: INSTITUTIONS */}
         <div className="space-y-2">
           <div className="w-full text-center px-4">
             <span className="text-[10px] font-mono tracking-widest font-bold text-[#45BAAF]/80 uppercase inline-block">
@@ -260,8 +304,7 @@ export default function Partners() {
             </span>
           </div>
           <div className="bg-black/10 py-2.5 border-t border-b border-white/5">
-            {/* Espace entre les logos réduit avec gap-4 */}
-            <div className="animate-marquee-left-track flex items-center gap-4 px-2">
+            <div className={institutionalShouldScroll ? "animate-marquee-left-track gap-4 px-2" : "flex flex-wrap items-center justify-center gap-4 px-4 w-full"}>
               {institutionalItems.map((item, idx) => (
                 <div
                   key={`inst-${item.id}-${idx}`}
@@ -468,121 +511,3 @@ export default function Partners() {
     </section>
   );
 }
-
-
-// Individual Logo Renders
-// const SiokaLogo = () => (
-//   <div className="flex flex-col items-center justify-center p-3 h-full w-full select-none leading-none">
-//     <div className="flex items-center space-x-2">
-//       <span className="text-4xl sm:text-5xl font-black text-[#D61F69] tracking-tighter transform scale-y-110">S</span>
-//       <div className="flex flex-col items-start justify-center">
-//         <span className="text-[13px] font-sans font-extrabold text-neutral-800 tracking-tight">IOKA</span>
-//         <div className="flex items-end space-x-[2px] h-3.5 mt-1">
-//           <span className="w-1.5 h-[30%] bg-[#00A6DF]" />
-//           <span className="w-1.5 h-[60%] bg-[#00A6DF]" />
-//           <span className="w-1.5 h-full bg-[#00A6DF]" />
-//           <span className="w-1.5 h-[75%] bg-[#D61F69]" />
-//         </div>
-//       </div>
-//     </div>
-//     <span className="text-[8.5px] font-sans font-bold text-neutral-400 mt-2.5 uppercase tracking-wide">
-//       Corporate Partners
-//     </span>
-//   </div>
-// );
-
-// const KoonSpaceLogo = () => (
-//   <div className="flex flex-col items-center justify-center p-3 text-center leading-none h-full w-full select-none">
-//     <div className="flex items-center space-x-2">
-//       <span className="text-2xl sm:text-3xl font-sans font-black text-gray-950 tracking-tight lowercase">koon</span>
-//       <div className="flex items-center bg-[#E53E3E] text-white text-[10px] sm:text-xs font-bold px-2 py-0.5 rounded-sm">
-//         <span>space</span>
-//         <span className="ml-[1.5px] w-1.5 h-1.5 rounded-full bg-white block" />
-//       </div>
-//     </div>
-//     <span className="text-[7.5px] font-sans font-semibold text-neutral-400 mt-3.5 uppercase tracking-wide whitespace-nowrap">
-//       Coworking • Networking • Business center
-//     </span>
-//   </div>
-// );
-
-// const IssofLogo = () => (
-//   <div className="flex flex-col items-center justify-center p-3 text-center leading-none h-full w-full select-none">
-//     <div className="flex items-center space-x-1">
-//       <span className="text-2xl font-sans font-black text-[#1A4E9E] tracking-tight uppercase">ISSOF</span>
-//       <span className="text-yellow-500 text-lg">★</span>
-//     </div>
-//     <span className="text-[8.5px] font-sans font-black text-[#1A4E9E] mt-2 tracking-wider uppercase">
-//       ISCAM Solutions Formation
-//     </span>
-//     <span className="text-[6.5px] font-mono text-neutral-400 mt-1.5 uppercase tracking-widest whitespace-nowrap">
-//       BRING YOUR PEOPLE TO THE NEXT LEVEL
-//     </span>
-//   </div>
-// );
-
-// const KentiaLogo = () => (
-//   <div className="flex h-full w-full items-stretch py-2 pl-4 text-left justify-center flex-col leading-none select-none border-l-[4.5px] border-[#F5C400]">
-//     <span className="text-[9px] font-sans font-semibold text-neutral-500 uppercase tracking-widest leading-none">Groupe</span>
-//     <span className="text-lg sm:text-xl font-sans font-black text-[#0B1E43] uppercase tracking-tight leading-none mt-1">KENTIA</span>
-//     <span className="text-[8.5px] font-sans font-bold text-neutral-400 mt-2.5 tracking-normal uppercase">
-//       Solutions pour les PME
-//     </span>
-//   </div>
-// );
-
-// const JeLogo = () => (
-//   <div className="flex items-center justify-center p-2 h-full w-full select-none leading-none">
-//     <div className="bg-[#00B4D8] rounded-xl p-2.5 flex items-center justify-center shadow-sm w-[55px] h-[55px] transform -rotate-6">
-//       <span className="text-2xl font-black text-white tracking-widest uppercase italic">JE</span>
-//     </div>
-//     <div className="ml-3 text-left">
-//       <span className="block text-[13px] font-sans font-extrabold text-neutral-800 uppercase tracking-wide leading-none">Jeune</span>
-//       <span className="block text-[13px] font-sans font-extrabold text-[#00B4D8] uppercase tracking-wide leading-none mt-0.5">Entrepreneur</span>
-//     </div>
-//   </div>
-// );
-
-// const LeCentreLogo = () => (
-//   <div className="flex items-center justify-center p-3 h-full w-full select-none leading-none">
-//     <div className="flex items-center space-x-2">
-//       <span className="text-[#00A6DF] text-sm font-sans font-light italic leading-none pr-[1px]">le</span>
-//       <span className="text-2xl sm:text-3xl font-sans font-black text-[#1D3557] uppercase tracking-tight leading-none">Centre</span>
-//       <div className="w-5.5 h-5.5 rounded-full bg-[#1D3557] flex items-center justify-center text-[11px] text-white border border-amber-400 font-bold font-mono">
-//         C
-//       </div>
-//     </div>
-//   </div>
-// );
-
-// const A4Logo = () => (
-//   <div className="flex h-full w-full p-2 items-center justify-center select-none leading-none">
-//     <div className="rounded-full border-[2.5px] border-neutral-900 bg-neutral-950 p-2 flex flex-col items-center justify-center w-[54px] h-[54px] relative">
-//       <span className="text-sm font-sans font-black text-white tracking-tighter">A4</span>
-//       <div className="absolute -bottom-1 flex items-center justify-center space-x-0.5">
-//         <span className="w-1 h-1 rounded-full bg-pink-500" />
-//         <span className="w-1.5 h-1.5 rounded-full bg-[#00A6DF]" />
-//       </div>
-//     </div>
-//     <div className="ml-3.5 text-left space-y-0.5">
-//       <span className="block text-[10px] font-sans font-extrabold text-neutral-800 uppercase tracking-widest">A4 STUDIO</span>
-//       <span className="block text-[7px] font-mono text-neutral-400 uppercase tracking-tight whitespace-nowrap">
-//         DRINK • CHILL • LIVE
-//       </span>
-//     </div>
-//   </div>
-// );
-
-// const MidiLogo = () => (
-//   <div className="flex items-center justify-center p-3 h-full w-full select-none leading-none">
-//     <div className="text-center flex flex-col items-center">
-//       <div className="flex items-center space-x-1">
-//         <span className="text-red-600 text-3xl font-sans font-black leading-none uppercase">M</span>
-//         <span className="text-neutral-900 text-lg font-serif font-black tracking-tighter uppercase leading-none">MIDI</span>
-//       </div>
-//       <span className="text-red-500 text-[10px] font-sans font-bold uppercase tracking-widest mt-1.5 italic">
-//         Madagasikara
-//       </span>
-//     </div>
-//   </div>
-// );

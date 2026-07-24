@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Calendar, Shield } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
-import LogoJCI from "../assets/images/LogoJCI2.jpeg"
+import Jci_Logo from "../assets/images/LogoJCI2-removebg-preview.png"
 
 
 interface HeaderProps {
@@ -32,7 +32,7 @@ export default function Header({ onNavigate, activeSection }: HeaderProps) {
     { label: "Programme", id: "program" },
     { label: "Youth Summit", id: "youth-summit-feature" },
     { label: "Formateurs", id: "formateurs" },
-    { label: "Tarifs", id: "registration" },
+    // { label: "Tarifs", id: "registration" },
     { label: "Partenaires", id: "partners" },
     { label: "Actualités", id: "blog" },
     { label: "FAQ", id: "faq" },
@@ -59,12 +59,12 @@ export default function Header({ onNavigate, activeSection }: HeaderProps) {
           <div
             id="logo-container"
             onClick={() => handleLinkClick("hero")}
-            className="flex items-center space-x-2.5 cursor-pointer group select-none py-1"
+            className="flex items-center space-x-2 cursor-pointer group select-none py-1"
           >
             <img 
-              src={LogoJCI} 
+              src={Jci_Logo} 
               alt="logoJCI" 
-              className="h-10 sm:h-12 w-auto object-contain transition-all duration-300 transform group-hover:scale-105 filter drop-shadow-[0_2px_8px_rgba(0,166,223,0.15)]" 
+              className="h-25 xs:h-10 sm:h-15 md:h-30 w-auto max-w-[150px] xs:max-w-[180px] sm:max-w-[220px] md:max-w-none object-contain transition-all duration-300 transform group-hover:scale-105 filter drop-shadow-[0_2px_8px_rgba(0,166,223,0.15)]" 
             />
           </div>
 
@@ -92,7 +92,7 @@ export default function Header({ onNavigate, activeSection }: HeaderProps) {
                   {isActive && (
                     <motion.div
                       layoutId="activeNavIndicator"
-                      className="absolute bottom-[-4px] left-3 right-3 h-[3px] bg-gradient-to-r from-[#00A6DF] to-amber-500 rounded-full shadow-[0_0_8px_rgba(0,166,223,0.5)]"
+                      className="absolute bottom-[-4px] left-3 right-3 h-[3px] bg-gradient-to-r from-[#A855F7] via-[#00A6DF] to-[#10B981] rounded-full shadow-[0_0_8px_rgba(0,166,223,0.4)]"
                       transition={{ type: "spring", stiffness: 380, damping: 30 }}
                     />
                   )}

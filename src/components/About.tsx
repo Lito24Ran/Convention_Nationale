@@ -41,7 +41,7 @@ export default function About() {
 
             <div className="space-y-4 text-base sm:text-lg text-gray-600 font-sans leading-relaxed">
               <p>
-                La <strong className="text-[#0F1026] font-semibold">Convention Nationale</strong>   Grand rendez-vous annuel de la JCI Madagascar rassemblant
+                La <strong className="text-[#0F1026] font-semibold">Convention Nationale</strong>  est le Grand rendez-vous annuel de la JCI Madagascar rassemblant
 membres, dirigeants et partenaires. Temps fort du calendrier institutionnel, espace de célébration, de formation et de prise de
 décision stratégique.
               </p>

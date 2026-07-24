@@ -29,7 +29,7 @@ export default function Footer() {
               {/* <a href="#" className="h-8 w-8 rounded-lg bg-white/5 hover:bg-white/10 text-gray-400 hover:text-amber-400 border border-white/5 flex items-center justify-center transition-colors">
                 <Twitter className="h-4 w-4" />
               </a> */}
-              <a href="linkedin.com/company/cn-jci-madagascar" className="h-8 w-8 rounded-lg bg-white/5 hover:bg-white/10 text-gray-400 hover:text-amber-400 border border-white/5 flex items-center justify-center transition-colors">
+              <a href="https://www.linkedin.com/company/cn-jci-madagascar/posts/?feedView=all" className="h-8 w-8 rounded-lg bg-white/5 hover:bg-white/10 text-gray-400 hover:text-amber-400 border border-white/5 flex items-center justify-center transition-colors">
                 <Linkedin className="h-4 w-4" />
               </a>
               <a href="https://www.facebook.com/CNJCIMadagascar" className="h-8 w-8 rounded-lg bg-white/5 hover:bg-white/10 text-gray-400 hover:text-amber-400 border border-white/5 flex items-center justify-center transition-colors">
@@ -46,15 +46,15 @@ export default function Footer() {
             <ul className="space-y-3 font-sans text-xs text-gray-300">
               <li className="flex items-center space-x-2.5">
                 <Calendar className="h-4 w-4 text-amber-500" />
-                <span>01-03 Octobre 2026, de 08h30 à 19h30</span>
+                <span>01 à 03 Octobre 2026</span>
               </li>
               <li className="flex items-center space-x-2.5">
                 <MapPin className="h-4 w-4 text-amber-500" />
-                <span>Antananarivo, </span>
+                <span>Antananarivo </span>
               </li>
               <li className="flex items-center space-x-2.5">
                 <Mail className="h-4 w-4 text-amber-500" />
-                <span>Contact: jciiarivo@gmail.com</span>
+                <span>Contact:  cn@jcimada.org</span>
               </li>
             </ul>
           </div>
@@ -78,7 +78,7 @@ export default function Footer() {
         {/* Ground Copyright rows bar & Top trigger */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-[11px] font-sans text-gray-500">
-            © 2026 La Convention Nationale. Tous droits réservés. Réalisation conforme aux standards React 19 + Tailwind CSS.
+            © 2026 La Convention Nationale. Tous droits réservés.
           </p>
           
           {/* Scroll to top button */}

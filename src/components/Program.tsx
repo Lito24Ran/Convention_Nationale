@@ -9,13 +9,13 @@ export default function Program() {
   const [activeCategory, setActiveCategory] = useState<string>("Tous");
   const [expandedIds, setExpandedIds] = useState<Record<string, boolean>>({});
 
-  const categories = ["Tous", "Conférence","Cérémonie","Networking","Soirée", "Atelier","Panel"];
+  const categories = ["Tous", "Conférence","Cérémonie","Networking","Soirée", "Atelier","Panel","Pause","Préparation","Logistique"];
 
   // Dynamically balance sessions into Day 1, Day 2 or Day 3 to handle content scale safely
   const getSessionDay = (id: string) => {
     const index = SESSIONS.findIndex((s) => s.id === id);
-    if (index < 13) return 1;
-    if (index < 27) return 2;
+    if (index < 11) return 1;
+    if (index < 25) return 2;
     return 3; 
   };
 
@@ -119,10 +119,10 @@ export default function Program() {
     </div>
 
         {/* Dynamic Dual-Filter Panel (Days + Format) */}
-        <div className="bg-[#151631]/80 border border-white/5 rounded-3xl p-4 sm:p-6 mb-10 max-w-5xl mx-auto flex flex-col md:flex-row items-stretch md:items-center justify-between gap-6">
+        <div className="bg-[#151631]/80 border border-white/5 rounded-3xl p-4 sm:p-6 mb-10 max-w-5xl mx-auto flex flex-col md:flex-row items-stretch md:items-center justify-between gap-10">
           
           {/* Day selection tabs — style onglet sobre plutôt que 3 boutons pilule identiques */}
-          <div className="flex items-center gap-6 border-b border-white/10 self-start md:self-auto w-full md:w-auto">
+          <div className="flex items-center gap-10 border-b border-white/10 self-start md:self-auto w-full md:w-auto">
             <button
               onClick={() => setActiveDay(1)}
               className={`relative px-1 py-3 font-sans text-xs sm:text-sm font-black tracking-wide uppercase transition-all duration-300 cursor-pointer flex items-center gap-2 ${

@@ -234,7 +234,7 @@ export default function Hero({ onRegisterClick, onThemesClick }: HeroProps) {
             {/* Elegant display text on the right */}
             <div className="text-center md:text-right">
               <span className="text-2xl md:text-3xl lg:text-4xl font-sans font-light tracking-wide text-white/95">
-                Decompte de la Convention
+                Décompte de la Convention
               </span>
             </div>
 
