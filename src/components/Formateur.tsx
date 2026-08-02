@@ -202,7 +202,7 @@ export default function Formateurs() {
     {
       name: "RATSIMBAZAFY Sandra Tiana",
       role: "Formatrice JCI",
-      company: "JCI Ilon' Iarivo",
+      company: "JCI Ilon'Iarivo",
       image: image5,
       email: "sandratiana@outlook.com",
       phone: "",
@@ -285,7 +285,7 @@ export default function Formateurs() {
     {
       name: "Dylan RAMANOARA",
       role: "Formateur JCI",
-      company: "JCI Ilon' Iarivo",
+      company: "JCI Ilon'Iarivo",
       image: image12,
       email: "macdylan77@yahoo.fr",
       phone: "",
@@ -329,7 +329,7 @@ export default function Formateurs() {
       image: Tsinjoniaina,
       email: "aina.tsinjo@gmail.com",
       phone: "033 28 121 26",
-      location: "Mahajanaga",
+      location: "Mahajanga",
       courses: "JCI Discover, JCI Explore"
     },
     {

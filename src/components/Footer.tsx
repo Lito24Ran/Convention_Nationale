@@ -23,7 +23,7 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-xs text-gray-400 font-sans leading-relaxed max-w-xs">
-              L&apos;événement national de référence pour tous les professionnels en quête d&apos;innovation, de transition verte et de gouvernance agile.
+              Le rendez-vous annuel des jeunes leaders entreprenants de la JCI Madagascar.
             </p>
             <div className="flex space-x-3 pt-2">
               {/* <a href="#" className="h-8 w-8 rounded-lg bg-white/5 hover:bg-white/10 text-gray-400 hover:text-amber-400 border border-white/5 flex items-center justify-center transition-colors">

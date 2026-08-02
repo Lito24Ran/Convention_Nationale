@@ -13,6 +13,8 @@ import Data from "../assets/images/Databridge.jpeg";
 import Mandala from "../assets/images/Mandala_Partenaire.jpeg";
 import JanteCo from "../assets/images/JanteCo_Partenaire.jpeg";
 import Filo from "../assets/images/LogoFilo.jpeg";
+import HappyCo from "../assets/images/HappyCo.jpeg";
+import SAE from "../assets/images/partenaire/logo-sae.svg";
 
 const MidiLogo = () => (
   <div className="flex items-center justify-center p-1 h-full w-full select-none">
@@ -134,6 +136,26 @@ const FiloAgency = () => (
   </div>
 );
 
+const HappyAndCoLogo = () => (
+  <div className="flex items-center justify-center p-0 h-full w-full select-none">
+    <img 
+      src={HappyCo}
+      alt="Happy & Co" 
+      className="w-[85%] h-[85%] object-contain transition-transform duration-300 hover:scale-105" 
+    />
+  </div>
+);
+
+const SaeLogo = () => (
+  <div className="flex items-center justify-center p-0 h-full w-full select-none">
+    <img 
+      src={SAE}
+      alt="SAE" 
+      className="w-[85%] h-[85%] object-contain transition-transform duration-300 hover:scale-105" 
+    />
+  </div>
+);
+
 // Groupes de logos
 const nationalLogos = [
   { id: "midi", component: <MidiLogo /> },
@@ -141,20 +163,21 @@ const nationalLogos = [
   { id: "koon", component: <KoonSpaceLogo /> },
   { id: "kentia", component: <KentiaLogo /> },
   { id: "24", component: <Logo2424 /> },
-
 ];
 
 const localLogos = [
   { id: "buddy", component: <BuddyLogo /> },
   { id: "hei", component: <HEILogo /> },
   { id: "filo", component: <FiloAgency /> },
-    { id: "janteco", component: <JanteCoLogo /> },
+  { id: "happy_co", component: <HappyAndCoLogo /> },
   { id: "databridge", component: <DatabridgeLogo /> },
+  { id: "janteco", component: <JanteCoLogo /> },
   { id: "mandala", component: <MandalaLogo /> }
 ];
 
 const institutionalLogos = [
-  // { id: "mjs", component: <MjsLogo /> }
+  // { id: "mjs", component: <MjsLogo /> },
+  { id: "sae", component: <SaeLogo /> }
 ];
 
 export default function Partners() {
@@ -300,7 +323,7 @@ export default function Partners() {
         <div className="space-y-2">
           <div className="w-full text-center px-4">
             <span className="text-[10px] font-mono tracking-widest font-bold text-[#45BAAF]/80 uppercase inline-block">
-              Institutions
+              Institution
             </span>
           </div>
           <div className="bg-black/10 py-2.5 border-t border-b border-white/5">

@@ -55,7 +55,7 @@ export default function WhoWeAre() {
               transition={{ delay: 0.1 }}
               className="text-3xl sm:text-4xl md:text-5xl font-sans font-black text-white tracking-tight leading-tight"
             >
-              Qui somme nous ?
+              Qui sommes-nous ?
             </motion.h2>
 
             {/* Narrative Paragraph */}
