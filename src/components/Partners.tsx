@@ -15,6 +15,8 @@ import JanteCo from "../assets/images/JanteCo_Partenaire.jpeg";
 import Filo from "../assets/images/LogoFilo.jpeg";
 import HappyCo from "../assets/images/HappyCo.jpeg";
 import SAE from "../assets/images/partenaire/logo-sae.svg";
+import Manaspatern from "../assets/images/partenaire/Manas.jpeg";
+import Picabou from "../assets/images/partenaire/Picabou.jpeg";
 
 const MidiLogo = () => (
   <div className="flex items-center justify-center p-1 h-full w-full select-none">
@@ -156,6 +158,26 @@ const SaeLogo = () => (
   </div>
 );
 
+const Picabou_pater = () => (
+  <div className="flex items-center justify-center p-0 h-full w-full select-none">
+    <img 
+      src={Picabou}
+      alt="Picabou" 
+      className="w-[85%] h-[85%] object-contain transition-transform duration-300 hover:scale-105" 
+    />
+  </div>
+);
+
+const Manas = () => (
+  <div className="flex items-center justify-center p-0 h-full w-full select-none">
+    <img 
+      src={Manaspatern}
+      alt="Manas" 
+      className="w-[85%] h-[85%] object-contain transition-transform duration-300 hover:scale-105" 
+    />
+  </div>
+);
+
 // Groupes de logos
 const nationalLogos = [
   { id: "midi", component: <MidiLogo /> },
@@ -172,11 +194,12 @@ const localLogos = [
   { id: "happy_co", component: <HappyAndCoLogo /> },
   { id: "databridge", component: <DatabridgeLogo /> },
   { id: "janteco", component: <JanteCoLogo /> },
-  { id: "mandala", component: <MandalaLogo /> }
+  { id: "mandala", component: <MandalaLogo /> },
+  { id: "manas", component: <Manas /> },
+  { id: "picabou", component: <Picabou_pater /> }
 ];
 
 const institutionalLogos = [
-  // { id: "mjs", component: <MjsLogo /> },
   { id: "sae", component: <SaeLogo /> }
 ];
 
@@ -323,7 +346,7 @@ export default function Partners() {
         <div className="space-y-2">
           <div className="w-full text-center px-4">
             <span className="text-[10px] font-mono tracking-widest font-bold text-[#45BAAF]/80 uppercase inline-block">
-              Institution
+              Institutions
             </span>
           </div>
           <div className="bg-black/10 py-2.5 border-t border-b border-white/5">
