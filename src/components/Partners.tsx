@@ -17,6 +17,7 @@ import HappyCo from "../assets/images/HappyCo.jpeg";
 import SAE from "../assets/images/partenaire/logo-sae.svg";
 import Manaspatern from "../assets/images/partenaire/Manas.jpeg";
 import Picabou from "../assets/images/partenaire/Picabou.jpeg";
+import AFG from "../assets/images/AFG-logo.png"
 
 const MidiLogo = () => (
   <div className="flex items-center justify-center p-1 h-full w-full select-none">
@@ -178,6 +179,17 @@ const Manas = () => (
   </div>
 );
 
+const AFGLogo = () => (
+  <div className="flex items-center justify-center p-0 h-full w-full select-none">
+    <img 
+      src={AFG}
+      alt="AFG" 
+      className="w-[85%] h-[85%] object-contain transition-transform duration-300 hover:scale-105" 
+    />
+  </div>
+)
+
+
 // Groupes de logos
 const nationalLogos = [
   { id: "midi", component: <MidiLogo /> },
@@ -201,6 +213,10 @@ const localLogos = [
 
 const institutionalLogos = [
   { id: "sae", component: <SaeLogo /> }
+];
+
+const silverLogos = [
+  { id: "afg", component: <AFGLogo /> }
 ];
 
 export default function Partners() {
@@ -342,7 +358,29 @@ export default function Partners() {
           </div>
         </div>
 
-        {/* BLOCK 3: INSTITUTIONS */}
+        {/* SECTION : PARTENAIRE SILVER */}
+        <div className="space-y-2">
+          <div className="w-full text-center px-4">
+            <span className="text-[10px] font-mono tracking-widest font-bold text-[#45BAAF]/80 uppercase inline-block">
+              Partenaire Silver - Partenaire Officiel
+            </span>
+          </div>
+          <div className="bg-black/10 py-2.5 border-t border-b border-white/5">
+            <div className="flex flex-wrap items-center justify-center gap-4 px-4 w-full">
+              {silverLogos.map((logo) => (
+                <div
+                  key={`silver-${logo.id}`}
+                  className="bg-white rounded-2xl w-[210px] sm:w-[240px] h-[100px] sm:h-[110px] flex items-center justify-center flex-shrink-0 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] p-3.5 cursor-pointer"
+                >
+                  {logo.component}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+
+        {/* BLOCK 4: INSTITUTIONS */}
         <div className="space-y-2">
           <div className="w-full text-center px-4">
             <span className="text-[10px] font-mono tracking-widest font-bold text-[#45BAAF]/80 uppercase inline-block">

@@ -21,6 +21,7 @@ import Bruno from "../assets/images/Bruno.jpeg";
 import Nielsen from "../assets/images/Nielsen.webp";
 import MamyRabelaza from "../assets/images/Mamy2.jpeg";
 import Caroline from "../assets/images/Caroline2.jpeg"
+import Andrianiaina from "../assets/images/RAMANANTOANINA.png"
 
 import placehoder from "../assets/images/placeholder_Formateurs.png"
 
@@ -133,7 +134,7 @@ export default function Formateurs() {
       name: "RAMANANTOANINA Andrianiaina",
       role: "Formateur Certifié JCI",
       company: "JCI Mayendeleyo",
-      image: image2,
+      image: Andrianiaina,
       email: "rany.mazany@gmail.com",
       phone: "261344357805",
       location: "Antananarivo",
