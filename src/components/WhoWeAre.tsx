@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 import ImageGive from "/src/assets/images/WhatsApp Image 2026-06-17 at 08.32.42.jpeg";
 import shootImage from "/src/assets/images/WhatsApp Image 2026-06-17 at 08.32.46.jpeg";
 import presentation from "/src/assets/images/Presentation.jpeg"
-import image from "/src/assets/images/CN_image.jpeg"
+import image from "/src/assets/images/3-new.jpg"
 
 export default function WhoWeAre() {
   const imgPresentation = "/src/assets/images/jci_presentation_1782134191329.jpg";

@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { Users, Calendar, Award, Mic, ChevronRight, Play } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
-import conventionImage from "../assets/images/CoventionN.jpeg";
-import ysImage from "../assets/images/YS.jpeg";
+import conventionImage from "../assets/images/YS.jpeg";
+import ysImage from "../assets/images/1-new (1).jpg";
 import collaborerImage from "../assets/images/Collaborer.jpeg";
 
 

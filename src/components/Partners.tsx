@@ -17,7 +17,7 @@ import HappyCo from "../assets/images/HappyCo.jpeg";
 import SAE from "../assets/images/partenaire/logo-sae.svg";
 import Manaspatern from "../assets/images/partenaire/Manas.jpeg";
 import Picabou from "../assets/images/partenaire/Picabou.jpeg";
-import AFG from "../assets/images/AFG-logo.png"
+import AFG from "../assets/images/AFG_Assur.png"
 
 const MidiLogo = () => (
   <div className="flex items-center justify-center p-1 h-full w-full select-none">
@@ -362,7 +362,7 @@ export default function Partners() {
         <div className="space-y-2">
           <div className="w-full text-center px-4">
             <span className="text-[10px] font-mono tracking-widest font-bold text-[#45BAAF]/80 uppercase inline-block">
-              Partenaire Silver - Partenaire Officiel
+              Sponsor Silver - Partenaire Officiel
             </span>
           </div>
           <div className="bg-black/10 py-2.5 border-t border-b border-white/5">

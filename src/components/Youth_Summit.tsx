@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "motion/react";
-import youthSummitImage from "../assets/images/YS.jpeg";
+import youthSummitImage from "../assets/images/2-new.jpg";
 
 export default function YouthSummit() {
   return (

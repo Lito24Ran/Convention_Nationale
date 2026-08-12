@@ -1,5 +1,5 @@
-import CN_image from "../src/assets/images/WhatsApp Image 2026-06-17 at 08.27.08.jpeg"
-import YS_image from "../src/assets/images/CN_image.jpeg"
+import CN_image from "../src/assets/images/1-new (1).jpg"
+import YS_image from "../src/assets/images/3-new.jpg"
 import access_financement from "../src/assets/images/Acces_Financement.jpeg"
 import Poeple_image from "../src/assets/images/People_image.jpeg"
 
@@ -436,7 +436,7 @@ export const SESSIONS: ProgramSession[] = [
     day: 2,
     time: "19h00 - 21h45",
     title: "Clôture Officielle Youth Summit 2026",
-    description: "Spectacle culturel, défilé, concert d'artistes, partage de gâteau pour les 15 ans de JCI Iarivo. Location de tenue chez Bogasy.",
+    description: "Spectacle culturel, défilé, concert d'artistes.",
     location: "Non précisé",
     category: "Cérémonie"
   },
