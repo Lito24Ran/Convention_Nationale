@@ -17,7 +17,9 @@ import HappyCo from "../assets/images/HappyCo.jpeg";
 import SAE from "../assets/images/partenaire/logo-sae.svg";
 import Manaspatern from "../assets/images/partenaire/Manas.jpeg";
 import Picabou from "../assets/images/partenaire/Picabou.jpeg";
-import AFG from "../assets/images/AFG_Assur.png"
+import lemurien from "../assets/images/partenaire/Logos Lemurien.jpg";
+import AFG from "../assets/images/AFG-logo.png";
+import V_paters from "../assets/images/partenaire/V_partenaire.jpeg";
 
 const MidiLogo = () => (
   <div className="flex items-center justify-center p-1 h-full w-full select-none">
@@ -179,16 +181,35 @@ const Manas = () => (
   </div>
 );
 
+const LemurienLogo = () => (
+  <div className="flex items-center justify-center p-0 h-full w-full select-none">
+    <img 
+      src={lemurien}
+      alt="Lémurien" 
+      className="w-[85%] h-[85%] object-contain transition-transform duration-300 hover:scale-105" 
+    />
+  </div>
+);
+
 const AFGLogo = () => (
   <div className="flex items-center justify-center p-0 h-full w-full select-none">
     <img 
       src={AFG}
-      alt="AFG" 
+      alt="AFG Assurances" 
       className="w-[85%] h-[85%] object-contain transition-transform duration-300 hover:scale-105" 
     />
   </div>
-)
+);
 
+const FonctVpaterns = () => (
+  <div className="flex items-center justify-center p-0 h-full w-full select-none">
+    <img 
+      src={V_paters}
+      alt="V_paterns" 
+      className="w-[85%] h-[85%] object-contain transition-transform duration-300 hover:scale-105" 
+    />
+  </div>
+);
 
 // Groupes de logos
 const nationalLogos = [
@@ -196,27 +217,29 @@ const nationalLogos = [
   { id: "orange", component: <OrangeLogo /> },
   { id: "koon", component: <KoonSpaceLogo /> },
   { id: "kentia", component: <KentiaLogo /> },
-  { id: "24", component: <Logo2424 /> },
+  { id: "24", component: <Logo2424 /> }
 ];
 
 const localLogos = [
+  { id: "databridge", component: <DatabridgeLogo /> },
+  { id: "janteco", component: <JanteCoLogo /> },
+  { id: "mandala", component: <MandalaLogo /> },
   { id: "buddy", component: <BuddyLogo /> },
   { id: "hei", component: <HEILogo /> },
   { id: "filo", component: <FiloAgency /> },
   { id: "happy_co", component: <HappyAndCoLogo /> },
-  { id: "databridge", component: <DatabridgeLogo /> },
-  { id: "janteco", component: <JanteCoLogo /> },
-  { id: "mandala", component: <MandalaLogo /> },
   { id: "manas", component: <Manas /> },
-  { id: "picabou", component: <Picabou_pater /> }
-];
-
-const institutionalLogos = [
-  { id: "sae", component: <SaeLogo /> }
+  { id: "picabou", component: <Picabou_pater /> },
+  { id: "lemurien", component: <LemurienLogo /> },
+  { id: "V_paterns", component: <FonctVpaterns /> }
 ];
 
 const silverLogos = [
   { id: "afg", component: <AFGLogo /> }
+];
+
+const institutionalLogos = [
+  { id: "sae", component: <SaeLogo /> }
 ];
 
 export default function Partners() {
@@ -281,12 +304,12 @@ export default function Partners() {
         .animate-marquee-left-track {
           display: flex;
           width: max-content;
-          animation: marqueeLeft 32s linear infinite;
+          animation: marqueeLeft 34s linear infinite;
         }
         .animate-marquee-right-track {
           display: flex;
           width: max-content;
-          animation: marqueeRight 28s linear infinite;
+          animation: marqueeRight 56s linear infinite;
         }
         .animate-marquee-left-track:hover,
         .animate-marquee-right-track:hover {
@@ -379,8 +402,7 @@ export default function Partners() {
           </div>
         </div>
 
-
-        {/* BLOCK 4: INSTITUTIONS */}
+        {/* BLOCK 3: INSTITUTIONS */}
         <div className="space-y-2">
           <div className="w-full text-center px-4">
             <span className="text-[10px] font-mono tracking-widest font-bold text-[#45BAAF]/80 uppercase inline-block">

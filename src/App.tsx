@@ -82,7 +82,7 @@ export default function App() {
         />
         <About />
         <Program />
-        {/* <Speakers /> */}
+        <Speakers />
         <YouthSummit/>
          <Formateurs />
         <Registration />

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Shield, Users, ArrowRight, X, Check, Award, Calendar, AlertCircle, Sparkles, Coffee, Utensils, Hotel, Gift, Briefcase, GraduationCap } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
-import JCi_image from "../assets/images/1-new (1).jpg";
+import JCi_image from "../assets/images/CoventionN.jpeg";
 import JCI_IMAGE2 from "../assets/images/YS.jpeg";
 
 type ProgramType = "convention" | "youth";
@@ -47,10 +47,10 @@ export default function Registration() {
 
   const now = new Date();
 
-  // Force la pré-sélection visuelle sur le Standard à l'ouverture
+  // Force la pré-sélection visuelle sur le Last Chance à l'ouverture
   useEffect(() => {
     if (modalOpen) {
-      setSelectedTier("standard");
+      setSelectedTier("last");
     }
   }, [modalOpen]);
 
@@ -412,9 +412,9 @@ export default function Registration() {
                     const tier = PERIOD_CONFIG[key];
                     const isSelected = selectedTier === key;
                     
-                    const isActive = key === "standard";
-                    const isClosed = key === "early";
-                    const isNotOpenYet = key === "last";
+                    const isActive = key === "last";
+                    const isClosed = key === "early" || key === "standard";
+                    const isNotOpenYet = false;
 
                     const currentPrice = hasAccommodation ? tier.priceComplet : tier.priceSolo;
 
@@ -559,7 +559,7 @@ export default function Registration() {
                                 type="button"
                                 onClick={(e) => {
                                   e.stopPropagation();
-                                  const url = selectedProgram === "convention" ? "https://tally.so/r/BzqO8N" : "https://tally.so/r/BzqO8N";
+                                  const url = selectedProgram === "convention" ? "https://tally.so/r/obL6K1" : "https://tally.so/r/obL6K1";
                                   window.open(url, "_blank");
                                 }}
                                 className="relative w-full py-3.5 px-6 bg-[#090A1F] hover:bg-[#0E0F2E] text-white rounded-2xl font-sans font-black text-[11px] tracking-widest uppercase active:scale-95 transition-all duration-300 cursor-pointer border border-white/10 flex items-center justify-center gap-2"

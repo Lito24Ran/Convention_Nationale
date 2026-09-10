@@ -15,7 +15,7 @@ export default function Program() {
   const getSessionDay = (id: string) => {
     const index = SESSIONS.findIndex((s) => s.id === id);
     if (index < 11) return 1;
-    if (index < 25) return 2;
+    if (index < 27) return 2;
     return 3; 
   };
 
