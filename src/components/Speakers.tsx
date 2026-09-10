@@ -6,6 +6,8 @@ import Thibault_image from "../assets/images/Conferencier/image_Thibault.webp"
 import Bonshe from "../assets/images/Conferencier/DN_Bonshe.jpeg"
 import Nirina_img from "../assets/images/Conferencier/Mirana.webp"
 import Dera from "../assets/images/Conferencier/Dera_Zafindravaka_photo.webp"
+import Riveltd from "../assets/images/Conferencier/Riveltd_Rakotomanana_photo.webp"
+import Andriamihaja from "../assets/images/Conferencier/Guenole_RAVELOMAHAFALY_4.webp"
 
 import Lahety from "../assets/images/Conferencier/lahety-jean-fredos.webp"
 
@@ -193,7 +195,7 @@ export default function Speakers() {
       name: "Riveltd Rakotomanana",
       role: "Ecosystem builder (Écosystème entrepreneurial Madagascar)",
       company: "Le CEENTRE",
-      image: "src/assets/images/Conferencier/Riveltd_Rakotomanana_photo.webp",
+      image: Riveltd,
       bio: "Riveltd Rakotomanana est ecosystem builder et activiste de l’entrepreneuriat jeunesse à Madagascar depuis 2008, Consultant Expert en Entrepreneuriat passionné par l’IA appliquée à l’exécution stratégique et opérationnelle. Il dirige Le CEENTRE (Centre d’Excellence en Entrepreneuriat) et a précédemment dirigé ISSOF (groupe GENERIS). Il siège comme Vice-Président à la Maison de l’Entrepreneuriat et à l’Entrepreneurship Mentoring Council, membre du CA de Madagascar SAE, Président de la Commission Formation de la CCI France Madagascar, et Expert Pédagogique du projet SEEED-INCUBOOST (Union Européenne). Conviction : « L’humain d’abord, le projet et les machines suivront ».",
       time: "11h00–12h15",
       day: "Jour 2 — 2 oct",
@@ -204,7 +206,7 @@ export default function Speakers() {
       name: "Andriamihaja Guénolé RAVELOMAHAFALY",
       role: "Vice-Président JCI 2025 (assigné à la JCI Guinée) | Ancien Président National JCI Madagascar (2021)",
       company: "Consultant en communication & Formateur",
-      image: "src/assets/images/Conferencier/Guenole_RAVELOMAHAFALY_4.webp",
+      image: Andriamihaja,
       bio: "Guénolé Ravelomahafaly est Vice-Président JCI 2025, assigné à sept organisations nationales dont la JCI Guinée. Consultant en communication basé à Antananarivo, il a été Président National de la JCI Madagascar en 2021 après un parcours dans le mouvement depuis 2013 (Président Local JCI Toliara, Secrétaire Général National, Vice-Président Exécutif National). Sénateur JCI #81590, diplômé de l'Académie JCI, il a participé à quatre Congrès Mondiaux JCI.",
       time: "09h00–10h50",
       day: "Jour 2 — 2 oct",
@@ -344,7 +346,7 @@ export default function Speakers() {
     {
       name: "Ratsitoarison Rakotondrasoa Nirina Ambinintsoa",
       role: "Orange Digital Center Madagascar",
-      company: "EcoCoco (Associé-gérante)",
+      company: "EcoCoco (Associée-gérante)",
       image:Nirina_img,
       bio: "Ratsitoarison Rakotondrasoa Nirina Ambinintsoa est entrepreneure, consultante-formatrice et femme engagée pour un développement plus humain, durable et inclusif à Madagascar. Fondatrice d'Ambinintsoa Ratsitoarison Consulting and Training et d'EcoCoco (valorisation des déchets de coco en énergie propre), elle est lauréate du Startupper de l'année TotalEnergies, du Tony Elumelu Foundation Entrepreneurship Programme, d'Impulsouth, deux fois du Purpose in Motion, et sélectionnée pour le Mandela Washington Fellowship Program. Ancienne Présidente Locale de la JCI Iarivo et championne nationale d'art oratoire de la JCI Madagascar.",
       time: "13h15–14h50",
@@ -721,9 +723,7 @@ export default function Speakers() {
                 </div>
 
                 <div className="pt-4 border-t border-white/10 flex items-center justify-between shrink-0">
-                  <div className="flex items-center space-x-1.5 text-xs text-gray-400 font-sans">
-                    <span>Ivato, Madagascar</span>
-                  </div>
+                  
 
                   <div className="flex space-x-2">
                     <span className="w-7 h-7 rounded-full bg-white/5 text-gray-300 flex items-center justify-center border border-white/5 hover:bg-cyan-500/20 hover:text-cyan-300 transition-colors">

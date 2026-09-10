@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Calendar, Shield } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
-import Jci_Logo from "../assets/images/LogoJCI2-removebg-preview.png"
+import logoJci from "../assets/images/LogoJCI2-removebg-preview.png"
 
 
 interface HeaderProps {
@@ -30,9 +30,10 @@ export default function Header({ onNavigate, activeSection }: HeaderProps) {
     { label: "Accueil", id: "hero" },
     { label: "À propos", id: "about" },
     { label: "Programme", id: "program" },
+    { label: "Intervenants", id: "intervenants" },
     { label: "Youth Summit", id: "youth-summit-feature" },
     { label: "Formateurs", id: "formateurs" },
-    // { label: "Tarifs", id: "registration" },
+    { label: "Tarifs", id: "registration" },
     { label: "Partenaires", id: "partners" },
     { label: "Actualités", id: "blog" },
     { label: "FAQ", id: "faq" },
@@ -52,7 +53,7 @@ export default function Header({ onNavigate, activeSection }: HeaderProps) {
           : "bg-transparent py-6"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xxl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           
           {/* JCI Styled Logo identical to the screenshot */}
@@ -62,9 +63,10 @@ export default function Header({ onNavigate, activeSection }: HeaderProps) {
             className="flex items-center space-x-2 cursor-pointer group select-none py-1"
           >
             <img 
-              src={Jci_Logo} 
+              src={logoJci} 
               alt="logoJCI" 
-              className="h-25 xs:h-10 sm:h-15 md:h-30 w-auto max-w-[150px] xs:max-w-[180px] sm:max-w-[220px] md:max-w-none object-contain transition-all duration-300 transform group-hover:scale-105 filter drop-shadow-[0_2px_8px_rgba(0,166,223,0.15)]" 
+              className="h-8 xs:h-20 sm:h-50
+              md:h-24 w-auto max-w-[150px] xs:max-w-[200px] sm:max-w-[220px] md:max-w-none object-contain transition-all duration-300 transform group-hover:scale-105 filter drop-shadow-[0_2px_8px_rgba(0,166,223,0.15)]" 
             />
           </div>
 
@@ -75,14 +77,14 @@ export default function Header({ onNavigate, activeSection }: HeaderProps) {
               const isActive = 
                 activeSection === item.id || 
                 (item.id === "about" && (activeSection === "who-we-are" || activeSection === "jci-madagascar")) ||
-                (item.id === "program" && (activeSection === "intervenants" || activeSection === "conferenciers"));
+                (item.id === "intervenants" && (activeSection === "intervenants" || activeSection === "conferenciers"));
                 
               return (
                 <button
                   key={item.id}
                   id={`nav-link-${item.id}`}
                   onClick={() => handleLinkClick(item.id)}
-                  className={`px-2.5 xl:px-3.5 py-2 text-[10px] xl:text-[11px] font-sans font-black tracking-widest uppercase transition-all duration-300 cursor-pointer relative ${
+                  className={`px-2 xl:px-3 py-2 text-[10px] xl:text-[11px] font-sans font-black tracking-widest uppercase transition-all duration-300 cursor-pointer relative ${
                     isActive
                       ? "text-white"
                       : "text-gray-400 hover:text-white"
@@ -92,7 +94,7 @@ export default function Header({ onNavigate, activeSection }: HeaderProps) {
                   {isActive && (
                     <motion.div
                       layoutId="activeNavIndicator"
-                      className="absolute bottom-[-4px] left-3 right-3 h-[3px] bg-gradient-to-r from-[#A855F7] via-[#00A6DF] to-[#10B981] rounded-full shadow-[0_0_8px_rgba(0,166,223,0.4)]"
+                      className="absolute bottom-[-4px] left-2 right-2 h-[3px] bg-gradient-to-r from-[#A855F7] via-[#00A6DF] to-[#10B981] rounded-full shadow-[0_0_8px_rgba(0,166,223,0.4)]"
                       transition={{ type: "spring", stiffness: 380, damping: 30 }}
                     />
                   )}
@@ -148,7 +150,7 @@ export default function Header({ onNavigate, activeSection }: HeaderProps) {
                 const isActive = 
                   activeSection === item.id || 
                   (item.id === "about" && (activeSection === "who-we-are" || activeSection === "jci-madagascar")) ||
-                  (item.id === "program" && (activeSection === "intervenants" || activeSection === "conferenciers"));
+                  (item.id === "intervenants" && (activeSection === "intervenants" || activeSection === "conferenciers"));
 
                 return (
                   <button
