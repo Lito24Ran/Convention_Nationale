@@ -160,7 +160,7 @@ export default function Speakers() {
     },
     {
       name: "Guy Foka",
-      role: "Directeur, Connecta",
+      role: "CEO Konecta Madagascar",
       company: "Connecta",
       image: Placeholder,
       bio: "",

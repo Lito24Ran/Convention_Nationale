@@ -62,11 +62,10 @@ export default function Header({ onNavigate, activeSection }: HeaderProps) {
             onClick={() => handleLinkClick("hero")}
             className="flex items-center space-x-2 cursor-pointer group select-none py-1"
           >
-            <img 
+             <img 
               src={logoJci} 
               alt="logoJCI" 
-              className="h-8 xs:h-20 sm:h-50
-              md:h-24 w-auto max-w-[150px] xs:max-w-[200px] sm:max-w-[220px] md:max-w-none object-contain transition-all duration-300 transform group-hover:scale-105 filter drop-shadow-[0_2px_8px_rgba(0,166,223,0.15)]" 
+              className="h-20 sm:h-25 md:h-24 w-auto max-w-[200px] sm:max-w-[240px] md:max-w-none object-contain transition-all duration-300 transform group-hover:scale-105 filter drop-shadow-[0_2px_8px_rgba(0,166,223,0.15)]" 
             />
           </div>
 
