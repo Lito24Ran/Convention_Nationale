@@ -8,8 +8,10 @@ import Nirina_img from "../assets/images/Conferencier/Mirana.webp"
 import Dera from "../assets/images/Conferencier/Dera_Zafindravaka_photo.webp"
 import Riveltd from "../assets/images/Conferencier/Riveltd_Rakotomanana_photo.webp"
 import Andriamihaja from "../assets/images/Conferencier/Guenole_RAVELOMAHAFALY_4.webp"
-
+import Mirado from "../assets/images/Conferencier/Mirado.jfif"
 import Lahety from "../assets/images/Conferencier/lahety-jean-fredos.webp"
+import ANDRIAMIHAJA from "../assets/images/Conferencier/Andriamihaja.webp"
+import Jonathan from "../assets/images/Conferencier/Jonathan.webp"
 
 // Inline stylesheet for seamless, GPU-accelerated infinite horizontal marquees
 const marqueeGlobalCSS = `
@@ -184,7 +186,7 @@ export default function Speakers() {
       name: "Jonathan Ranjatoelina",
       role: "",
       company: "GEM / ESCM / French Tech",
-      image: Placeholder,
+      image: Jonathan,
       bio: "",
       time: "15h00–16h20",
       day: "Jour 2 — 2 oct",
@@ -213,17 +215,17 @@ export default function Speakers() {
       session: "Formation Certifiante JCI - Effective leadership",
       typeIntervention: "Formateur"
     },
-    // {
-    //   name: "PL (Président Local)",
-    //   role: "Président Local 2026",
-    //   company: "JCI Iarivo",
-    //   image: Placeholder,
-    //   bio: "Président Local de la JCI Iarivo, garant de la vision et de l'organisation de la Convention Nationale 2026.",
-    //   time: "8h30–09h50",
-    //   day: "Jour 1 — 1er oct",
-    //   session: "Cérémonie d'ouverture officielle",
-    //   typeIntervention: "Allocution"
-    // },
+    {
+      name: "ANDRIAMIHAJA MINA",
+      role: "Directrice des Ressources Humaines, BNI Madagascar | Coach et Formatrice certifiée Maxwell Leadership | Consultante DISC",
+      company: "BNI Madagascar",
+      image: ANDRIAMIHAJA,
+      bio: "Mina Andriamihaja est Directrice des Ressources Humaines de BNI Madagascar, Coach et Formatrice certifiée Maxwell Leadership et consultante DISC. Passionnée par le leadership et la transformation humaine, elle accompagne depuis plus de 20 ans les organisations et les talents avec une conviction forte : le véritable leadership ne se mesure pas au titre que l'on porte, mais à l'impact que l'on crée autour de soi.",
+      time: "15h00–16h30",
+      day: "Jour 1 — 1er oct",
+      session: "Cérémonie d'ouverture officielle",
+      typeIntervention: "Formatrice"
+    },
    
     // {
     //   name: "Mialy Rananaivoson",
@@ -336,7 +338,7 @@ export default function Speakers() {
       name: "Mirado Rafenomahenintsoa",
       role: "Fondateur, DataBridge Madagascar",
       company: "Databridge Madagascar",
-      image:Placeholder,
+      image:Mirado,
       bio: "Mirado est enseignant et engagé pour une meilleure compréhension et utilisation des données. Il est le fondateur de Databridge Madagascar, une initiative qui vise à rendre les compétences et la culture data plus accessibles aux jeunes.",
       time: "15h00–16h30",
       day: "Jour 1 — 1er oct",
