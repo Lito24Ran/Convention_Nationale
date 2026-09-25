@@ -270,7 +270,7 @@ export const SESSIONS: ProgramSession[] = [
     time: "18:30 - 21:30",
     title: "Soirée d'ouverture (Networking Cocktail & VIP)",
     description: "• Discours courts\n• Networking premium (VIP, partenaires, décideurs)\n• Animation DJ + musique",
-    location: "Espace soirée + zone d'exposition — Cité des Cultures",
+    location: "Espace soirée + zone d'exposition — NAMASTE",
     targetAudience: "Participants CN + BL + BN + VIP/Partenaires + Public payant",
     category: "Soirée",
     day: 1

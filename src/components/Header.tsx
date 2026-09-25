@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Calendar, Shield } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
-import logoJci from "../assets/images/LogoJCI2-removebg-preview.png"
+import logoJci from "../assets/images/principal_fond_sombre.png"
 
 
 interface HeaderProps {
@@ -65,7 +65,7 @@ export default function Header({ onNavigate, activeSection }: HeaderProps) {
              <img 
               src={logoJci} 
               alt="logoJCI" 
-              className="h-20 sm:h-25 md:h-24 w-auto max-w-[200px] sm:max-w-[240px] md:max-w-none object-contain transition-all duration-300 transform group-hover:scale-105 filter drop-shadow-[0_2px_8px_rgba(0,166,223,0.15)]" 
+              className="h-15 sm:h-7 md:h-12 w-auto max-w-[200px] sm:max-w-[240px] md:max-w-none object-contain transition-all duration-300 transform group-hover:scale-105 filter drop-shadow-[0_2px_8px_rgba(0,166,223,0.15)]" 
             />
           </div>
 

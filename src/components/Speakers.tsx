@@ -150,7 +150,7 @@ export default function Speakers() {
   // Data for Intervenants - Ligne 1
   const intervenantsLigne1: SpeakerMock[] = [
     {
-      name: "Dera",
+      name: "Dera Zafindravaka",
       role: "Administrateur Exécutif Finances, Groupe Taloumis | Fondateur, Entrepreneurship Club",
       company: "Groupe Taloumis / Entrepreneurship Club",
       image: Dera,
@@ -223,7 +223,7 @@ export default function Speakers() {
       bio: "Mina Andriamihaja est Directrice des Ressources Humaines de BNI Madagascar, Coach et Formatrice certifiée Maxwell Leadership et consultante DISC. Passionnée par le leadership et la transformation humaine, elle accompagne depuis plus de 20 ans les organisations et les talents avec une conviction forte : le véritable leadership ne se mesure pas au titre que l'on porte, mais à l'impact que l'on crée autour de soi.",
       time: "15h00–16h30",
       day: "Jour 1 — 1er oct",
-      session: "Cérémonie d'ouverture officielle",
+      session: "Leadership & Mindset",
       typeIntervention: "Formatrice"
     },
    
@@ -347,7 +347,7 @@ export default function Speakers() {
     },
     {
       name: "Ratsitoarison Rakotondrasoa Nirina Ambinintsoa",
-      role: "Orange Digital Center Madagascar",
+      role: "Associé-gérante EcoCoco",
       company: "EcoCoco (Associée-gérante)",
       image:Nirina_img,
       bio: "Ratsitoarison Rakotondrasoa Nirina Ambinintsoa est entrepreneure, consultante-formatrice et femme engagée pour un développement plus humain, durable et inclusif à Madagascar. Fondatrice d'Ambinintsoa Ratsitoarison Consulting and Training et d'EcoCoco (valorisation des déchets de coco en énergie propre), elle est lauréate du Startupper de l'année TotalEnergies, du Tony Elumelu Foundation Entrepreneurship Programme, d'Impulsouth, deux fois du Purpose in Motion, et sélectionnée pour le Mandela Washington Fellowship Program. Ancienne Présidente Locale de la JCI Iarivo et championne nationale d'art oratoire de la JCI Madagascar.",
@@ -577,6 +577,7 @@ export default function Speakers() {
                 <SpeakerCard 
                   key={`intervenant-ligne1-${idx}`} 
                   s={s} 
+                  
                   onClick={() => setSelectedSpeaker(s)} 
                 />
               ))}
@@ -724,18 +725,7 @@ export default function Speakers() {
                   </div>
                 </div>
 
-                <div className="pt-4 border-t border-white/10 flex items-center justify-between shrink-0">
-                  
-
-                  <div className="flex space-x-2">
-                    <span className="w-7 h-7 rounded-full bg-white/5 text-gray-300 flex items-center justify-center border border-white/5 hover:bg-cyan-500/20 hover:text-cyan-300 transition-colors">
-                      <Facebook className="h-3.5 w-3.5" />
-                    </span>
-                    <span className="w-7 h-7 rounded-full bg-white/5 text-gray-300 flex items-center justify-center border border-white/5 hover:bg-cyan-500/20 hover:text-cyan-300 transition-colors">
-                      <Linkedin className="h-3.5 w-3.5" />
-                    </span>
-                  </div>
-                </div>
+               
 
               </div>
 

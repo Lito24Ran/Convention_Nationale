@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Handshake, Mail, Phone, User, X, ShieldCheck, Heart } from "lucide-react";
+import { Handshake, Mail, Phone, User, X, ShieldCheck } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import MG from "../assets/images/partenaire/2424.png";
 import buddy from "../assets/images/partenaire/BUDDY_CREATIF.png";
@@ -8,7 +8,7 @@ import kentia from "../assets/images/partenaire/Groupe_Kentia.png";
 import Koon from "../assets/images/partenaire/KOON_SPACE.jpg";
 import Midi from "../assets/images/partenaire/Midi_Madagasikara.png";
 import HEI from "../assets/images/partenaire/HEI.png";
-import MJS from "../assets/images/partenaire/MJS.png";
+import MJS from "../assets/images/partenaire/Logo_MJS.jpeg";
 import Data from "../assets/images/Databridge.jpeg";
 import Mandala from "../assets/images/Mandala_Partenaire.jpeg";
 import JanteCo from "../assets/images/JanteCo_Partenaire.jpeg";
@@ -18,8 +18,13 @@ import SAE from "../assets/images/partenaire/logo-sae.svg";
 import Manaspatern from "../assets/images/partenaire/Manas.jpeg";
 import Picabou from "../assets/images/partenaire/Picabou.jpeg";
 import lemurien from "../assets/images/partenaire/Logos Lemurien.jpg";
-import AFG from "../assets/images/AFG-logo.png";
+import AFG from "../assets/images/AFG_Assur.png";
 import V_paters from "../assets/images/partenaire/V_partenaire.jpeg";
+import vita_Foam from "../assets/images/partenaire/VitaFOAM.jpeg";
+import PAMF from "../assets/images/partenaire/PAMF.jpeg";
+import METFP from "../assets/images/partenaire/Logo_METFP.jpeg";
+import MIDSP from "../assets/images/partenaire/Logo_MIDSP.jpeg";
+import Shell from "../assets/images/partenaire/Logo_Shell.jpeg";
 
 const MidiLogo = () => (
   <div className="flex items-center justify-center p-1 h-full w-full select-none">
@@ -65,7 +70,7 @@ const Logo2424 = () => (
   <div className="flex items-center justify-center p-1 h-full w-full select-none">
     <img 
       src={MG}
-      alt="MJS" 
+      alt="2424.mg" 
       className="max-h-full max-w-full object-contain transition-transform duration-300 hover:scale-105" 
     />
   </div>
@@ -87,16 +92,6 @@ const HEILogo = () => (
       src={HEI}
       alt="HEI" 
       className="w-[85%] h-[85%] object-contain transition-transform duration-300 hover:scale-105"
-    />
-  </div>
-);
-
-const MjsLogo = () => (
-  <div className="flex items-center justify-center p-0 h-full w-full select-none">
-    <img 
-      src={MJS}
-      alt="MJS" 
-      className="w-[85%] h-[85%] object-contain transition-transform duration-300 hover:scale-105" 
     />
   </div>
 );
@@ -155,7 +150,7 @@ const SaeLogo = () => (
   <div className="flex items-center justify-center p-0 h-full w-full select-none">
     <img 
       src={SAE}
-      alt="SAE" 
+      alt="SAE - Secrétariat d'État à la Souveraineté Alimentaire" 
       className="w-[85%] h-[85%] object-contain transition-transform duration-300 hover:scale-105" 
     />
   </div>
@@ -211,13 +206,78 @@ const FonctVpaterns = () => (
   </div>
 );
 
+const VitaFoam = () => (
+  <div className="flex items-center justify-center p-0 h-full w-full select-none">
+    <img 
+      src={vita_Foam}
+      alt="vitaFOAM" 
+      className="w-[85%] h-[85%] object-contain transition-transform duration-300 hover:scale-105" 
+    />
+  </div>
+);
+
+const PAMFLogo = () => (
+  <div className="flex items-center justify-center p-0 h-full w-full select-none">
+    <img 
+      src={PAMF}
+      alt="PAMF Madagascar" 
+      className="w-[85%] h-[85%] object-contain transition-transform duration-300 hover:scale-105" 
+    />
+  </div>
+);
+
+
+
+const Metfp = () => (
+  <div className="flex items-center justify-center p-0 h-full w-full select-none">
+    <img 
+      src={METFP}
+      alt="METFP - Ministère de l'Enseignement Technique et de la Formation Professionnelle" 
+      className="w-[85%] h-[85%] object-contain transition-transform duration-300 hover:scale-105" 
+    />
+  </div>
+);
+
+const Midsp = () => (
+  <div className="flex items-center justify-center p-0 h-full w-full select-none">
+    <img 
+      src={MIDSP}
+      alt="MIDSP - Ministère de l'Industrialisation, du Commerce et de la Consommation" 
+      className="w-[85%] h-[85%] object-contain transition-transform duration-300 hover:scale-105" 
+    />
+  </div>
+);
+
+const Mjs = () => (
+  <div className="flex items-center justify-center p-0 h-full w-full select-none">
+    <img 
+      src={MJS}
+      alt="MJS - Ministère de la Jeunesse et des Sports" 
+      className="w-[85%] h-[85%] object-contain transition-transform duration-300 hover:scale-105" 
+    />
+  </div>
+);
+
+const MjsLogo = Mjs;
+
+const Shell_logo = () => (
+  <div className="flex items-center justify-center p-0 h-full w-full select-none">
+    <img 
+      src={Shell}
+      alt="Shell Madagascar" 
+      className="w-[85%] h-[85%] object-contain transition-transform duration-300 hover:scale-105" 
+    />
+  </div>
+);
+
 // Groupes de logos
 const nationalLogos = [
   { id: "midi", component: <MidiLogo /> },
   { id: "orange", component: <OrangeLogo /> },
   { id: "koon", component: <KoonSpaceLogo /> },
   { id: "kentia", component: <KentiaLogo /> },
-  { id: "24", component: <Logo2424 /> }
+  { id: "24", component: <Logo2424 /> },
+  { id: "VitaFOAM", component: <VitaFoam /> }
 ];
 
 const localLogos = [
@@ -231,15 +291,24 @@ const localLogos = [
   { id: "manas", component: <Manas /> },
   { id: "picabou", component: <Picabou_pater /> },
   { id: "lemurien", component: <LemurienLogo /> },
-  { id: "V_paterns", component: <FonctVpaterns /> }
+  { id: "V_paterns", component: <FonctVpaterns /> },
+  { id: "shell", component: <Shell_logo /> }
+];
+
+const institutionalLogos = [
+  { id: "sae", component: <SaeLogo /> },
+  { id: "mjs", component: <Mjs /> },
+  { id: "metfp", component: <Metfp /> },
+  { id: "midsp", component: <Midsp /> }
+];
+
+const goldLogos = [
+  { id: "pamf", component: <PAMFLogo /> },
+  
 ];
 
 const silverLogos = [
   { id: "afg", component: <AFGLogo /> }
-];
-
-const institutionalLogos = [
-  { id: "sae", component: <SaeLogo /> }
 ];
 
 export default function Partners() {
@@ -350,7 +419,7 @@ export default function Partners() {
                   className="bg-white rounded-2xl w-[210px] sm:w-[240px] h-[100px] sm:h-[110px] flex items-center justify-center flex-shrink-0 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] p-3.5 cursor-pointer"
                 >
                   <div className="w-full h-full flex items-center justify-center">
-                    {item.component}
+                    {(item as any).component ?? (item as any).Component}
                   </div>
                 </div>
               ))}
@@ -373,8 +442,56 @@ export default function Partners() {
                   className="bg-white rounded-2xl w-[210px] sm:w-[240px] h-[100px] sm:h-[110px] flex items-center justify-center flex-shrink-0 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] p-3.5 cursor-pointer"
                 >
                   <div className="w-full h-full flex items-center justify-center">
-                    {item.component}
+                    {(item as any).component ?? (item as any).Component}
                   </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* BLOCK 3: INSTITUTIONS (Au-dessus des sponsors Gold) */}
+        <div className="space-y-2">
+          <div className="w-full text-center px-4">
+            <span className="text-[10px] font-mono tracking-widest font-bold text-[#45BAAF]/80 uppercase inline-block">
+              Institutions
+            </span>
+          </div>
+          <div className="bg-black/10 py-2.5 border-t border-b border-white/5">
+            <div className={institutionalShouldScroll ? "animate-marquee-left-track gap-4 px-2" : "flex flex-wrap items-center justify-center gap-4 px-4 w-full"}>
+              {institutionalItems.map((item, idx) => (
+                <div
+                  key={`inst-${item.id}-${idx}`}
+                  className="bg-white rounded-2xl w-[210px] sm:w-[240px] h-[100px] sm:h-[110px] flex items-center justify-center flex-shrink-0 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] p-3.5 cursor-pointer"
+                >
+                  <div className="w-full h-full flex items-center justify-center">
+                    {(item as any).component ?? (item as any).Component}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* SECTION : PARTENAIRE GOLD */}
+        <div className="space-y-2">
+          <div className="w-full text-center px-4">
+            <span className="text-[10px] font-mono tracking-widest font-bold text-amber-400 uppercase inline-flex items-center gap-1.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
+              Sponsor Gold - Partenaire Majeur
+            </span>
+          </div>
+          <div className="bg-black/10 py-2.5 border-t border-b border-white/5">
+            <div className="flex flex-wrap items-center justify-center gap-4 px-4 w-full">
+              {goldLogos.map((logo) => (
+                <div
+                  key={`gold-${logo.id}`}
+                  className="bg-white rounded-2xl w-[210px] sm:w-[240px] h-[100px] sm:h-[110px] flex items-center justify-center flex-shrink-0 shadow-lg hover:shadow-amber-500/20 hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] p-3.5 cursor-pointer border border-amber-400/40 relative group"
+                >
+                  <div className="absolute -top-2 -right-2 bg-gradient-to-r from-amber-400 to-amber-500 text-[#0F1026] text-[9px] font-mono font-black uppercase px-2 py-0.5 rounded-full shadow-md">
+                    Gold
+                  </div>
+                  {(logo as any).component ?? (logo as any).Component}
                 </div>
               ))}
             </div>
@@ -395,30 +512,7 @@ export default function Partners() {
                   key={`silver-${logo.id}`}
                   className="bg-white rounded-2xl w-[210px] sm:w-[240px] h-[100px] sm:h-[110px] flex items-center justify-center flex-shrink-0 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] p-3.5 cursor-pointer"
                 >
-                  {logo.component}
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* BLOCK 3: INSTITUTIONS */}
-        <div className="space-y-2">
-          <div className="w-full text-center px-4">
-            <span className="text-[10px] font-mono tracking-widest font-bold text-[#45BAAF]/80 uppercase inline-block">
-              Institutions
-            </span>
-          </div>
-          <div className="bg-black/10 py-2.5 border-t border-b border-white/5">
-            <div className={institutionalShouldScroll ? "animate-marquee-left-track gap-4 px-2" : "flex flex-wrap items-center justify-center gap-4 px-4 w-full"}>
-              {institutionalItems.map((item, idx) => (
-                <div
-                  key={`inst-${item.id}-${idx}`}
-                  className="bg-white rounded-2xl w-[210px] sm:w-[240px] h-[100px] sm:h-[110px] flex items-center justify-center flex-shrink-0 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] p-3.5 cursor-pointer"
-                >
-                  <div className="w-full h-full flex items-center justify-center">
-                    {item.component}
-                  </div>
+                  {(logo as any).component ?? (logo as any).Component}
                 </div>
               ))}
             </div>
